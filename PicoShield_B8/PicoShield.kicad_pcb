@@ -84,7 +84,7 @@
 			(layerselection 0x00010fc_ffffffff)
 			(plot_on_all_layers_selection 0x0000000_00000000)
 			(disableapertmacros no)
-			(usegerberextensions no)
+			(usegerberextensions yes)
 			(usegerberattributes yes)
 			(usegerberadvancedattributes yes)
 			(creategerberjobfile yes)
@@ -115,7 +115,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "GerberPicoShield")
+			(outputdirectory "PICOB8/")
 		)
 	)
 	(net 0 "")
@@ -7566,7 +7566,7 @@
 		(descr "SOIC, 8 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/20005045C.pdf#page=23), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
 		(property "Reference" "U2"
-			(at 0 3.59 360)
+			(at 0 3.59 0)
 			(layer "B.SilkS")
 			(uuid "ef83ee15-d010-4670-92f1-170715311647")
 			(effects
@@ -7578,7 +7578,7 @@
 			)
 		)
 		(property "Value" "AT45DB641E"
-			(at 0 -3.59 360)
+			(at 0 -3.59 0)
 			(layer "B.Fab")
 			(uuid "eaf285a7-7b18-4d16-bbfa-42d521cc33e2")
 			(effects
@@ -7819,7 +7819,7 @@
 			(uuid "3799f2ba-60a1-4b53-9423-9324ea6e4329")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(uuid "a2798c47-4885-4a34-b56c-37e51cfe2d39")
 			(effects
@@ -8450,6 +8450,18 @@
 		(layer "Edge.Cuts")
 		(uuid "ff142b95-5810-41ba-9490-893b8883e4ed")
 	)
+	(gr_text "B8"
+		(at 131.6736 75.1332 0)
+		(layer "F.SilkS")
+		(uuid "c7d8c795-5d31-41d4-9d1f-2d3869d82794")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
 	(segment
 		(start 133.731 51.16)
 		(end 135.784 51.16)
@@ -8569,14 +8581,6 @@
 		(layer "B.Cu")
 		(net 4)
 		(uuid "8003c1de-09d1-424a-8f5c-1586ba349714")
-	)
-	(segment
-		(start 144.9125 56.4125)
-		(end 145 56.5)
-		(width 0.25)
-		(layer "B.Cu")
-		(net 4)
-		(uuid "907e6de4-7e10-4937-9a26-28f934246de2")
 	)
 	(segment
 		(start 149.6568 63.0428)
@@ -14720,10 +14724,10 @@
 				(xy 134.961221 50.787315) (xy 134.961218 50.787322) (xy 134.902727 50.96734) (xy 134.902726 50.967344)
 				(xy 134.88294 51.1556) (xy 134.902726 51.343856) (xy 134.902727 51.343859) (xy 134.961218 51.523877)
 				(xy 134.961221 51.523884) (xy 135.055867 51.687816) (xy 135.182529 51.828488) (xy 135.335665 51.939748)
-				(xy 135.33567 51.939751) (xy 135.50359 52.014515) (xy 135.540835 52.040113) (xy 140.511011 57.010289)
-				(xy 140.622415 57.121693) (xy 140.622512 57.12179) (xy 140.753614 57.20939) (xy 140.753627 57.209397)
-				(xy 140.86912 57.257235) (xy 140.899303 57.269737) (xy 141.053953 57.300499) (xy 141.053956 57.3005)
-				(xy 141.053958 57.3005) (xy 144.921158 57.3005) (xy 148.849309 57.3005) (xy 148.916348 57.320185)
+				(xy 135.33567 51.939751) (xy 135.50359 52.014515) (xy 135.540835 52.040113) (xy 140.622507 57.121786)
+				(xy 140.622511 57.121789) (xy 140.753614 57.20939) (xy 140.753627 57.209397) (xy 140.86912 57.257235)
+				(xy 140.899303 57.269737) (xy 141.053953 57.300499) (xy 141.053956 57.3005) (xy 141.053958 57.3005)
+				(xy 141.211642 57.3005) (xy 144.921158 57.3005) (xy 148.849309 57.3005) (xy 148.916348 57.320185)
 				(xy 148.962103 57.372989) (xy 148.972047 57.442147) (xy 148.943022 57.505703) (xy 148.94153 57.507392)
 				(xy 148.889293 57.565408) (xy 148.873464 57.582987) (xy 148.778821 57.746915) (xy 148.778818 57.746922)
 				(xy 148.724734 57.913378) (xy 148.720326 57.926944) (xy 148.708542 58.039063) (xy 148.681959 58.103676)
