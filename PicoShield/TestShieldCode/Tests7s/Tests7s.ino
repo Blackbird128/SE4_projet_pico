@@ -38,6 +38,7 @@ void setup()
   clearDisplaySPI();
 
   setBrightnessSPI(255);  // High brightness
+  delay(10);
   s7sSendStringSPI("1234");
 }
 
