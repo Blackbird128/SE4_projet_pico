@@ -8,10 +8,10 @@ export LDFLAGS = -g $(TARGET_ARCH) -lm -Wl,--gc-sections #	-Os
 
 
 TARGET = ordo
-TERM = /dev/ttyUSB0
-#TERM = /dev/ttyACM0
+#TERM = /dev/ttyUSB0
+TERM = /dev/ttyACM0
 CPPFLAGS = -mmcu=$(MCU)
-PGMER = -c stk500v1 -b 57600 -P $(TERM)
+PGMER = -c stk500v1 -b 115200 -P $(TERM)
 PGMERISP = -c stk500v1 -b 115200 -P $(TERM)
 ARVDUDECONF= -C /usr/local/arduino/arduino-0021/hardware/tools/avrdude.conf
 export DUDE = /usr/bin/avrdude -F -v -p $(MCU) $(AVRDUDECONF)

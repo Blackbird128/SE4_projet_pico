@@ -1,48 +1,50 @@
 #include <stdio.h>
 #include <avr/io.h>
+#include <avr/interrupt.h>
 
-#define portCLEAR_COUNTER_ON_MATCH ( 0x08 )
-#define portPRESCALE_256 ( 0x04 )
-#define portCLOCK_PRESCALER ( 256 )
-#define portCOMPARE_MATCH_A_INTERRUPT_ENABLE ( 0x10 )
 
-static void prvSetupTimerInterrupt( void )
-{
-unsigned portLONG ulCompareMatch;
-unsigned portCHAR ucHighByte, ucLowByte;
-/* Generate the compare match value for our required tick
-frequency. */
-ulCompareMatch = portCPU_CLOCK_HZ / portTICK_RATE_HZ;
-EXAMPLE C IMPLEMENTATION OF A MULTITASKING KERNEL FOR THE AVR, RICHARD BARRY - AVRFREAKS.NET
-4
-/* We only have 16 bits so have to scale to get our
-required tick rate. */
-ulCompareMatch /= portCLOCK_PRESCALER;
-/* Setup compare match value for compare match A.
-Interrupts are disabled before calling this function so
-we need not bother here. [casting has been removed for
-each of reading] */
-ucLowByte = ulCompareMatch & 0xff;
-ulCompareMatch >>= 8;
-ucHighByte = ulCompareMatch & 0xff;
-outb( OCR1AH, ucHighByte );
-outb( OCR1AL, ucLowByte );
-/* Setup clock source and compare match behaviour. */
-ucLowByte = portCLEAR_COUNTER_ON_MATCH | portPRESCALE_256;
-outb( TCCR1B, ucLowByte );
-/* Enable the interrupt - this is okay as interrupt
-are currently globally disabled. */
-ucLowByte = inb( TIMSK );
-ucLowByte |= portCOMPARE_MATCH_A_INTERRUPT_ENABLE;
-outb( TIMSK, ucLowByte );
+#define INT_BAS         0
+#define INT_CHANGE      1
+#define INT_DESCENTE    2
+#define INT_MONTEE      3
+
+
+#define CTC1            WGM12           // Meilleur nom pour le bit
+#define PERIODE         1000
+
+
+
+void init_minuteur(int diviseur,long periode){
+TCCR1A=0;               // Le mode choisi n'utilise pas ce registre
+TCCR1B=(1<<CTC1);       // Réinitialisation du minuteur sur expiration
+switch(diviseur){
+  case    8: TCCR1B |= (1<<CS11); break;
+  case   64: TCCR1B |= (1<<CS11 | 11<<CS10); break;
+  case  256: TCCR1B |= (1<<CS12); break;
+  case 1024: TCCR1B |= (1<<CS12 | 1<<CS10); break;
+  }
+// Un cycle prend 1/F_CPU secondes.
+// Un pas de compteur prend diviseur/F_CPU secondes.
+// Pour une periode en millisecondes, il faut (periode/1000)/(diviseur/F_CPU) pas
+// soit (periode*F_CPU)/(1000*diviseur)
+OCR1A=F_CPU/1000*periode/diviseur;  // Calcul du pas
+TCNT1=0;                // Compteur initialisé
+TIMSK1=(1<<OCIE1A);     // Comparaison du compteur avec OCR1A
 }
-ISR(TIMER1_COMPA_vect,ISR_NAKED)
-{
-/* Sauvegarde du contexte de la tâche interrompue */
-...
-/* Appel à l'ordonnanceur */
-scheduler();
-/* Récupération du contexte de la tâche ré-activée */
-...
-asm volatile ( "reti" );
+
+ISR(TIMER1_COMPA_vect){               // Procédure d'interruption
+PORTD ^= 0x80;
+}
+
+/*ISR(TIMER1_COMPA_vect){               // Procédure d'interruption
+PORTD ^= 0x0F;
+}*/
+
+int main(void){
+DDRD |= 0x80;
+PORTD |= 0x80;
+init_minuteur(256, PERIODE);
+sei();                        // Autorisation des interruptions
+while(1);
+return 0;
 }
