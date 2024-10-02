@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Arduino Uno SMD")(type "KiCad")(uri "${KIPRJMOD}/PicoMother.pretty")(options "")(descr ""))
+)
