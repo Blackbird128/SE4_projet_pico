@@ -7,9 +7,10 @@ export CFLAGS =  -Wall -I. -DF_CPU=16000000 -Os #-g
 export LDFLAGS = -g $(TARGET_ARCH) -lm -Wl,--gc-sections #	-Os
 
 
-TARGET = ordo
+TARGET = ordonnanceur
 #TERM = /dev/ttyUSB0
 TERM = /dev/ttyACM0
+TERM_MAC = /dev/cu.usbmodem21301
 CPPFLAGS = -mmcu=$(MCU)
 PGMER = -c stk500v1 -b 115200 -P $(TERM)
 PGMERISP = -c stk500v1 -b 115200 -P $(TERM)
@@ -47,3 +48,6 @@ upload: $(TARGET).hex
 size: $(TARGET).elf
 	avr-size --format=avr --mcu=$(MCU) $(TARGET).elf
 
+upload_mac: $(TARGET).hex
+	stty -f $(TERM_MAC) hupcl # reset
+	/opt/homebrew/bin/avrdude -F -v -p $(MCU) $(AVRDUDECONF) -P $(TERM_MAC) -c stk500v1 -b 115200 -P $(TERM_MAC) -U flash:w:$(TARGET).hex
