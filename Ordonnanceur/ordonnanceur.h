@@ -96,6 +96,8 @@ typedef struct task{
 void init_minuteur(int diviseur, long periode);
 void Led1(void);
 void Led2(void);
+void SerialRead();
+void SerialWrite();
 void init_task(int t);
 void ordonnanceur(void);
 

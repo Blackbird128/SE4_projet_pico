@@ -9,7 +9,7 @@ export LDFLAGS = -g $(TARGET_ARCH) -lm -Wl,--gc-sections #	-Os
 
 TARGET = ordonnanceur
 #TERM = /dev/ttyUSB0
-TERM = /dev/ttyACM0
+TERM = /dev/ttyACM1
 TERM_MAC = /dev/cu.usbmodem21301
 CPPFLAGS = -mmcu=$(MCU)
 PGMER = -c stk500v1 -b 115200 -P $(TERM)

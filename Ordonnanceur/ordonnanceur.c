@@ -2,14 +2,16 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include "ordonnanceur.h"
+#include "serial.h"
 
-#define NB_TASKS    2
+#define NB_TASKS    3
 
 int courant = 0;
 
 task Taches[NB_TASKS] = {
   {Led2, 0x0700},
-  {Led1, 0x0600}
+  {Led1, 0x0600},
+  {SerialWrite, 0x0500}
 };
 
 void init_minuteur(int diviseur,long periode){
@@ -41,8 +43,22 @@ void init_task(int t){
     SP = oldSP;
 }
 
+ISR(TIMER1_COMPA_vect, ISR_NAKED){
+    /* Sauvegarde du contexte de la tâche interrompue */
+    portSAVE_Registers();
+    Taches[courant].stack = SP;
+
+    /* Appel à l'ordonnanceur */
+    ordonnanceur();
+
+    /* Récupération du contexte de la tâche ré-activée */
+    SP = Taches[courant].stack;
+    portRESTORE_Registers();
+    asm volatile("reti");
+}
+
 void ordonnanceur(){
-    PORTD ^= 0x02; // On fait clignoter une des led à chaque fois que l'ordonnanceur est appelé
+    PORTC ^= 0x01; // On fait clignoter une des led à chaque fois que l'ordonnanceur est appelé
     courant++;
     if (courant == NB_TASKS) courant = 0;
 }
@@ -61,23 +77,34 @@ void Led2(){
     }
 }
 
-ISR(TIMER1_COMPA_vect, ISR_NAKED){
-    /* Sauvegarde du contexte de la tâche interrompue */
-    portSAVE_Registers();
-    Taches[courant].stack = SP;
+void SerialWrite(){
+    //Serial_Transmit('A');
+    //Send_String(" Testing 123...");
+    Serial_Transmit('\r');  // Carriage return
 
-    /* Appel à l'ordonnanceur */
-    ordonnanceur();
+    //sprintf(mychar, "%04d", value);
+    //Send_String(" MyValue:");
+    //Send_String(mychar);
+    //Serial_Transmit('\r');
 
-    /* Récupération du contexte de la tâche ré-activée */
-    SP = Taches[courant].stack;
-    portRESTORE_Registers();
-    asm volatile("reti");
+
+    //Serial_Transmit(value);  // Sends ASCII equivalent of 123
+
+
+    while (1)  // Loop to get serial data and send it to PORTB
+    {
+        Send_String(" LOULOUTOINE ");
+        Serial_Transmit('\r');
+        Serial_Transmit('\n');
+        //PORTB = Serial_Receive();
+    }
 }
 
 int main(void){
-    DDRD |= 0x92; //Déclaration de PD1, PD4 et PD7 en sortie
+    DDRD |= 0x92;
+    DDRC |= 0x01;//Déclaration de PD1, PD4 et PD7 en sortie
     init_minuteur(256, PERIODE);
+    Serial_Init(MYUBRR);
     for(int i = 1; i < NB_TASKS; i++) init_task(i);
     sei();
     SP = Taches[courant].stack;
