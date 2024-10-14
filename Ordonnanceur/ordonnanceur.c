@@ -2,11 +2,15 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include "ordonnanceur.h"
-#include "serial.h"
+#include "pico_serial.h"
+#include "pico_SPI.h"
 
 #define NB_TASKS    3
+#define S7SPIN 0
 
 int courant = 0;
+
+unsigned char serial_buffer;
 
 task Taches[NB_TASKS] = {
   {Led2, 0x0700},
@@ -63,10 +67,12 @@ void ordonnanceur(){
     if (courant == NB_TASKS) courant = 0;
 }
 
+//Ci dessous les diffirentes taches
+
 void Led1(){
     while(1){
         PORTD ^= 0x80;
-        _delay_ms(300);
+        _delay_ms(333);
     }
 }
 
@@ -78,33 +84,31 @@ void Led2(){
 }
 
 void SerialWrite(){
-    //Serial_Transmit('A');
-    //Send_String(" Testing 123...");
-    Serial_Transmit('\r');  // Carriage return
+    while (1){
+        //Send_String("LOULOUTOINE"); //Test
+        Serial_Transmit('\r\n');
+        Serial_Transmit(serial_buffer);
+    }
+}
 
-    //sprintf(mychar, "%04d", value);
-    //Send_String(" MyValue:");
-    //Send_String(mychar);
-    //Serial_Transmit('\r');
+void SerialRead(){
+    while(1){
+        serial_buffer = Serial_Receive();
+    }
+}
 
-
-    //Serial_Transmit(value);  // Sends ASCII equivalent of 123
-
-
-    while (1)  // Loop to get serial data and send it to PORTB
-    {
-        Send_String(" LOULOUTOINE ");
-        Serial_Transmit('\r');
-        Serial_Transmit('\n');
-        //PORTB = Serial_Receive();
+void s7s(){
+    while(1){
+        PORTD ^= 0x10; //Mettre CE du port s7s low
+        
     }
 }
 
 int main(void){
-    DDRD |= 0x92;
-    DDRC |= 0x01;//Déclaration de PD1, PD4 et PD7 en sortie
+    DDRD |= 0x92; //Déclaration de PD1, PD4 et PD7 en sortie
+    DDRC |= 0x01;
     init_minuteur(256, PERIODE);
-    Serial_Init(MYUBRR);
+    Serial_Init(MYUBRR); // Initialisation de la communication serie
     for(int i = 1; i < NB_TASKS; i++) init_task(i);
     sei();
     SP = Taches[courant].stack;
