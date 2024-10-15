@@ -24,7 +24,7 @@
 */
 #include <SPI.h>
 
-const int csPin = A0; //The CS pin of J1 is A0
+const int csPin = 7; //The CS pin of J1 is A0
 
 char tempString[10];
 
@@ -44,7 +44,8 @@ void setup()
 
 void loop()
 {
-  
+  delay(1000);
+  s7sSendStringSPI("1234");
 }
 
 // This custom function works somewhat like a serial.print.
