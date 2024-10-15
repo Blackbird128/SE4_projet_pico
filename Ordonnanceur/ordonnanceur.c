@@ -5,8 +5,7 @@
 #include "pico_serial.h"
 #include "pico_SPI.h"
 
-#define NB_TASKS    3
-#define S7SPIN 0
+#define NB_TASKS 5
 
 int courant = 0;
 
@@ -15,7 +14,9 @@ unsigned char serial_buffer;
 task Taches[NB_TASKS] = {
   {Led2, 0x0700},
   {Led1, 0x0600},
-  {SerialWrite, 0x0500}
+  {SerialRead, 0x0300},
+  {SerialWrite, 0x0400},
+  {s7s, 0x0500}
 };
 
 void init_minuteur(int diviseur,long periode){
@@ -86,7 +87,7 @@ void Led2(){
 void SerialWrite(){
     while (1){
         //Send_String("LOULOUTOINE"); //Test
-        Serial_Transmit('\r\n');
+        Serial_Transmit('\r');
         Serial_Transmit(serial_buffer);
     }
 }
@@ -99,7 +100,18 @@ void SerialRead(){
 
 void s7s(){
     while(1){
-        PORTD ^= 0x10; //Mettre CE du port s7s low
+
+        //drive slave select low
+        PORTC &= ~(1 << CS);
+
+        // transmit byte to slave (and ignore response)
+        SPI_masterTransmit(0x76);
+        SPI_masterTransmit(0x77);
+        SPI_masterTransmit(0x04);
+
+        // return slave select to high
+        PORTC |= (1 << CS);
+        _delay_ms(500);
         
     }
 }
@@ -109,6 +121,7 @@ int main(void){
     DDRC |= 0x01;
     init_minuteur(256, PERIODE);
     Serial_Init(MYUBRR); // Initialisation de la communication serie
+    SPI_init();
     for(int i = 1; i < NB_TASKS; i++) init_task(i);
     sei();
     SP = Taches[courant].stack;

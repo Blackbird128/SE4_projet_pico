@@ -2,22 +2,23 @@
 #include <string.h>
 #include <stdio.h>
 
-#define SPI_DDR DDRB
-#define CS      PINB2
-#define MOSI    PINB3
-#define MISO    PINB4
-#define SCK     PINB5
+#define CS      PC3  // Pin A3 (J2)
+#define MOSI    PB3  // Pin 11 (MOSI)
+#define MISO    PB4  // Pin 12 (MISO)
+#define SCK     PB5  // Pin 13 (SCK)
 
 void SPI_init()
 {
     // set CS, MOSI and SCK to output
-    SPI_DDR |= (1 << CS) | (1 << MOSI) | (1 << SCK);
+    DDRB |= (1 << MOSI) | (1 << SCK);
+    DDRC |= (1 << CS);//J2
 
     // enable SPI, set as master, and clock to fosc/128
-    SPCR = (1 << SPE) | (1 << MSTR) | (1 << SPR1) | (1 << SPR0);
+    //SPCR = (1 << SPE) | (1 << MSTR) | (1 << SPR1) | (1 << SPR0);
+    SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0);
 }
 
-void SPI_masterTransmitByte(uint8_t data)
+void SPI_masterTransmit(uint8_t data)
 {
     // load data into register
     SPDR = data;
@@ -49,15 +50,3 @@ uint8_t SPI_masterTxRx(uint8_t data)
     // return Data Register
     return SPDR;
 }
-
- // drive slave select low
-    //SPI_DDR &= ~(1 << SS);
-
-    // transmit byte to slave (and ignore response)
-    //SPI_masterTransmit(0x55);
-
-    // receive byte from slave
-    //uint8_t ret = SPI_masterTxRx(0xFF);
-
-    // return slave select to high
-    //SPI_DDR |= (1 << SS);

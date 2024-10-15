@@ -100,5 +100,6 @@ void SerialRead();
 void SerialWrite();
 void init_task(int t);
 void ordonnanceur(void);
+void s7s();
 
 #endif
