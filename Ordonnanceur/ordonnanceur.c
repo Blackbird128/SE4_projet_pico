@@ -4,6 +4,7 @@
 #include "ordonnanceur.h"
 #include "pico_serial.h"
 #include "pico_SPI.h"
+#include "pico_s7s.h"
 
 #define NB_TASKS 5
 
@@ -63,16 +64,16 @@ ISR(TIMER1_COMPA_vect, ISR_NAKED){
 }
 
 void ordonnanceur(){
-    PORTC ^= 0x01; // On fait clignoter une des led à chaque fois que l'ordonnanceur est appelé
+    PORTC ^= 0x01; // On fait clignoter une des led (J1) à chaque fois que l'ordonnanceur est appelé
     courant++;
     if (courant == NB_TASKS) courant = 0;
 }
 
-//Ci dessous les diffirentes taches
+//Ci dessous les differentes taches
 
 void Led1(){
     while(1){
-        PORTD ^= 0x80;
+        PORTC ^= 0x08;
         _delay_ms(333);
     }
 }
@@ -99,30 +100,34 @@ void SerialRead(){
 }
 
 void s7s(){
+    int i = 0;
     while(1){
-
-        //drive slave select low
-        PORTC &= ~(1 << CS);
-
-        // transmit byte to slave (and ignore response)
-        SPI_masterTransmit(0x76);
-        SPI_masterTransmit(0x77);
-        SPI_masterTransmit(0x04);
-
-        // return slave select to high
-        PORTC |= (1 << CS);
-        _delay_ms(500);
-        
+        clearDisplaySPI();
+        SPI_send(i);
+        SPI_send(i);
+        SPI_send(i);
+        SPI_send(i);
+        i++;
+        if (i > 15){
+            i = 0;
+        }
+        _delay_ms(50);
     }
 }
 
 int main(void){
-    DDRD |= 0x92; //Déclaration de PD1, PD4 et PD7 en sortie
-    DDRC |= 0x01;
+    DDRD |= 0x12; //Déclaration des sorties
+    DDRC |= 0x09;
     init_minuteur(256, PERIODE);
     Serial_Init(MYUBRR); // Initialisation de la communication serie
-    SPI_init();
-    for(int i = 1; i < NB_TASKS; i++) init_task(i);
+
+    SPI_init(); // Initialisation ISP 
+    S7S_init(); //Initialisation écran (sur port J6 )
+    clearDisplaySPI();
+
+    for(int i = 1; i < NB_TASKS; i++) {
+        init_task(i);
+    }
     sei();
     SP = Taches[courant].stack;
     Taches[courant].start();

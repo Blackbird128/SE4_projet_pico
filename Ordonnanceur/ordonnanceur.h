@@ -4,10 +4,10 @@
 // Déclarations et constantes
 #define INT_BAS 0
 #define INT_CHANGE  1
-#define INT_DESCENTE    2
+#define INT_DESCENTE  2
 #define INT_MONTEE  3
 
-#define CTC1    WGM12   // Meilleur nom pour le bit
+#define CTC1  WGM12   // Meilleur nom pour le bit
 #define PERIODE 20
 
 typedef struct task{
