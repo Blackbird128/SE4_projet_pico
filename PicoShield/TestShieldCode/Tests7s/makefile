@@ -10,7 +10,7 @@ export LDFLAGS = -g $(TARGET_ARCH) -lm -Wl,--gc-sections #	-Os
 TARGET = test_s7s
 #TERM = /dev/ttyUSB0
 TERM = /dev/ttyACM0
-TERM_MAC = /dev/cu.usbmodem21301
+TERM_MAC = /dev/cu.usbmodem101
 CPPFLAGS = -mmcu=$(MCU)
 PGMER = -c stk500v1 -b 115200 -P $(TERM)
 PGMERISP = -c stk500v1 -b 115200 -P $(TERM)
