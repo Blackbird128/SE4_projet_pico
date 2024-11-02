@@ -2561,12 +2561,6 @@
 		(uuid "432d6f9c-2eed-4fe0-9e4b-24c1dc47edc0")
 	)
 	(junction
-		(at 160.02 50.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "53698330-9978-4929-bbc9-ceb12cc1317b")
-	)
-	(junction
 		(at 152.4 151.13)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2980,13 +2974,13 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 50.8) (xy 167.64 50.8)
+			(xy 157.48 50.8) (xy 157.48 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5140c1cb-03e4-47ce-84e9-9fa27b15875b")
+		(uuid "5062d23f-6d7e-4e7a-958b-e59a21d0452a")
 	)
 	(wire
 		(pts
@@ -3027,16 +3021,6 @@
 			(type default)
 		)
 		(uuid "5f85288a-fc6c-4df8-bf5b-4fc81c1991db")
-	)
-	(wire
-		(pts
-			(xy 149.86 50.8) (xy 160.02 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "613dde36-417f-4e46-b3e6-06afb206c15f")
 	)
 	(wire
 		(pts
@@ -3580,6 +3564,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 50.8) (xy 157.48 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6eac507-c78b-45ad-87ef-0f1b4676a60a")
+	)
+	(wire
+		(pts
 			(xy 153.67 125.73) (xy 156.21 125.73)
 		)
 		(stroke
@@ -3587,16 +3581,6 @@
 			(type default)
 		)
 		(uuid "f7f802ac-043a-4948-a7b8-225e450ebc0a")
-	)
-	(wire
-		(pts
-			(xy 160.02 49.53) (xy 160.02 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f80be47c-612d-4659-8c05-d1e42dc78261")
 	)
 	(wire
 		(pts
@@ -3940,28 +3924,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "RESET2"
-		(shape input)
-		(at 167.64 50.8 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "724b186a-3a27-4a35-9305-b18b074ea06f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 177.5798 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -4390,72 +4352,6 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 160.02 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "179475c9-27f8-412f-8914-55ff978c5122")
-		(property "Reference" "#PWR025"
-			(at 160.02 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 160.02 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.02 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 160.02 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5872a2ee-da57-424c-aad8-53672f3c555c")
-		)
-		(instances
-			(project "Arduino Uno SMD"
-				(path "/a569fb01-6252-4b3a-9dcb-3675b5ce6f3f"
-					(reference "#PWR025")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
 		(at 72.39 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4780,6 +4676,72 @@
 			(project "Arduino Uno SMD"
 				(path "/a569fb01-6252-4b3a-9dcb-3675b5ce6f3f"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 157.48 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2f237b99-f4b2-4ec4-8c01-6be6c7ea332d")
+		(property "Reference" "#PWR043"
+			(at 157.48 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 157.48 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 157.48 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9074fead-3eec-4671-9fa9-e48b10ee4eec")
+		)
+		(instances
+			(project "PicoMother"
+				(path "/a569fb01-6252-4b3a-9dcb-3675b5ce6f3f"
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -5774,76 +5736,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 160.02 45.72 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9b747bf1-d5c9-42d6-a0b9-362384713efb")
-		(property "Reference" "R8"
-			(at 162.56 44.4499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 162.56 46.9899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 158.242 45.72 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 160.02 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 160.02 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "36c62bb3-07a7-40de-ace9-a3982873a939")
-		)
-		(pin "1"
-			(uuid "335b4d0d-72b4-43b0-a9db-25463b6e1e27")
-		)
-		(instances
-			(project ""
-				(path "/a569fb01-6252-4b3a-9dcb-3675b5ce6f3f"
-					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 152.4 153.67 0)
 		(unit 1)
@@ -6455,6 +6347,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 156.21 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cbba8bcc-e477-4bda-8918-5f60f0ed9040")
+		(property "Reference" "R8"
+			(at 158.75 95.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 158.75 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 154.432 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 156.21 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 156.21 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "edaf3148-b347-42eb-a2c4-7198d9e9850d")
+		)
+		(pin "1"
+			(uuid "9ee61f57-eddb-4170-a3df-0c3eed95a2c5")
+		)
+		(instances
+			(project "PicoMother"
+				(path "/a569fb01-6252-4b3a-9dcb-3675b5ce6f3f"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 240.03 36.83 0)
 		(unit 1)
@@ -6516,6 +6478,72 @@
 			(project "PicoMother"
 				(path "/a569fb01-6252-4b3a-9dcb-3675b5ce6f3f"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 156.21 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e6a74fbf-01ac-4cce-96d5-a239de2e2581")
+		(property "Reference" "#PWR025"
+			(at 156.21 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 156.21 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 156.21 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 156.21 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f08efb75-327c-4c81-92c5-b6ff7976b038")
+		)
+		(instances
+			(project "PicoMother"
+				(path "/a569fb01-6252-4b3a-9dcb-3675b5ce6f3f"
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
