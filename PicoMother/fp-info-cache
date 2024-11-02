@@ -1,4 +1,4 @@
-23343076360126502
+1566397610945203
 Arduino Uno SMD
 CAP_EEHZA1E470P
 
@@ -1554,6 +1554,27 @@ SPST Button Switch
 4
 2
 Button_Switch_SMD
+SW_SPST_PTS647_Sx38
+C&K Components SPST SMD PTS647 Series 4.5mm Tact Switch, 3.8mm Height, see https://www.ckswitches.com/media/2567/pts647.pdf
+SPST Button Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_PTS647_Sx50
+C&K Components SPST SMD PTS647 Series 4.5mm Tact Switch, 5.0mm Height, see https://www.ckswitches.com/media/2567/pts647.pdf
+SPST Button Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_PTS647_Sx70
+C&K Components SPST SMD PTS647 Series 4.5mm Tact Switch, 7.0mm Height, see https://www.ckswitches.com/media/2567/pts647.pdf
+SPST Button Switch
+0
+4
+2
+Button_Switch_SMD
 SW_SPST_PTS810
 C&K Components, PTS 810 Series, Microminiature SMT Top Actuated, http://www.ckswitches.com/media/1476/pts810.pdf
 SPST Button Switch
@@ -2305,7 +2326,7 @@ tactile switch Omron B3F right angle through hole
 Button_Switch_THT
 SW_Slide-03_Wuerth-WS-SLTV_10x2.5x6.4_P2.54mm
 Wuerth, WS-SLTV, 450301014042, https://www.we-online.com/components/products/datasheet/450301014042.pdf
-switch single-pole double-throw SPDT würth wurth
+switch single-pole opposite-side-connection double-throw SPDT würth wurth
 0
 3
 3
@@ -2379,6 +2400,27 @@ SW PUSH SMALL Tactile C&K
 0
 4
 2
+Button_Switch_THT
+SW_XKB_DM1-16UC-1
+1A 30V SPDT Micro Switch rated for one million cycles, W12.7xD5.7xH6.6, https://www.helloxkb.com/public/images/pdf/DMX-XXXC-X.pdf
+SPDT endstop limit switch clockwise hook lever XKB DM1-16UC-1
+0
+3
+3
+Button_Switch_THT
+SW_XKB_DM1-16UD-1
+1A 30V SPDT Micro Switch rated for one million cycles, W12.7xD5.7xH6.6, https://www.helloxkb.com/public/images/pdf/DMX-XXXD-X.pdf
+SPDT endstop limit switch anti-clockwise hook lever XKB DM1-16UD-1
+0
+3
+3
+Button_Switch_THT
+SW_XKB_DM1-16UP-1
+1A 30V SPDT Micro Switch rated for one million cycles, W12.7xD5.7xH6.6, https://www.helloxkb.com/public/images/pdf/DMX-XXXP-X.pdf
+SPDT endstop limit switch vertical hook lever XKB DM1-16UP-1
+0
+3
+3
 Buzzer_Beeper
 Buzzer_12x9.5RM7.6
 Generic Buzzer, D12mm height 9.5mm with RM7.6mm
@@ -8316,6 +8358,13 @@ Combo Connector microSD and microSIM
 25
 18
 Connector_Card
+SD_Card_Device_16mm_SlotDepth
+SD card device PCB layout, contacts and mechanicalm, 16mm slot depth. Manufacture with PCB thickness of 1.4mm, http://www.convict.lu/pdf/ProdManualSDCardv1.9.pdf
+SD Card
+0
+9
+9
+Connector_Card
 SD_Hirose_DM1AA_SF_PEJ82
 SD, SMD, top-mount, push-push (https://www.hirose.com/product/document?clcode=CL0609-0004-8-82&productname=DM1AA-SF-PEJ(82)&series=DM1&documenttype=2DDrawing&lang=en&documentid=0000915301)
 SD card connector
@@ -8568,6 +8617,13 @@ SMA THT Female Jack Vertical Bulkhead
 5
 2
 Connector_Coaxial
+SMA_BAT_Wireless_BWSMA-KWE-Z001
+BAT Wireless BWSMA-KWE-Z00 https://www.lcsc.com/datasheet/lcsc_datasheet_2310171703_BAT-WIRELESS-BWSMA-KWE-Z001_C496551.pdf
+SMA THT Female Jack Horizontal
+0
+5
+2
+Connector_Coaxial
 SMA_Molex_73251-1153_EdgeMount_Horizontal
 Molex SMA RF Connectors, Edge Mount, (http://www.molex.com/pdm_docs/sd/732511150_sd.pdf)
 sma edge
@@ -8589,7 +8645,7 @@ SMA THT Female Jack Horizontal
 5
 2
 Connector_Coaxial
-SMA_Samtec_SMA-J-P-X-ST-EM1_EdgeMount
+SMA_Samtec_SMA-J-P-H-ST-EM1_EdgeMount
 Connector SMA, 0Hz to 20GHz, 50Ohm, Edge Mount (http://suddendocs.samtec.com/prints/sma-j-p-x-st-em1-mkt.pdf)
 SMA Straight Samtec Edge Mount
 0
@@ -11423,55 +11479,6 @@ Wuerth FPC 68611214422 connector 12 bottom-side contacts 1.0mm pitch 1.0mm heigh
 0
 14
 13
-Connector_HDMI
-HDMI_A_Amphenol_10029449-x01xLF_Horizontal
-HDMI Type A connector, Amphenol 10029449-001TLF 10029449-001RLF 10029449-101TLF 10029449-101RLF, Right Angle(https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10029449.pdf)
-hdmi right angle
-0
-23
-20
-Connector_HDMI
-HDMI_A_Contact_Technology_HDMI-19APL2_Horizontal
-HDMI Contact Technology Type A http://www.contactswitch.com/en/download.aspx?id=1449
-HDMI Contact Technology Type A
-0
-23
-20
-Connector_HDMI
-HDMI_A_Kycon_KDMIX-SL1-NS-WS-B15_VerticalRightAngle
-HDMI, Type A, Kycon KDMIX-SL1-NS-WS-B15, Vertical Right Angle, http://www.kycon.com/Pub_Eng_Draw/KDMIX-SL1-NS-WS-B15.pdf
-hdmi type a
-0
-23
-20
-Connector_HDMI
-HDMI_A_Molex_208658-1001_Horizontal
-HDMI Molex Type A https://www.molex.com/pdm_docs/sd/2086581001_sd.pdf
-HDMI Molex Type A
-0
-23
-20
-Connector_HDMI
-HDMI_Micro-D_Molex_46765-0x01
-HDMI, Micro, Type D, SMD, 0.4mm pitch, 19 ckt, right angle (http://www.molex.com/pdm_docs/sd/467651301_sd.pdf)
-hdmi micro type d right angle smd
-0
-23
-20
-Connector_HDMI
-HDMI_Micro-D_Molex_46765-1x01
-HDMI, Micro, Type D, THT, 0.4mm pitch, 19 ckt, right angle (http://www.molex.com/pdm_docs/sd/467651301_sd.pdf)
-hdmi micro type d right angle tht
-0
-23
-20
-Connector_HDMI
-HDMI_Micro-D_Molex_46765-2x0x
-HDMI, Micro, Type D, THT/SMD hybrid, 0.4mm pitch, 19 ckt, right angle (http://www.molex.com/pdm_docs/sd/467651301_sd.pdf)
-hdmi micro type d right angle tht smd hybrid 
-0
-23
-20
 Connector_Harting
 Harting_har-flexicon_14110213001xxx_1x02-MP_P2.54mm_Vertical
 Harting har-flexicon series connector, 14110213001xxx (https://b2b.harting.com/files/download/PRD/PDF_TS/1411XX13001XXX_100228421DRW046C.pdf), generated with kicad-footprint-generator
@@ -18311,6 +18318,251 @@ connector JST ZE horizontal
 0
 18
 17
+Connector_JST
+JST_ZH_B2B-ZR-SM4-TF_1x02-1MP_P1.50mm_Vertical
+JST ZH series connector, B2B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+4
+3
+Connector_JST
+JST_ZH_B2B-ZR_1x02_P1.50mm_Vertical
+JST ZH series connector, B2B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+2
+2
+Connector_JST
+JST_ZH_B3B-ZR-SM4-TF_1x03-1MP_P1.50mm_Vertical
+JST ZH series connector, B3B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+5
+4
+Connector_JST
+JST_ZH_B3B-ZR_1x03_P1.50mm_Vertical
+JST ZH series connector, B3B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+3
+3
+Connector_JST
+JST_ZH_B4B-ZR-SM4-TF_1x04-1MP_P1.50mm_Vertical
+JST ZH series connector, B4B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+6
+5
+Connector_JST
+JST_ZH_B4B-ZR_1x04_P1.50mm_Vertical
+JST ZH series connector, B4B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+4
+4
+Connector_JST
+JST_ZH_B5B-ZR-SM4-TF_1x05-1MP_P1.50mm_Vertical
+JST ZH series connector, B5B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+7
+6
+Connector_JST
+JST_ZH_B5B-ZR_1x05_P1.50mm_Vertical
+JST ZH series connector, B5B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+5
+5
+Connector_JST
+JST_ZH_B6B-ZR-SM4-TF_1x06-1MP_P1.50mm_Vertical
+JST ZH series connector, B6B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+8
+7
+Connector_JST
+JST_ZH_B6B-ZR_1x06_P1.50mm_Vertical
+JST ZH series connector, B6B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+6
+6
+Connector_JST
+JST_ZH_B7B-ZR-SM4-TF_1x07-1MP_P1.50mm_Vertical
+JST ZH series connector, B7B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+9
+8
+Connector_JST
+JST_ZH_B7B-ZR_1x07_P1.50mm_Vertical
+JST ZH series connector, B7B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+7
+7
+Connector_JST
+JST_ZH_B8B-ZR-SM4-TF_1x08-1MP_P1.50mm_Vertical
+JST ZH series connector, B8B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+10
+9
+Connector_JST
+JST_ZH_B8B-ZR_1x08_P1.50mm_Vertical
+JST ZH series connector, B8B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+8
+8
+Connector_JST
+JST_ZH_B9B-ZR-SM4-TF_1x09-1MP_P1.50mm_Vertical
+JST ZH series connector, B9B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+11
+10
+Connector_JST
+JST_ZH_B9B-ZR_1x09_P1.50mm_Vertical
+JST ZH series connector, B9B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+9
+9
+Connector_JST
+JST_ZH_B10B-ZR-SM4-TF_1x10-1MP_P1.50mm_Vertical
+JST ZH series connector, B10B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+12
+11
+Connector_JST
+JST_ZH_B10B-ZR_1x10_P1.50mm_Vertical
+JST ZH series connector, B10B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+10
+10
+Connector_JST
+JST_ZH_B11B-ZR-SM4-TF_1x11-1MP_P1.50mm_Vertical
+JST ZH series connector, B11B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+13
+12
+Connector_JST
+JST_ZH_B11B-ZR_1x11_P1.50mm_Vertical
+JST ZH series connector, B11B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+11
+11
+Connector_JST
+JST_ZH_B12B-ZR-SM4-TF_1x12-1MP_P1.50mm_Vertical
+JST ZH series connector, B12B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+14
+13
+Connector_JST
+JST_ZH_B12B-ZR_1x12_P1.50mm_Vertical
+JST ZH series connector, B12B-ZR (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+12
+12
+Connector_JST
+JST_ZH_B13B-ZR-SM4-TF_1x13-1MP_P1.50mm_Vertical
+JST ZH series connector, B13B-ZR-SM4-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH vertical
+0
+15
+14
+Connector_JST
+JST_ZH_S2B-ZR-SM4A-TF_1x02-1MP_P1.50mm_Horizontal
+JST ZH series connector, S2B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+4
+3
+Connector_JST
+JST_ZH_S3B-ZR-SM4A-TF_1x03-1MP_P1.50mm_Horizontal
+JST ZH series connector, S3B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+5
+4
+Connector_JST
+JST_ZH_S4B-ZR-SM4A-TF_1x04-1MP_P1.50mm_Horizontal
+JST ZH series connector, S4B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+6
+5
+Connector_JST
+JST_ZH_S5B-ZR-SM4A-TF_1x05-1MP_P1.50mm_Horizontal
+JST ZH series connector, S5B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+7
+6
+Connector_JST
+JST_ZH_S6B-ZR-SM4A-TF_1x06-1MP_P1.50mm_Horizontal
+JST ZH series connector, S6B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+8
+7
+Connector_JST
+JST_ZH_S7B-ZR-SM4A-TF_1x07-1MP_P1.50mm_Horizontal
+JST ZH series connector, S7B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+9
+8
+Connector_JST
+JST_ZH_S8B-ZR-SM4A-TF_1x08-1MP_P1.50mm_Horizontal
+JST ZH series connector, S8B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+10
+9
+Connector_JST
+JST_ZH_S9B-ZR-SM4A-TF_1x09-1MP_P1.50mm_Horizontal
+JST ZH series connector, S9B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+11
+10
+Connector_JST
+JST_ZH_S10B-ZR-SM4A-TF_1x10-1MP_P1.50mm_Horizontal
+JST ZH series connector, S10B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+12
+11
+Connector_JST
+JST_ZH_S11B-ZR-SM4A-TF_1x11-1MP_P1.50mm_Horizontal
+JST ZH series connector, S11B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+13
+12
+Connector_JST
+JST_ZH_S12B-ZR-SM4A-TF_1x12-1MP_P1.50mm_Horizontal
+JST ZH series connector, S12B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+14
+13
+Connector_JST
+JST_ZH_S13B-ZR-SM4A-TF_1x13-1MP_P1.50mm_Horizontal
+JST ZH series connector, S13B-ZR-SM4A-TF (http://www.jst-mfg.com/product/pdf/eng/eZH.pdf), generated with kicad-footprint-generator
+connector JST ZH horizontal
+0
+15
+14
 Connector_Molex
 Molex_CLIK-Mate_502382-0270_1x02-1MP_P1.25mm_Vertical
 Molex CLIK-Mate series connector, 502382-0270 (http://www.molex.com/pdm_docs/sd/5023820270_sd.pdf), generated with kicad-footprint-generator
@@ -22029,6 +22281,55 @@ connector Molex Pico-EZmate_Slim side entry
 4
 3
 Connector_Molex
+Molex_Pico-Lock_205338-0002_1x02-1MP_P2.00mm_Horizontal
+Molex Pico-Lock series connector, 205338-0002 (https://www.molex.com/pdm_docs/sd/2053380002_sd.pdf), generated with kicad-footprint-generator
+connector Molex Pico-Lock horizontal
+0
+4
+3
+Connector_Molex
+Molex_Pico-Lock_205338-0004_1x04-1MP_P2.00mm_Horizontal
+Molex Pico-Lock series connector, 205338-0004 (https://www.molex.com/pdm_docs/sd/2053380002_sd.pdf), generated with kicad-footprint-generator
+connector Molex Pico-Lock horizontal
+0
+6
+5
+Connector_Molex
+Molex_Pico-Lock_205338-0006_1x06-1MP_P2.00mm_Horizontal
+Molex Pico-Lock series connector, 205338-0006 (https://www.molex.com/pdm_docs/sd/2053380002_sd.pdf), generated with kicad-footprint-generator
+connector Molex Pico-Lock horizontal
+0
+8
+7
+Connector_Molex
+Molex_Pico-Lock_205338-0008_1x08-1MP_P2.00mm_Horizontal
+Molex Pico-Lock series connector, 205338-0008 (https://www.molex.com/pdm_docs/sd/2053380002_sd.pdf), generated with kicad-footprint-generator
+connector Molex Pico-Lock horizontal
+0
+10
+9
+Connector_Molex
+Molex_Pico-Lock_205338-0010_1x10-1MP_P2.00mm_Horizontal
+Molex Pico-Lock series connector, 205338-0010 (https://www.molex.com/pdm_docs/sd/2053380002_sd.pdf), generated with kicad-footprint-generator
+connector Molex Pico-Lock horizontal
+0
+12
+11
+Connector_Molex
+Molex_Pico-Lock_504050-0291_1x02-1MP_P1.50mm_Horizontal
+Molex Pico-Lock series connector, 504050-0291 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
+connector Molex Pico-Lock horizontal
+0
+4
+3
+Connector_Molex
+Molex_Pico-Lock_504050-0391_1x03-1MP_P1.50mm_Horizontal
+Molex Pico-Lock series connector, 504050-0391 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
+connector Molex Pico-Lock horizontal
+0
+5
+4
+Connector_Molex
 Molex_Pico-Lock_504050-0491_1x04-1MP_P1.50mm_Horizontal
 Molex Pico-Lock series connector, 504050-0491 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
 connector Molex Pico-Lock horizontal
@@ -22064,12 +22365,26 @@ connector Molex Pico-Lock horizontal
 10
 9
 Connector_Molex
+Molex_Pico-Lock_504050-0991_1x09-1MP_P1.50mm_Horizontal
+Molex Pico-Lock series connector, 504050-0991 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
+connector Molex Pico-Lock horizontal
+0
+11
+10
+Connector_Molex
 Molex_Pico-Lock_504050-1091_1x10-1MP_P1.50mm_Horizontal
 Molex Pico-Lock series connector, 504050-1091 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
 connector Molex Pico-Lock horizontal
 0
 12
 11
+Connector_Molex
+Molex_Pico-Lock_504050-1191_1x11-1MP_P1.50mm_Horizontal
+Molex Pico-Lock series connector, 504050-1191 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
+connector Molex Pico-Lock horizontal
+0
+13
+12
 Connector_Molex
 Molex_Pico-Lock_504050-1291_1x12-1MP_P1.50mm_Horizontal
 Molex Pico-Lock series connector, 504050-1291 (http://www.molex.com/pdm_docs/sd/5040500891_sd.pdf), generated with kicad-footprint-generator
@@ -49028,6 +49343,13 @@ USB C Type-C Receptacle SMD
 20
 17
 Connector_USB
+USB_C_Receptacle_G-Switch_GT-USB-7025
+USB Type C, right-angle, SMT, https://www.lcsc.com/datasheet/lcsc_datasheet_2312191005_G-Switch-GT-USB-7025_C963213.pdf
+USB C Type-C Receptacle SMD
+0
+22
+18
+Connector_USB
 USB_C_Receptacle_G-Switch_GT-USB-7051x
 USB Type C, vertical, SMT, https://datasheet.lcsc.com/lcsc/2108072030_G-Switch-GT-USB-7051A_C2843970.pdf
 USB C Type-C Receptacle SMD GT-USB-7051A GT-USB-7051B
@@ -49097,6 +49419,13 @@ usb usb-c 2.0 pd
 0
 20
 17
+Connector_USB
+USB_C_Receptacle_HRO_TYPE-C-31-M-17
+USB Type-C receptacle for USB 2.0, 6 pin, https://omo-oss-file.thefastfile.com/portal-saas/new2023011311465142457/cms/file/134891b2-9b01-4104-89d3-96207243f692.pdf
+usb usb-c 2.0 pd
+0
+10
+7
 Connector_USB
 USB_C_Receptacle_JAE_DX07S016JA1R1500
 USB TYPE C, USB 2.0, SMT, https://www.jae.com/en/connectors/series/detail/product/id=91780
@@ -49175,8 +49504,15 @@ USB Micro-B horizontal SMD
 11
 6
 Connector_USB
+USB_Micro-B_Amphenol_10118194-0001LF_Horizontal
+USB Micro-B receptacle, horizontal, SMD, 10118194, 10118194-0001LF, 10118194-0002LF, 10118194-0101LF, 10118194-1001LF, https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf
+USB Micro B horizontal SMD
+0
+17
+6
+Connector_USB
 USB_Micro-B_Amphenol_10118194_Horizontal
-USB Micro-B receptacle, horizontal, SMD, 10118194, https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf
+USB Micro-B receptacle, horizontal, SMD, 10118194, 10118194-0011LF, 10118194-0012LF, https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/10118194.pdf
 USB Micro B horizontal SMD
 0
 17
@@ -51562,6 +51898,265 @@ MesurementPoint Square SMDPad 5mmx10mm
 1
 1
 Connector_Wuerth
+Wuerth_WR-PHD_613004216921_Large_2x02_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613004216921 (https://katalog.we-online.de/em/datasheet/613004216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613004216921
+0
+4
+4
+Connector_Wuerth
+Wuerth_WR-PHD_613006216921_Large_2x03_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613006216921 (https://katalog.we-online.de/em/datasheet/613006216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613006216921
+0
+6
+6
+Connector_Wuerth
+Wuerth_WR-PHD_613008216921_Large_2x04_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613008216921 (https://katalog.we-online.de/em/datasheet/613008216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613008216921
+0
+8
+8
+Connector_Wuerth
+Wuerth_WR-PHD_613010216921_Large_2x05_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613010216921 (https://katalog.we-online.de/em/datasheet/613010216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613010216921
+0
+10
+10
+Connector_Wuerth
+Wuerth_WR-PHD_613012216921_Large_2x06_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613012216921 (https://katalog.we-online.de/em/datasheet/613012216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613012216921
+0
+12
+12
+Connector_Wuerth
+Wuerth_WR-PHD_613016216921_Large_2x08_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613016216921 (https://katalog.we-online.de/em/datasheet/613016216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613016216921
+0
+16
+16
+Connector_Wuerth
+Wuerth_WR-PHD_613018216921_Large_2x09_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613018216921 (https://katalog.we-online.de/em/datasheet/613018216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613018216921
+0
+18
+18
+Connector_Wuerth
+Wuerth_WR-PHD_613020216921_Large_2x10_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613020216921 (https://katalog.we-online.de/em/datasheet/613020216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613020216921
+0
+20
+20
+Connector_Wuerth
+Wuerth_WR-PHD_613022216921_Large_2x11_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613022216921 (https://katalog.we-online.de/em/datasheet/613022216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613022216921
+0
+22
+22
+Connector_Wuerth
+Wuerth_WR-PHD_613024216921_Large_2x12_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613024216921 (https://katalog.we-online.de/em/datasheet/613024216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613024216921
+0
+24
+24
+Connector_Wuerth
+Wuerth_WR-PHD_613026216921_Large_2x13_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613026216921 (https://katalog.we-online.de/em/datasheet/613026216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613026216921
+0
+26
+26
+Connector_Wuerth
+Wuerth_WR-PHD_613032216921_Large_2x16_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613032216921 (https://katalog.we-online.de/em/datasheet/613032216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613032216921
+0
+32
+32
+Connector_Wuerth
+Wuerth_WR-PHD_613034216921_Large_2x17_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Large, Wuerth electronics 613034216921 (https://katalog.we-online.de/em/datasheet/613034216921.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 613034216921
+0
+34
+34
+Connector_Wuerth
+Wuerth_WR-PHD_610004243021_SMD_2x02_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610004243021 (https://katalog.we-online.de/em/datasheet/610004243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610004243021
+0
+4
+4
+Connector_Wuerth
+Wuerth_WR-PHD_610006243021_SMD_2x03_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610006243021 (https://katalog.we-online.de/em/datasheet/610006243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610006243021
+0
+6
+6
+Connector_Wuerth
+Wuerth_WR-PHD_610008243021_SMD_2x04_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610008243021 (https://katalog.we-online.de/em/datasheet/610008243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610008243021
+0
+8
+8
+Connector_Wuerth
+Wuerth_WR-PHD_610010243021_SMD_2x05_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610010243021 (https://katalog.we-online.de/em/datasheet/610010243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610010243021
+0
+10
+10
+Connector_Wuerth
+Wuerth_WR-PHD_610012243021_SMD_2x06_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610012243021 (https://katalog.we-online.de/em/datasheet/610012243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610012243021
+0
+12
+12
+Connector_Wuerth
+Wuerth_WR-PHD_610016243021_SMD_2x08_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610016243021 (https://katalog.we-online.de/em/datasheet/610016243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610016243021
+0
+16
+16
+Connector_Wuerth
+Wuerth_WR-PHD_610018243021_SMD_2x09_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610018243021 (https://katalog.we-online.de/em/datasheet/610018243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610018243021
+0
+18
+18
+Connector_Wuerth
+Wuerth_WR-PHD_610020243021_SMD_2x10_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610020243021 (https://katalog.we-online.de/em/datasheet/610020243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610020243021
+0
+20
+20
+Connector_Wuerth
+Wuerth_WR-PHD_610022243021_SMD_2x11_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610022243021 (https://katalog.we-online.de/em/datasheet/610022243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610022243021
+0
+22
+22
+Connector_Wuerth
+Wuerth_WR-PHD_610024243021_SMD_2x12_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610024243021 (https://katalog.we-online.de/em/datasheet/610024243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610024243021
+0
+24
+24
+Connector_Wuerth
+Wuerth_WR-PHD_610026243021_SMD_2x13_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610026243021 (https://katalog.we-online.de/em/datasheet/610026243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610026243021
+0
+26
+26
+Connector_Wuerth
+Wuerth_WR-PHD_610032243021_SMD_2x16_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610032243021 (https://katalog.we-online.de/em/datasheet/610032243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610032243021
+0
+32
+32
+Connector_Wuerth
+Wuerth_WR-PHD_610034243021_SMD_2x17_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry SMD, Wuerth electronics 610034243021 (https://katalog.we-online.de/em/datasheet/610034243021.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 610034243021
+0
+34
+34
+Connector_Wuerth
+Wuerth_WR-PHD_61300425721_Standard_2x02_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61300425721 (https://katalog.we-online.de/em/datasheet/61300425721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61300425721
+0
+4
+4
+Connector_Wuerth
+Wuerth_WR-PHD_61300625721_Standard_2x03_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61300625721 (https://katalog.we-online.de/em/datasheet/61300625721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61300625721
+0
+6
+6
+Connector_Wuerth
+Wuerth_WR-PHD_61300825721_Standard_2x04_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61300825721 (https://katalog.we-online.de/em/datasheet/61300825721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61300825721
+0
+8
+8
+Connector_Wuerth
+Wuerth_WR-PHD_61301025721_Standard_2x05_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61301025721 (https://katalog.we-online.de/em/datasheet/61301025721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61301025721
+0
+10
+10
+Connector_Wuerth
+Wuerth_WR-PHD_61301225721_Standard_2x06_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61301225721 (https://katalog.we-online.de/em/datasheet/61301225721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61301225721
+0
+12
+12
+Connector_Wuerth
+Wuerth_WR-PHD_61301625721_Standard_2x08_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61301625721 (https://katalog.we-online.de/em/datasheet/61301625721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61301625721
+0
+16
+16
+Connector_Wuerth
+Wuerth_WR-PHD_61302025721_Standard_2x10_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61302025721 (https://katalog.we-online.de/em/datasheet/61302025721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61302025721
+0
+20
+20
+Connector_Wuerth
+Wuerth_WR-PHD_61302425721_Standard_2x12_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61302425721 (https://katalog.we-online.de/em/datasheet/61302425721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61302425721
+0
+24
+24
+Connector_Wuerth
+Wuerth_WR-PHD_61302625721_Standard_2x13_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61302625721 (https://katalog.we-online.de/em/datasheet/61302625721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61302625721
+0
+26
+26
+Connector_Wuerth
+Wuerth_WR-PHD_61303225721_Standard_2x16_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61303225721 (https://katalog.we-online.de/em/datasheet/61303225721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61303225721
+0
+32
+32
+Connector_Wuerth
+Wuerth_WR-PHD_61303425721_Standard_2x17_P2.54mm_Vertical
+Connector Wuerth, WR-PHD 2.54mm Dual Socket Header Bottom Entry Standard, Wuerth electronics 61303425721 (https://katalog.we-online.de/em/datasheet/61303425721.pdf), generated with kicad-footprint-generator
+Connector Wuerth WR-PHD 2.54mm 61303425721
+0
+34
+34
+Connector_Wuerth
 Wuerth_WR-WTB_64800211622_1x02_P1.50mm_Vertical
 Wuerth WR-WTB series connector, 64800211622 (https://katalog.we-online.com/em/datasheet/6480xx11622.pdf), generated with kicad-footprint-generator
 connector Wuerth WR-WTB vertical
@@ -51796,6 +52391,13 @@ Converter_ACDC
 Converter_ACDC_Recom_RAC20-xxSK_THT
 Recom RAC20-xxSK https://recom-power.com/pdf/Powerline_AC-DC/RAC20-K.pdf#page=6 Rev. 6/2020
 Recom RAC20-xxSK
+0
+4
+4
+Converter_ACDC
+Converter_ACDC_TRACO_TMF_051xx_THT
+ACDC-Converter, TRACO, TMF 051xx, 5W, Rev. August 26. 2024 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tmf05.pdf)
+ACDC-Converter TRACO TMF05 THT 5W
 0
 4
 4
@@ -57708,6 +58310,13 @@ Inductor wirewound power shielded
 2
 2
 Inductor_SMD
+L_Changjiang_FXL1365
+Inductor, Changjiang, FXL1365, 12.9x12.6x6.5mm, https://www.lcsc.com/datasheet/lcsc_datasheet_2303201000_cjiang--Changjiang-Microelectronics-Tech-FXL1365-330-M_C5359277.pdf
+Inductor power shielded cjiang fxl
+0
+2
+2
+Inductor_SMD
 L_Chilisin_BMRA00040415
 Inductor, Chilisin, BMRA00040415, 4.6x4.1x1.5mm, https://www.chilisin.com/upload/media/product/power/file/BMRx_Series.pdf
 Inductor bmrx mchi
@@ -57893,6 +58502,146 @@ Inductor_SMD
 L_Coilcraft_LPS5030
 Shielded Power Inductor SMD, Coilcraft LPS5030, https://www.coilcraft.com/pdfs/lps5030.pdf, StepUp generated footprint
 inductor
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MOS6020-XXX
+Inductor, Coilcraft, MOS6020-XXX, 6.8x6.0x2.4mm, (https://www.coilcraft.com/getmedia/c3eb212d-a1a9-4db6-9f14-a01f21fd984c/mos6020.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1038-XXX
+Inductor, Coilcraft, MSS1038-XXX, 10.2x10.0x3.8mm, (https://www.coilcraft.com/getmedia/3e03a7b4-3b1d-4f31-b1f3-e7c621695ac0/mss1038.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1038T-XXX
+Inductor, Coilcraft, MSS1038T-XXX, 10.2x10.0x3.8mm, (https://www.coilcraft.com/getmedia/ea4800a7-100e-49d9-9bbc-6ba8b238dc0d/mss1038t.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1048-XXX
+Inductor, Coilcraft, MSS1048-XXX, 10.2x10.0x4.8mm, (https://www.coilcraft.com/getmedia/bd5140ec-db32-4346-a029-5182269dc08e/mss1048.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1048T-XXX
+Inductor, Coilcraft, MSS1048T-XXX, 10.2x10.0x4.8mm, (https://www.coilcraft.com/getmedia/bd5140ec-db32-4346-a029-5182269dc08e/mss1048t.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1210-XXX
+Inductor, Coilcraft, MSS1210-XXX, 12.0x12.0x10.0mm, (https://www.coilcraft.com/getmedia/f1a1bc5f-bdff-42f8-9ca8-1a0fb1d5094f/MSS1210.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1210H-XXX
+Inductor, Coilcraft, MSS1210H-XXX, 12.0x12.0x10.0mm, (https://www.coilcraft.com/getmedia/52078704-21eb-4c2b-9b72-1e07b4a2e252/mss1210h.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1246-XXX
+Inductor, Coilcraft, MSS1246-XXX, 12.0x12.0x4.6mm, (https://www.coilcraft.com/getmedia/960fadbe-0ca0-40e2-ae20-64edb15f3a07/mss1246.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1246H-XXX
+Inductor, Coilcraft, MSS1246H-XXX, 12.0x12.0x4.65mm, (https://www.coilcraft.com/getmedia/25f62276-187e-4c2c-9b9b-4568b9a9a423/mss1246h.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1246T-XXX
+Inductor, Coilcraft, MSS1246T-XXX, 12.0x12.0x4.6mm, (https://www.coilcraft.com/getmedia/dec41de3-f4b7-4c07-b144-cc21921ccfd5/mss1246t.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1260-XXX
+Inductor, Coilcraft, MSS1260-XXX, 12.0x12.0x6.0mm, (https://www.coilcraft.com/getmedia/febefb9b-60f9-4a2c-8525-9c396f34e363/mss1260.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1260H-XXX
+Inductor, Coilcraft, MSS1260H-XXX, 12.0x12.0x6.0mm, (https://www.coilcraft.com/getmedia/352767ff-7c30-4312-ab84-989443b4047e/mss1260h.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1260T-XXX
+Inductor, Coilcraft, MSS1260T-XXX, 12.0x12.0x6.0mm, (https://www.coilcraft.com/getmedia/ce88ed45-272e-474e-a25e-981003944639/mss1260t.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1278-XXX
+Inductor, Coilcraft, MSS1278-XXX, 12.0x12.0x7.8mm, (https://www.coilcraft.com/getmedia/6eb5ea38-40e4-41a6-9f92-3cdf8e907dcd/mss1278.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1278H-XXX
+Inductor, Coilcraft, MSS1278H-XXX, 12.0x12.0x7.8mm, (https://www.coilcraft.com/getmedia/72ffd561-3941-457d-b0e7-bb55b1b2d1a7/MSS1278H.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1278T-XXX
+Inductor, Coilcraft, MSS1278T-XXX, 12.0x12.0x7.8mm, (https://www.coilcraft.com/getmedia/e8d7b32a-defa-4500-bc0f-6ecc558fcde6/mss1278t.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1514V-XXX
+Inductor, Coilcraft, MSS1514V-XXX, 15.0x15.0x8.6mm, (https://www.coilcraft.com/getmedia/a1319e1c-d611-4bc0-be30-c17e52e4e667/mss1514v.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1583-XXX
+Inductor, Coilcraft, MSS1583-XXX, 15.0x15.0x8.6mm, (https://www.coilcraft.com/getmedia/fbfe8ea7-f5d8-4484-859e-2285f427326d/mss1583.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS1812T-XXX
+Inductor, Coilcraft, MSS1812T-XXX, 18.3x18.3x12.0mm, (https://www.coilcraft.com/getmedia/148807de-bc83-43dc-9fce-d4df334864cd/mss1812t.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
+0
+2
+2
+Inductor_SMD
+L_Coilcraft_MSS7348-XXX
+Inductor, Coilcraft, MSS7348-XXX, 7.0x7.0x4.5mm, (https://www.coilcraft.com/getmedia/018a2bda-2036-409a-8b19-945e531c18b5/MSS7348.pdf), generated with kicad-footprint-generator gen_inductor.py
+Inductor mss
 0
 2
 2
@@ -58178,91 +58927,91 @@ Inductor xal
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-102
-Inductor, Coilcraft, XAL7030-102, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-102, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-103
-Inductor, Coilcraft, XAL7030-103, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-103, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-152
-Inductor, Coilcraft, XAL7030-152, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-152, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-161
-Inductor, Coilcraft, XAL7030-161, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-161, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-222
-Inductor, Coilcraft, XAL7030-222, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-222, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-272
-Inductor, Coilcraft, XAL7030-272, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-272, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-301
-Inductor, Coilcraft, XAL7030-301, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-301, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-332
-Inductor, Coilcraft, XAL7030-332, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-332, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-472
-Inductor, Coilcraft, XAL7030-472, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-472, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-562
-Inductor, Coilcraft, XAL7030-562, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-562, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-601
-Inductor, Coilcraft, XAL7030-601, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-601, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-682
-Inductor, Coilcraft, XAL7030-682, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-682, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
 2
 Inductor_SMD
 L_Coilcraft_XAL7030-822
-Inductor, Coilcraft, XAL7030-822, 8.0x8.0x3.1mm, https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf
+Inductor, Coilcraft, XAL7030-822, 8.0x8.0x3.1mm, (https://www.coilcraft.com/getmedia/0d05a05e-d55d-4a0c-911d-46bd73686633/xal7030.pdf), generated with kicad-footprint-generator gen_inductor.py
 Inductor xal
 0
 2
@@ -62748,6 +63497,13 @@ LED Dialight 591
 2
 2
 LED_SMD
+LED_Inolux_IN-P55TATRGB_PLCC6_5.0x5.5mm_P1.8mm
+5.0x5.0mm PLCC-6 RGB LED, Inolux, https://www.inolux-corp.com/datasheet/SMDLED/RGB%20Top%20View/IN-P55TATRGB.pdf
+LED RGB
+0
+6
+6
+LED_SMD
 LED_Inolux_IN-PI554FCH_PLCC4_5.0x5.0mm_P3.2mm
 5.0mm x 5.0mm PLCC4 Addressable RGB LED, http://www.inolux-corp.com/datasheet/SMDLED/Addressable%20LED/IN-PI554FCH.pdf
 LED RGB NeoPixel addressable PLCC-4 5050
@@ -65079,6 +65835,20 @@ mounting hole 8.4mm m8
 9
 1
 Mounting_Wuerth
+Mounting_Wuerth_WA-SMRA-D3.3mm_L7mm_7466300R_Horizontal
+Right-angle SMD mounting hardware, inside through hole 3.3mm, lenght 7mm, total height 5mm, Würth electronics 7466300R (https://www.we-online.com/components/products/datasheet/7466300R.pdf)
+screw
+0
+4
+1
+Mounting_Wuerth
+Mounting_Wuerth_WA-SMRA-M3_L7mm_7466303R_Horizontal
+Right-angle SMD mounting Hardware, inside threaded M3, length 7m, total height 5mm, Würth electronics 7466303R (https://www.we-online.com/components/products/datasheet/7466303R.pdf)
+threaded screw
+0
+4
+1
+Mounting_Wuerth
 Mounting_Wuerth_WA-SMSE-ExternalM3_H5mm_9771050360
 Mounting Hardware, external M3, height 5, Wuerth electronics 9771050360 (https://katalog.we-online.com/em/datasheet/9771050360.pdf), generated with kicad-footprint-generator
 Mounting M3 9771050360
@@ -67003,6 +67773,13 @@ IR Receiver Vishay TSOP-xxxx MOLD
 0
 3
 3
+OptoDevice
+Vishay_TCRT5000
+IR Reflective Optical Sensor with Transistor Output TCRT5000 https://www.vishay.com/docs/83760/tcrt5000.pdf
+IR Reflective Optical Sensor with Transistor Output TCRT5000 Vishay Distance Sensor
+0
+4
+4
 Oscillator
 Oscillator_DIP-8
 Oscillator, DIP8,http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf
@@ -68327,6 +69104,20 @@ BGA 113 0.5
 113
 113
 Package_BGA
+Texas_PicoStar_BGA-4_0.758x0.758mm_Layout2x2_P0.4mm
+Texas Instruments PicoStar - 0.15 mm max height, 0.758x0.758mm, 4 Ball, 2x2 Layout, 0.4mm Pitch, https://www.ti.com/lit/ds/symlink/tmp114.pdf
+BGA 4 0.4 PicoStar
+0
+4
+4
+Package_BGA
+Texas_YFP0020_DSBGA-20_1.56x1.96mm_Layout4x5_P0.4mm
+Texas Instruments, YFP0020, DSBGA-20, area grid, 1.588x1.988mm, 20 Ball, 4x5 Layout, 0.4mm Pitch, https://www.ti.com/lit/ds/symlink/txs0206.pdf
+BGA 20 0.4
+0
+20
+20
+Package_BGA
 UCBGA-36_2.5x2.5mm_Layout6x6_P0.4mm
 UCBGA-36, 2.5x2.5mm, 36 Ball, 6x6 Layout, 0.4mm Pitch, https://www.latticesemi.com/view_document?document_id=213
 BGA 36 0.4
@@ -68824,6 +69615,13 @@ Analog LFCSP-UQ NoLead
 10
 10
 Package_CSP
+Dialog_WLCSP-34_4.54x1.66mm_Stagger
+Dialog Semiconductor (Renesas) WLCSP-34, staggered array, 4.54x1.66mm, 34 Ball, 17x4 Layout, 0.25x0.34mm Pitch, https://www.renesas.com/us/en/document/dst/da7212-datasheet
+CSP 34 0.25x0.34 34-ball
+0
+34
+34
+Package_CSP
 DiodesInc_GEA20_WLCSP-20_1.70x2.10mm_Layout4x5_P0.4mm
 Diodes Incorporated WLCSP-20, GEA20, 1.7x2.1mm, 20 Ball, 4x5 Layout, 0.4mm Pitch, https://www.diodes.com/assets/Package-Files/GEA20.pdf
 CSP 20 0.4
@@ -69174,6 +69972,20 @@ LFCSP NoLead
 75
 49
 Package_CSP
+LFCSP-56-1EP_8x8mm_P0.5mm_EP6.6x6.6mm
+LFCSP, 56 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/lfcspcp/cp-56/CP_56_9.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+LFCSP NoLead Analog-LFCSP_WQ-CP-56-9
+0
+66
+57
+Package_CSP
+LFCSP-56-1EP_8x8mm_P0.5mm_EP6.6x6.6mm_ThermalVias
+LFCSP, 56 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/lfcspcp/cp-56/CP_56_9.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+LFCSP NoLead Analog-LFCSP_WQ-CP-56-9
+0
+71
+57
+Package_CSP
 LFCSP-64-1EP_9x9mm_P0.5mm_EP5.21x5.21mm
 LFCSP, 64 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/lfcspcp/cp_64_7.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 LFCSP NoLead
@@ -69250,6 +70062,13 @@ LFCSP-WD NoLead
 0
 24
 11
+Package_CSP
+Macronix_WLCSP-12_2.02x2.09mm_P0.5mm
+WLCSP-12, 2.02x2.09mm, 12 Ball, 4x4 Layout, 0.5mm Pitch, https://www.macronix.com/Lists/Datasheet/Attachments/8909/MX25U3232F,%201.8V,%2032Mb,%20v1.2.pdf#page=93
+CSP 12 0.5
+0
+12
+12
 Package_CSP
 Maxim_WLCSP-35_3.0x2.17mm_Layout7x5_P0.4mm_Ball0.27mm_Pad0.25mm
 WLCSP-35, 2.998x2.168mm, 35 Ball, 7x5 Layout, 0.4mm Pitch, https://pdfserv.maximintegrated.com/package_dwgs/21-100489.PDF
@@ -70028,13 +70847,6 @@ DFN NoLead 506AQ
 13
 9
 Package_DFN_QFN
-DFN-8-1EP_2x2mm_P0.5mm_EP0.7x1.3mm
-DFN, 8 Pin (https://www.onsemi.com/pub/Collateral/NUF4401MN-D.PDF#page=6), generated with kicad-footprint-generator ipc_noLead_generator.py
-DFN NoLead
-0
-13
-9
-Package_DFN_QFN
 DFN-8-1EP_2x2mm_P0.5mm_EP0.8x1.6mm
 DFN, 8 Pin (https://www.qorvo.com/products/d/da007268), generated with kicad-footprint-generator ipc_noLead_generator.py
 DFN NoLead
@@ -70077,18 +70889,11 @@ DFN 0.45
 11
 9
 Package_DFN_QFN
-DFN-8-1EP_2x3mm_P0.5mm_EP0.56x2.15mm
-DFN, 8 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/2451fg.pdf#page=17), generated with kicad-footprint-generator ipc_noLead_generator.py
+DFN-8-1EP_2x3mm_P0.5mm_EP0.61x2.2mm
+DFN, 8 Pin (https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-dfn/05081702_c_ddb8.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 DFN NoLead
 0
 11
-9
-Package_DFN_QFN
-DFN-8-1EP_2x3mm_P0.5mm_EP0.61x2.2mm
-DDB Package; 8-Lead Plastic DFN (3mm x 2mm) (see Linear Technology DFN_8_05-08-1702.pdf)
-DFN 0.5
-0
-12
 9
 Package_DFN_QFN
 DFN-8-1EP_3x2mm_P0.5mm_EP1.3x1.5mm
@@ -70131,6 +70936,20 @@ DCB Package 8-Lead Plastic DFN (2mm x 3mm) (see Linear Technology DFN_8_05-08-17
 DFN 0.45
 0
 13
+9
+Package_DFN_QFN
+DFN-8-1EP_3x3mm_P0.5mm_EP1.7x2.4mm
+DFN, 8 Pin (https://stcmicro.com/datasheet/STC8G-en.pdf#page=81), generated with kicad-footprint-generator ipc_noLead_generator.py
+DFN NoLead STC8G1K08A-36I-DFN8
+0
+10
+9
+Package_DFN_QFN
+DFN-8-1EP_3x3mm_P0.5mm_EP1.7x2.4mm_ThermalVias
+DFN, 8 Pin (https://stcmicro.com/datasheet/STC8G-en.pdf#page=81), generated with kicad-footprint-generator ipc_noLead_generator.py
+DFN NoLead STC8G1K08A-36I-DFN8
+0
+20
 9
 Package_DFN_QFN
 DFN-8-1EP_3x3mm_P0.5mm_EP1.65x2.38mm
@@ -70336,13 +71155,6 @@ DFN NoLead
 24
 13
 Package_DFN_QFN
-DFN-12-1EP_3x3mm_P0.45mm_EP1.66x2.38mm
-DD Package; 12-Lead Plastic DFN (3mm x 3mm) (see Linear Technology DFN_12_05-08-1725.pdf)
-DFN 0.45
-0
-17
-13
-Package_DFN_QFN
 DFN-12-1EP_3x4mm_P0.5mm_EP1.7x3.3mm
 DE/UE Package; 12-Lead Plastic DFN (4mm x 3mm) (see Linear Technology DFN_12_05-08-1695.pdf)
 DFN 0.5
@@ -70387,13 +71199,6 @@ VDFN DFN 0.65mm
 Package_DFN_QFN
 DFN-14-1EP_3x4mm_P0.5mm_EP1.7x3.3mm
 DE Package; 14-Lead Plastic DFN (4mm x 3mm) (see Linear Technology DFN_14_05-08-1708.pdf)
-DFN 0.5
-0
-23
-15
-Package_DFN_QFN
-DFN-14-1EP_4x4mm_P0.5mm_EP2.86x3.6mm
-DFN14, 4x4, 0.5P; CASE 506CM (see ON Semiconductor 506CM.PDF)
 DFN 0.5
 0
 23
@@ -70531,6 +71336,13 @@ U-DFN2020-6 (Type F)
 0
 8
 8
+Package_DFN_QFN
+Diodes_ZL32_TQFN-32-1EP_3x6mm_P0.4mm_EP1.25x3.5mm
+Diodes ZL32 TQFN, 32 Pin (https://www.diodes.com/assets/Package-Files/ZL32.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+Diodes TQFN NoLead
+0
+41
+33
 Package_DFN_QFN
 HVQFN-16-1EP_3x3mm_P0.5mm_EP1.5x1.5mm
 HVQFN, 16 Pin (https://www.nxp.com/docs/en/package-information/SOT758-1.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
@@ -71519,6 +72331,13 @@ QFN NoLead
 43
 29
 Package_DFN_QFN
+QFN-28-1EP_4x4mm_P0.45mm_EP2.6x2.6mm
+QFN, 28 Pin (http://www.everest-semi.com/pdf/ES8388%20DS.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+33
+29
+Package_DFN_QFN
 QFN-28-1EP_4x5mm_P0.5mm_EP2.65x3.65mm
 QFN, 28 Pin (http://www.analog.com/media/en/technical-documentation/data-sheets/3555fe.pdf#page=32), generated with kicad-footprint-generator ipc_noLead_generator.py
 QFN NoLead
@@ -72095,6 +72914,20 @@ QFN NoLead
 Package_DFN_QFN
 QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm_ThermalVias
 QFN, 48 Pin (http://www.st.com/resource/en/datasheet/stm32f042k6.pdf#page=94), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+91
+49
+Package_DFN_QFN
+QFN-48-1EP_7x7mm_P0.5mm_EP5.7x5.7mm
+QFN, 48 Pin (http://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-qfn/QFN_48_05-08-1704.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+65
+49
+Package_DFN_QFN
+QFN-48-1EP_7x7mm_P0.5mm_EP5.7x5.7mm_ThermalVias
+QFN, 48 Pin (http://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/ltc-legacy-qfn/QFN_48_05-08-1704.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 QFN NoLead
 0
 91
@@ -72725,7 +73558,7 @@ TDFN NoLead
 Package_DFN_QFN
 TQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm
 TQFN, 16 Pin (https://www.diodes.com/assets/Datasheets/PI6C5946002.pdf#page=12), generated with kicad-footprint-generator ipc_noLead_generator.py
-TQFN NoLead
+TQFN NoLead Pericom-TQFN-16-ZH Analog-CP-16-22
 0
 21
 17
@@ -73297,12 +74130,26 @@ Texas VQFN NoLead
 24
 21
 Package_DFN_QFN
+Texas_RMG0012A_WQFN-12_1.8x1.8mm_P0.4mm
+Texas RMG0012A WQFN, 12 Pin (https://www.ti.com/lit/ds/symlink/tmux131.pdf#page=18), generated with kicad-footprint-generator ipc_noLead_generator.py
+Texas WQFN NoLead
+0
+12
+12
+Package_DFN_QFN
 Texas_RNN0018A
 Texas Instruments, VQFN-HR RNN0018A (http://www.ti.com/lit/ds/symlink/tps568215.pdf)
 ti vqfn-hr rnn0018a
 0
 26
 18
+Package_DFN_QFN
+Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm
+VQFN-HR, 10 Pin (https://www.ti.com/lit/ds/symlink/tps62912.pdf#page=39)
+VQFN-HR NO LEAD
+0
+10
+10
 Package_DFN_QFN
 Texas_RSA_VQFN-16-1EP_4x4mm_P0.65mm_EP2.7x2.7mm
 Texas RSA VQFN, 16 Pin (http://www.ti.com/lit/ds/symlink/msp430g2001.pdf#page=44), generated with kicad-footprint-generator ipc_noLead_generator.py
@@ -73331,6 +74178,20 @@ Texas WQFN NoLead
 0
 47
 33
+Package_DFN_QFN
+Texas_RTE0016D_WQFN-16-1EP_3x3mm_P0.5mm_EP0.8x0.8mm
+Texas RTE0016D WQFN, 16 Pin (https://www.ti.com/lit/ds/symlink/dac80504.pdf#page=47), generated with kicad-footprint-generator ipc_noLead_generator.py
+Texas WQFN NoLead
+0
+21
+17
+Package_DFN_QFN
+Texas_RTE0016D_WQFN-16-1EP_3x3mm_P0.5mm_EP0.8x0.8mm_ThermalVias
+Texas RTE0016D WQFN, 16 Pin (https://www.ti.com/lit/ds/symlink/dac80504.pdf#page=47), generated with kicad-footprint-generator ipc_noLead_generator.py
+Texas WQFN NoLead
+0
+20
+17
 Package_DFN_QFN
 Texas_RTE_WQFN-16-1EP_3x3mm_P0.5mm_EP1.2x0.8mm
 Texas RTE WQFN, 16 Pin (https://www.ti.com/lit/ds/symlink/tps43060.pdf#page=40), generated with kicad-footprint-generator ipc_noLead_generator.py
@@ -73394,6 +74255,20 @@ Texas WQFN NoLead
 0
 10
 10
+Package_DFN_QFN
+Texas_RVA_VQFN-16-1EP_3.5x3.5mm_P0.5mm_EP2.14x2.14mm
+Texas RVA VQFN, 16 Pin (https://www.ti.com/lit/pdf/MPQF232), generated with kicad-footprint-generator ipc_noLead_generator.py
+Texas VQFN NoLead
+0
+21
+17
+Package_DFN_QFN
+Texas_RVA_VQFN-16-1EP_3.5x3.5mm_P0.5mm_EP2.14x2.14mm_ThermalVias
+Texas RVA VQFN, 16 Pin (https://www.ti.com/lit/pdf/MPQF232), generated with kicad-footprint-generator ipc_noLead_generator.py
+Texas VQFN NoLead
+0
+26
+17
 Package_DFN_QFN
 Texas_RVE0028A_VQFN-28-1EP_3.5x4.5mm_P0.4mm_EP2.1x3.1mm
 Texas RVE0028A VQFN, 28 Pin (http://www.ti.com/lit/ds/symlink/tps51363.pdf#page=29), generated with kicad-footprint-generator ipc_noLead_generator.py
@@ -73534,13 +74409,6 @@ TI RNR0011A
 0
 20
 11
-Package_DFN_QFN
-Texas_VSON-HR-8_1.5x2mm_P0.5mm
-Texas  VSON-HR, 8 Pin (http://www.ti.com/lit/ds/symlink/tps62823.pdf#page=29), generated with kicad-footprint-generator ipc_noLead_generator.py
-Texas VSON-HR NoLead
-0
-8
-8
 Package_DFN_QFN
 Texas_WQFN-MR-100_3x3-DapStencil
 http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=szza059&fileType=pdf,http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=mpqf258&fileType=pdf,http://www.ti.com/general/docs/lit/getliterature.tsp?baseLiteratureNumber=LPPD235&fileType=pdf
@@ -74033,14 +74901,14 @@ VQFN NoLead
 49
 Package_DFN_QFN
 VQFN-64-1EP_9x9mm_P0.5mm_EP5.4x5.4mm
-VQFN, 64 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19195-6-7-Data-Sheet-40001873D.pdf#page=718), generated with kicad-footprint-generator ipc_noLead_generator.py
+VQFN, 64 Pin (https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19195-6-7-Data-Sheet-40001873D.pdf#page=718), generated with kicad-footprint-generator ipc_noLead_generator.py
 VQFN NoLead
 0
 74
 65
 Package_DFN_QFN
 VQFN-64-1EP_9x9mm_P0.5mm_EP5.4x5.4mm_ThermalVias
-VQFN, 64 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19195-6-7-Data-Sheet-40001873D.pdf#page=718), generated with kicad-footprint-generator ipc_noLead_generator.py
+VQFN, 64 Pin (https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19195-6-7-Data-Sheet-40001873D.pdf#page=718), generated with kicad-footprint-generator ipc_noLead_generator.py
 VQFN NoLead
 0
 100
@@ -74128,6 +74996,20 @@ WDFN, 8 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/8L_WDFN_5x6mm_MF_C0
 WDFN NoLead
 0
 13
+9
+Package_DFN_QFN
+WDFN-8-1EP_8x6mm_P1.27mm_EP6x4.8mm
+WDFN, 8 Pin (https://ww1.microchip.com/downloads/en/DeviceDoc/8L_WDFN_6x8mm_MN_C04172A.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+WDFN NoLead Microchip-8L-WDFN-6x8mm-MN-C04172A
+0
+21
+9
+Package_DFN_QFN
+WDFN-8-1EP_8x6mm_P1.27mm_EP6x4.8mm_ThermalVias
+WDFN, 8 Pin (https://ww1.microchip.com/downloads/en/DeviceDoc/8L_WDFN_6x8mm_MN_C04172A.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+WDFN NoLead Microchip-8L-WDFN-6x8mm-MN-C04172A
+0
+42
 9
 Package_DFN_QFN
 WDFN-8_2x2mm_P0.5mm
@@ -74237,14 +75119,14 @@ WQFN-20 4.5mm 2.5mm 0.5mm
 Package_DFN_QFN
 WQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm
 WQFN, 20 Pin (https://www.ti.com/lit/ds/symlink/ts3ds10224.pdf#page=29), generated with kicad-footprint-generator ipc_noLead_generator.py
-WQFN NoLead
+WQFN NoLead Texas_RUK0020B
 0
 25
 21
 Package_DFN_QFN
 WQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm_ThermalVias
 WQFN, 20 Pin (https://www.ti.com/lit/ds/symlink/ts3ds10224.pdf#page=29), generated with kicad-footprint-generator ipc_noLead_generator.py
-WQFN NoLead
+WQFN NoLead Texas_RUK0020B
 0
 30
 21
@@ -76734,7 +77616,7 @@ NXP LGA NoLead
 8
 8
 Package_LGA
-Rohm_MLGA010V020A_LGA-10_2x2mm_P0.45mm_LayoutBorder_3x2y
+Rohm_MLGA010V020A_LGA-10_2x2mm_P0.45mm_LayoutBorder2x3y
 Rohm  LGA, 10 Pin (https://fscdn.rohm.com/en/techdata_basic/ic/package/Jisso_MLGA010V020A-1-2_Rev005s_E2(MSL3).pdf)
 Rohm LGA NoLead
 0
@@ -77041,6 +77923,20 @@ LQFP QFP
 0
 128
 128
+Package_QFP
+LQFP-144-1EP_20x20mm_P0.5mm_EP6.5x6.5mm
+LQFP, 144 Pin (https://www.infineon.com/cms/en/product/packages/PG-LQFP/PG-LQFP-144-22), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP Infineon-PG-LQFP-144-24 Infineon-PG-LQFP-144-26
+0
+154
+145
+Package_QFP
+LQFP-144-1EP_20x20mm_P0.5mm_EP6.5x6.5mm_ThermalVias
+LQFP, 144 Pin (https://www.infineon.com/cms/en/product/packages/PG-LQFP/PG-LQFP-144-22), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP Infineon-PG-LQFP-144-24 Infineon-PG-LQFP-144-26
+0
+171
+145
 Package_QFP
 LQFP-144_20x20mm_P0.5mm
 LQFP, 144 Pin (http://ww1.microchip.com/downloads/en/PackagingSpec/00000049BQ.pdf#page=425), generated with kicad-footprint-generator ipc_gullwing_generator.py
@@ -77938,6 +78834,13 @@ HVSSOP SO
 20
 11
 Package_SO
+Infineon_PG-DSO-8-24_4x5mm
+Infineon  PG-DSO, 8 Pin (https://www.infineon.com/dgdl/Infineon-BSP752R-DS-v01_02-EN.pdf?fileId=db3a304316f112290116f233cbd271e9#page=17), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Infineon PG-DSO SO
+0
+8
+8
+Package_SO
 Infineon_PG-DSO-8-27_3.9x4.9mm_EP2.65x3mm
 Infineon  PG-DSO, 8 Pin (https://www.infineon.com/cms/en/product/packages/PG-DSO/PG-DSO-8-27), generated with kicad-footprint-generator ipc_gullwing_generator.py
 Infineon PG-DSO SO
@@ -77958,6 +78861,13 @@ DSO DSO-8 SOIC SOIC-8
 0
 12
 9
+Package_SO
+Infineon_PG-DSO-8-59_7.5x6.3mm
+Infineon  PG-DSO, 8 Pin (https://www.infineon.com/dgdl/Infineon-1EDCxxI12AH-DS-v02_00-EN.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Infineon PG-DSO SO
+0
+8
+8
 Package_SO
 Infineon_PG-DSO-12-9
 Infineon PG-DSO 12 pin, exposed pad: 4.5x8.1mm, (https://www.infineon.com/cms/en/product/packages/PG-DSO/PG-DSO-12-9/)
@@ -78365,6 +79275,20 @@ PowerPAK SO-8 Single
 9
 5
 Package_SO
+PowerSSO-16-1EP_3.9x4.9mm_P0.5mm_EP2.5x3.61mm
+PowerSSO, 16 Pin (https://www.st.com/resource/en/datasheet/vnd7020aj.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+PowerSSO SO
+0
+18
+17
+Package_SO
+PowerSSO-16-1EP_3.9x4.9mm_P0.5mm_EP2.5x3.61mm_ThermalVias
+PowerSSO, 16 Pin (https://www.st.com/resource/en/datasheet/vnd7020aj.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+PowerSSO SO
+0
+27
+17
+Package_SO
 QSOP-16_3.9x4.9mm_P0.635mm
 QSOP, 16 Pin (https://pdfserv.maximintegrated.com/package_dwgs/21-0055.PDF), generated with kicad-footprint-generator ipc_gullwing_generator.py
 QSOP SO
@@ -78709,8 +79633,8 @@ SOIC 1.27 16 12 Wide
 12
 Package_SO
 SOIC-16W_5.3x10.2mm_P1.27mm
-16-Lead Plastic Small Outline (SO) - Wide, 5.3 mm Body (http://www.ti.com/lit/ml/msop002a/msop002a.pdf)
-SOIC 1.27
+SOIC, 16 Pin (http://www.ti.com/lit/ml/msop002a/msop002a.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOIC SO
 0
 16
 16
@@ -78946,6 +79870,13 @@ SSO SO
 7
 7
 Package_SO
+SSO-8-7_6.4x9.7mm_P2.54mm
+SSO, 7 Pin (https://gitlab.com/Sirdel/public/-/blob/3a5b5234461aee14649dc0eb10cbdef84d37b29e/Datasheets/BC2213A-EN.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SSO SO
+0
+7
+7
+Package_SO
 SSO-8_6.7x9.8mm_P2.54mm_Clearance8mm
 8-Lead Plastic Stretched Small Outline (SSO/Stretched SO), see https://www.vishay.com/docs/83831/lh1533ab.pdf
 SSO Stretched SO SOIC Pitch 2.54
@@ -78981,6 +79912,13 @@ SSO Stretched SO SOIC Pitch 1.27
 8
 8
 Package_SO
+SSOP-4_4.4x2.6mm_P1.27mm
+SSOP, 4 Pin (https://www.vishay.com/docs/83465/vos618a.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SSOP SO
+0
+4
+4
+Package_SO
 SSOP-8_2.95x2.8mm_P0.65mm
 SSOP-8 2.9 x2.8mm Pitch 0.65mm
 SSOP-8 2.95x2.8mm Pitch 0.65mm
@@ -79008,6 +79946,20 @@ SSOP SO
 0
 8
 8
+Package_SO
+SSOP-10-1EP_3.9x4.9mm_P1mm_EP2.1x3.3mm
+SSOP, 10 Pin (http://download.py32.org/%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C/zh-CN/PY32F002A%20%E7%B3%BB%E5%88%97%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C_Rev1.0.pdf#page=44), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SSOP SO ESSOP-10
+0
+12
+11
+Package_SO
+SSOP-10-1EP_3.9x4.9mm_P1mm_EP2.1x3.3mm_ThermalVias
+SSOP, 10 Pin (http://download.py32.org/%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C/zh-CN/PY32F002A%20%E7%B3%BB%E5%88%97%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C_Rev1.0.pdf#page=44), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SSOP SO ESSOP-10
+0
+15
+11
 Package_SO
 SSOP-10_3.9x4.9mm_P1.00mm
 10-Lead SSOP, 3.9 x 4.9mm body, 1.00mm pitch (http://www.st.com/resource/en/datasheet/viper01.pdf)
@@ -79059,8 +80011,8 @@ SSOP 0.635
 20
 Package_SO
 SSOP-20_4.4x6.5mm_P0.65mm
-SSOP20: plastic shrink small outline package; 20 leads; body width 4.4 mm; (see NXP SSOP-TSSOP-VSO-REFLOW.pdf and sot266-1_po.pdf)
-SSOP 0.65
+SSOP, 20 Pin (https://www.jedec.org/system/files/docs/Mo-152c.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SSOP SO JEDEC-MO-152-AC SOT266-1 Nisshinbo-PI-SSOP20-E-A Rohm-SSOP-B20
 0
 20
 20
@@ -79884,6 +80836,48 @@ TSSOP SO
 100
 100
 Package_SO
+Texas_DGN0008B_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x3mm_Mask1.88x1.98mm
+Texas DGN0008B VSSOP, 8 Pin (https://www.ti.com/lit/ds/symlink/tps7a4101.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Texas VSSOP SO
+0
+11
+9
+Package_SO
+Texas_DGN0008B_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x3mm_Mask1.88x1.98mm_ThermalVias
+Texas DGN0008B VSSOP, 8 Pin (https://www.ti.com/lit/ds/symlink/tps7a4101.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Texas VSSOP SO
+0
+23
+9
+Package_SO
+Texas_DGN0008D_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x2.94mm_Mask1.57x1.89mm
+Texas DGN0008D VSSOP, 8 Pin (https://www.ti.com/lit/ds/symlink/tpa711.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Texas VSSOP SO
+0
+11
+9
+Package_SO
+Texas_DGN0008D_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x2.94mm_Mask1.57x1.89mm_ThermalVias
+Texas DGN0008D VSSOP, 8 Pin (https://www.ti.com/lit/ds/symlink/tpa711.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Texas VSSOP SO
+0
+19
+9
+Package_SO
+Texas_DGN0008G_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x2.94mm_Mask1.846x2.15mm
+Texas DGN0008G VSSOP, 8 Pin (https://www.ti.com/lit/ds/symlink/tpa711.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Texas VSSOP SO
+0
+11
+9
+Package_SO
+Texas_DGN0008G_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x2.94mm_Mask1.846x2.15mm_ThermalVias
+Texas DGN0008G VSSOP, 8 Pin (https://www.ti.com/lit/ds/symlink/tpa711.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+Texas VSSOP SO
+0
+23
+9
+Package_SO
 Texas_DYY0016A_TSOT-23-16_4.2x2.0mm_P0.5mm
 TSSOP, 16 Pin (https://www.ti.com/lit/ds/symlink/tmux1574.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
 TSSOP SO
@@ -79955,22 +80949,15 @@ SSOP 0.75
 56
 Package_SO
 VSSOP-8_2.3x2mm_P0.5mm
-VSSOP-8 2.3x2mm Pitch 0.5mm
-VSSOP-8 2.3x2mm Pitch 0.5mm
+VSSOP, 8 Pin (https://www.jedec.org/standards-documents/docs/mo-187-f), generated with kicad-footprint-generator ipc_gullwing_generator.py
+VSSOP SO JEDEC-MO-187-CA TI-DCU0008A
 0
 8
 8
 Package_SO
-VSSOP-8_2.4x2.1mm_P0.5mm
-http://www.ti.com/lit/ml/mpds050d/mpds050d.pdf
-VSSOP DCU R-PDSO-G8 Pitch0.5mm
-0
-8
-8
-Package_SO
-VSSOP-8_3.0x3.0mm_P0.65mm
-VSSOP-8 3.0 x 3.0, http://www.ti.com/lit/ds/symlink/lm75b.pdf
-VSSOP-8 3.0 x 3.0
+VSSOP-8_3x3mm_P0.65mm
+VSSOP, 8 Pin (https://www.jedec.org/standards-documents/docs/mo-187-f), generated with kicad-footprint-generator ipc_gullwing_generator.py
+VSSOP SO JEDEC-MO-187-AA TI-DGK0008A
 0
 8
 8
@@ -80106,6 +81093,13 @@ Infineon, PG-TISON-8-5, 8x8x1.1mm, 1mm Pitch, https://www.infineon.com/cms/en/pr
 tison
 0
 34
+8
+Package_SON
+MicroCrystal_C7_SON-8_1.5x3.2mm_P0.9mm
+MicroCrystal C7 SON, 8 Pin (https://www.microcrystal.com/fileadmin/Media/Products/RTC/App.Manual/RV-3028-C7_App-Manual.pdf#page=107), generated with kicad-footprint-generator ipc_noLead_generator.py
+MicroCrystal SON NoLead MicroCrystal-RV3028-C7
+0
+8
 8
 Package_SON
 NXP_XSON-16
@@ -80326,7 +81320,7 @@ Texas VSON-HR NoLead
 8
 Package_SON
 Texas_X2SON-4_1x1mm_P0.65mm
-X2SON 5 pin 1x1mm package (Reference Datasheet: http://www.ti.com/lit/ds/sbvs193d/sbvs193d.pdf Reference part: TPS383x) [StepUp generated footprint]
+X2SON 5 pin 1x1mm package, DQN0004A (Reference Datasheet: http://www.ti.com/lit/ds/sbvs193d/sbvs193d.pdf Reference part: TPS383x) [StepUp generated footprint]
 X2SON
 0
 13
@@ -85674,8 +86668,15 @@ AXICOM IM-Series Relay SPDT
 8
 Relay_THT
 Relay_DPDT_Finder_40.52
-Relay DPDT Finder 40.52, Pitch 5mm/7.5mm, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
-Relay DPDT Finder 40.52 Pitch 5mm
+DPDT relay, Finder 40.52, 8A, 250V, body size 29x12.4mm, height 25mm, pitch 5x7.5mm, https://cdn.findernet.com/app/uploads/S40EN.pdf
+2-Form-C
+0
+8
+8
+Relay_THT
+Relay_DPDT_Finder_40.62
+DPDT relay, Finder 40.62, 10A, 250V, body size 29x12.4mm, height 25mm, pitch 5x7.5mm, https://cdn.findernet.com/app/uploads/S40EN.pdf
+2-Form-C
 0
 8
 8
@@ -85683,6 +86684,13 @@ Relay_THT
 Relay_DPDT_Fujitsu_FTR-F1C
 https://www.fujitsu.com/downloads/MICRO/fcai/relays/ftr-f1.pdf
 relay dpdt fujitsu tht
+0
+8
+8
+Relay_THT
+Relay_DPDT_Hongfa_HF115F-2Z-x4
+Hongfa DPDT power relay, 8A, 250VAC, body size 29x127.x15.7mm, https://source.hongfa.com//pdf/web/viewer.html?file=/Uploads/Product/PDF/HF115F_I_en.pdf
+2-Form-C
 0
 8
 8
@@ -85849,32 +86857,39 @@ spdt relay
 5
 Relay_THT
 Relay_SPDT_Finder_40.11
-Relay SPDT Finder 40.11, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
-Relay SPDT Finder 40.11 
+Relay SPDT Finder 40.11, 10/16A, 250V, body size 28.5x26.3mm, height 12.7mm, https://web.archive.org/web/20170816081018if_/https://www.finder-relais.net/de/finder-relais-serie-40.pdf
+1-Form-C
 0
 5
 5
 Relay_THT
 Relay_SPDT_Finder_40.31
-Relay DPDT Finder 40.31, Pitch 3.5mm/7.5mm, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
-Relay DPDT Finder 40.31 Pitch 3.5mm
+DPDT relay, Finder 40.52, 10/12A, 250V, body size 29x12.4mm, height 25mm, pitch 3.5x7.5mm, https://cdn.findernet.com/app/uploads/S40EN.pdf
+1-Form-C
 0
 5
 5
 Relay_THT
 Relay_SPDT_Finder_40.41
-Relay DPDT Finder 40.41, Pitch 3.5mm/7.5mm, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
-Relay DPDT Finder 40.41 Pitch 3.5mm
+Relay SPDT Finder 40.11, 10A, 250V, body size 28.5x12.3mm, height 26.3mm, https://web.archive.org/web/20170816081018if_/https://www.finder-relais.net/de/finder-relais-serie-40.pdf
+1-Form-C
 0
 5
 5
 Relay_THT
 Relay_SPDT_Finder_40.51
-Relay DPDT Finder 40.51, Pitch 5mm/7.5mm, https://www.finder-relais.net/de/finder-relais-serie-40.pdf
-Relay DPDT Finder 40.51 Pitch 5mm
+SPDT relay, Finder 40.52, 10/12A, 250V, body size 29x12.4mm, height 25mm, pitch 5x7.5mm, https://cdn.findernet.com/app/uploads/S40EN.pdf
+1-Form-C
 0
 5
 5
+Relay_THT
+Relay_SPDT_Finder_40.61
+SPDT relay, Finder 40.61, 16A, 250V, body size 29x12.4mm, height 25mm, pitch 5x7.5mm, https://cdn.findernet.com/app/uploads/S40EN.pdf
+2-Form-C
+0
+8
+8
 Relay_THT
 Relay_SPDT_Fujitsu_FTR-LYCA005x_FormC_Vertical
 Relay, SPDT Form C, vertical mount, 6A, 5-60V, https://www.fujitsu.com/sg/imagesgig5/ftr-ly.pdf
@@ -87667,6 +88682,6649 @@ rotary encoder illuminated switch vertical
 0
 9
 8
+SF_Aesthetics
+BREADBOARD_SPACING
+BREADBOARD SPACING
+BREADBOARD SPACING
+0
+0
+0
+SF_Aesthetics
+CREATIVE_COMMONS
+CREATIVE COMMONS LICENSE TEMPLATE
+CREATIVE COMMONS LICENSE TEMPLATE
+0
+0
+0
+SF_Aesthetics
+DUMMY
+DUMMY FOOTPRINT
+DUMMY FOOTPRINT
+0
+0
+0
+SF_Aesthetics
+FIDUCIAL-1X2
+FIDUCIAL - CIRCLE, 1MM
+FIDUCIAL - CIRCLE, 1MM
+0
+1
+1
+SF_Aesthetics
+FIDUCIAL-FRAME-1_5MM
+FIDUCIAL - CIRCLE, 1MM
+FIDUCIAL - CIRCLE, 1MM
+0
+1
+1
+SF_Aesthetics
+FIDUCIAL-MICRO
+FIDUCIAL - CIRCLE, 0.25IN
+FIDUCIAL - CIRCLE, 0.25IN
+0
+1
+1
+SF_Aesthetics
+FIDUCIAL-MICRO-NO_PASTE
+FIDUCIAL - CIRCLE, 0.25IN
+FIDUCIAL - CIRCLE, 0.25IN
+0
+1
+1
+SF_Aesthetics
+FIDUCIALTAB
+FIDUCIAL PANEL TAB
+FIDUCIAL PANEL TAB
+0
+1
+1
+SF_Aesthetics
+FIO_LOGO
+FUNNEL IO (FIO) LOGO - SILKSCREEN
+FUNNEL IO (FIO) LOGO - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+FOUR_LAYER_WARNING
+FOUR-LAYER BOARD WARNING - TDOC LAYER
+FOUR-LAYER BOARD WARNING - TDOC LAYER
+0
+0
+0
+SF_Aesthetics
+GESTURESENSE_NOTEXT
+GESTURESENSE LOGO SILKSCREEN
+GESTURESENSE LOGO SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+GESTURESENSE_TEXT
+GESTURESENSE LOGO (W/ TEXT) SILKSCREEN
+GESTURESENSE LOGO (W/ TEXT) SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+IOIO-OTG-COPPER-EXPOSED
+IOIO OTG LOGO - EXPOSED COPPER
+IOIO OTG LOGO - EXPOSED COPPER
+0
+0
+0
+SF_Aesthetics
+LOGOMATIC_LOGO
+SPARKFUN LOGOMATIC LOGO - SILKSCREEN
+SPARKFUN LOGOMATIC LOGO - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+NO_PB_LOGO_0.120
+LEAD-FREE (NO PB) LOGO - 0.12IN DIAMETER
+LEAD-FREE (NO PB) LOGO - 0.12IN DIAMETER
+0
+0
+0
+SF_Aesthetics
+ORDERING_INSTRUCTIONS
+SPECIAL ORDERING INSTRUCTIONS ALERT
+SPECIAL ORDERING INSTRUCTIONS ALERT
+0
+0
+0
+SF_Aesthetics
+OSHW-LOGO-L
+OPEN-SOURCE HARDWARE (OSHW) LOGO - LARGE - SILKSCREEN
+OPEN-SOURCE HARDWARE (OSHW) LOGO - LARGE - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+OSHW-LOGO-L_COPPER
+OPEN-SOURCE HARDWARE (OSHW) LOGO - LARGE - TOP COPPER
+OPEN-SOURCE HARDWARE (OSHW) LOGO - LARGE - TOP COPPER
+0
+0
+0
+SF_Aesthetics
+OSHW-LOGO-M
+OPEN-SOURCE HARDWARE (OSHW) LOGO - MEDIUM - SILKSCREEN
+OPEN-SOURCE HARDWARE (OSHW) LOGO - MEDIUM - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+OSHW-LOGO-MINI
+OPEN-SOURCE HARDWARE (OSHW) LOGO - MINI - SILKSCREEN
+OPEN-SOURCE HARDWARE (OSHW) LOGO - MINI - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+OSHW-LOGO-M_COPPER
+OPEN-SOURCE HARDWARE (OSHW) LOGO - MEDIUM - TOP COPPER
+OPEN-SOURCE HARDWARE (OSHW) LOGO - MEDIUM - TOP COPPER
+0
+0
+0
+SF_Aesthetics
+OSHW-LOGO-S
+OPEN-SOURCE HARDWARE (OSHW) LOGO - SMALL - SILKSCREEN
+OPEN-SOURCE HARDWARE (OSHW) LOGO - SMALL - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+OSHW-LOGO-S_COPPER
+OPEN-SOURCE HARDWARE (OSHW) LOGO - SMALL - TOP COPPER
+OPEN-SOURCE HARDWARE (OSHW) LOGO - SMALL - TOP COPPER
+0
+0
+0
+SF_Aesthetics
+PRODUCTION_INSTRUCTIONS
+SPECIAL PRODUCTION INSTRUCTIONS ALERT
+SPECIAL PRODUCTION INSTRUCTIONS ALERT
+0
+0
+0
+SF_Aesthetics
+QTECHKNOW-LOGO-LARGE-SILK
+QTECHKNOW LOGO - LARGE - SILKSCREEN
+QTECHKNOW LOGO - LARGE - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+QTECHKNOW-LOGO-SMALL-SILK
+QTECHKNOW LOGO - SMALL - SILKSCREEN
+QTECHKNOW LOGO - SMALL - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+REDBOT_LOGO
+SPARKFUN REDBOT LOGO - SILKSCREEN
+SPARKFUN REDBOT LOGO - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+REVISION
+"REVISION BY" TEXT - TDOC
+"REVISION BY" TEXT - TDOC
+0
+0
+0
+SF_Aesthetics
+ROHS_LOGO_0.18_IN
+RESTRICTION OF HAZARDOUS SUBSTANCES (ROHS) LOGO - 0.18IN HEIGHT
+RESTRICTION OF HAZARDOUS SUBSTANCES (ROHS) LOGO - 0.18IN HEIGHT
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_.1
+SPARKFUN FLAME LOGO - 0.1" HEIGHT - SILKSCREEN
+SPARKFUN FLAME LOGO - 0.1" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_.2
+SPARKFUN FLAME LOGO - 0.2" HEIGHT - SILKSCREEN
+SPARKFUN FLAME LOGO - 0.2" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_.3
+SPARKFUN FLAME LOGO - 0.3" HEIGHT - SILKSCREEN
+SPARKFUN FLAME LOGO - 0.3" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_.4
+SPARKFUN FLAME LOGO - 0.4" HEIGHT - SILKSCREEN
+SPARKFUN FLAME LOGO - 0.4" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_.05
+SPARKFUN FLAME LOGO - 0.05" HEIGHT - SILKSCREEN
+SPARKFUN FLAME LOGO - 0.05" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_.5
+SPARKFUN FLAME LOGO - 0.5" HEIGHT - SILKSCREEN
+SPARKFUN FLAME LOGO - 0.5" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_.6
+SPARKFUN FLAME LOGO - 0.6" HEIGHT - SILKSCREEN
+SPARKFUN FLAME LOGO - 0.6" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_.7
+SPARKFUN FLAME LOGO - 0.7" HEIGHT - SILKSCREEN
+SPARKFUN FLAME LOGO - 0.7" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_.8
+SPARKFUN FLAME LOGO - 0.8" HEIGHT - SILKSCREEN
+SPARKFUN FLAME LOGO - 0.8" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_.9
+SPARKFUN FLAME LOGO - 0.9" HEIGHT - SILKSCREEN
+SPARKFUN FLAME LOGO - 0.9" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_COPPER_.1
+SPARKFUN FLAME LOGO - 0.1" HEIGHT - TOP COPPER
+SPARKFUN FLAME LOGO - 0.1" HEIGHT - TOP COPPER
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_COPPER_.2
+SPARKFUN FLAME LOGO - 0.2" HEIGHT - TOP COPPER
+SPARKFUN FLAME LOGO - 0.2" HEIGHT - TOP COPPER
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_COPPER_.3
+SPARKFUN FLAME LOGO - 0.3" HEIGHT - TOP COPPER
+SPARKFUN FLAME LOGO - 0.3" HEIGHT - TOP COPPER
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_COPPER_EXPOSED_.1
+SPARKFUN FLAME LOGO - 0.1" HEIGHT - TOP COPPER (EXPOSED)
+SPARKFUN FLAME LOGO - 0.1" HEIGHT - TOP COPPER (EXPOSED)
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_COPPER_EXPOSED_.2
+SPARKFUN FLAME LOGO - 0.2" HEIGHT - TOP COPPER (EXPOSED)
+SPARKFUN FLAME LOGO - 0.2" HEIGHT - TOP COPPER (EXPOSED)
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_COPPER_EXPOSED_.3
+SPARKFUN FLAME LOGO - 0.3" HEIGHT - TOP COPPER (EXPOSED)
+SPARKFUN FLAME LOGO - 0.3" HEIGHT - TOP COPPER (EXPOSED)
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_FLAME_STOP_.1
+SPARKFUN FLAME LOGO - 0.1" HEIGHT - TOP STOPMASK
+SPARKFUN FLAME LOGO - 0.1" HEIGHT - TOP STOPMASK
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_.1
+SPARKFUN FONT LOGO - 0.1" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO - 0.1" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_.2
+SPARKFUN FONT LOGO - 0.2" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO - 0.2" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_.3
+SPARKFUN FONT LOGO - 0.3" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO - 0.3" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_.4
+SPARKFUN FONT LOGO - 0.4" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO - 0.4" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_.5
+SPARKFUN FONT LOGO - 0.5" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO - 0.5" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_.6
+SPARKFUN FONT LOGO - 0.6" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO - 0.6" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_.7
+SPARKFUN FONT LOGO - 0.7" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO - 0.7" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_.8
+SPARKFUN FONT LOGO - 0.8" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO - 0.8" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_.9
+SPARKFUN FONT LOGO - 0.9" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO - 0.9" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_1
+SPARKFUN FONT LOGO - 1.0" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO - 1.0" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_FLAME_.1
+SPARKFUN FONT LOGO W/ FLAME - 0.1" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO W/ FLAME - 0.1" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_FLAME_.2
+SPARKFUN FONT LOGO W/ FLAME - 0.2" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO W/ FLAME - 0.2" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_FLAME_.3
+SPARKFUN FONT LOGO W/ FLAME - 0.3" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO W/ FLAME - 0.3" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_FLAME_.4
+SPARKFUN FONT LOGO W/ FLAME - 0.4" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO W/ FLAME - 0.4" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_FLAME_.5
+SPARKFUN FONT LOGO W/ FLAME - 0.5" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO W/ FLAME - 0.5" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_FLAME_.6
+SPARKFUN FONT LOGO W/ FLAME - 0.6" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO W/ FLAME - 0.6" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_FLAME_.7
+SPARKFUN FONT LOGO W/ FLAME - 0.7" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO W/ FLAME - 0.7" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_FLAME_.8
+SPARKFUN FONT LOGO W/ FLAME - 0.8" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO W/ FLAME - 0.8" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_FLAME_.9
+SPARKFUN FONT LOGO W/ FLAME - 0.9" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO W/ FLAME - 0.9" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_FLAME_1
+SPARKFUN FONT LOGO W/ FLAME - 1.0" HEIGHT - SILKSCREEN
+SPARKFUN FONT LOGO W/ FLAME - 1.0" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LOGO_NAME_WEB
+SPARKFUN LOGO W/ ".COM" AND FLAME
+SPARKFUN LOGO W/ ".COM" AND FLAME
+0
+0
+0
+SF_Aesthetics
+SFE_LUDUS-L
+SPARKFUN EDUCATION MASCOT - LUDUS! - LARGE - SILKSCREEN
+SPARKFUN EDUCATION MASCOT - LUDUS! - LARGE - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LUDUS-M
+SPARKFUN EDUCATION MASCOT - LUDUS! - MEDIUM - SILKSCREEN
+SPARKFUN EDUCATION MASCOT - LUDUS! - MEDIUM - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SFE_LUDUS-S
+SPARKFUN EDUCATION MASCOT - LUDUS! - SMALL - SILKSCREEN
+SPARKFUN EDUCATION MASCOT - LUDUS! - SMALL - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SMART_BASIC_LOGO
+SPARKFUN SMART BASIC LOGO - SILKSCREEN
+SPARKFUN SMART BASIC LOGO - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SPARKPUNK_LOGO_.1
+SPARKPUNK LOGO - 0.1" HEIGHT - SILKSCREEN
+SPARKPUNK LOGO - 0.1" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SPARKPUNK_LOGO_.2
+SPARKPUNK LOGO - 0.2" HEIGHT - SILKSCREEN
+SPARKPUNK LOGO - 0.2" HEIGHT - SILKSCREEN
+0
+0
+0
+SF_Aesthetics
+SPECTACLE_LOGO_NEGATIVE_1.5X0.5
+
+
+0
+0
+0
+SF_Aesthetics
+SPECTACLE_LOGO_NEGATIVE_2.2X1.0
+
+
+0
+0
+0
+SF_Aesthetics
+SPECTACLE_LOGO_TITLE_0.35X0.70
+
+
+0
+0
+0
+SF_Batteries
+BATTCOM_20MM_PTH
+20MM (CR2032) COIN CELL BATTERY HOLDER - PTH
+20MM (CR2032) COIN CELL BATTERY HOLDER - PTH
+0
+2
+2
+SF_Batteries
+BATTCON-6.8MM
+PART#: MS621FE-FL11E
+PART#: MS621FE-FL11E
+0
+2
+2
+SF_Batteries
+BATTCON_9V
+PCMOUNT 9V BATTERY HOLDER
+PCMOUNT 9V BATTERY HOLDER
+0
+2
+2
+SF_Batteries
+BATTCON_12MM
+12MM COIN CELL (CR1225) BATTERY HOLDER - SMD
+12MM COIN CELL (CR1225) BATTERY HOLDER - SMD
+0
+3
+2
+SF_Batteries
+BATTCON_12MM_PTH
+12MM COIN CELL BATTERY (CR1225) HOLDER - PTH
+12MM COIN CELL BATTERY (CR1225) HOLDER - PTH
+0
+3
+2
+SF_Batteries
+BATTCON_20MM
+20MM COIN CELL BATTERY (CR2032) HOLDER - SMD (SINGLE PAD)
+20MM COIN CELL BATTERY (CR2032) HOLDER - SMD (SINGLE PAD)
+0
+3
+3
+SF_Batteries
+BATTCON_20MM_4LEGS
+20MM COIN CELL BATTERY (CR2032) HOLDER - SMD (DUAL PAD)
+20MM COIN CELL BATTERY (CR2032) HOLDER - SMD (DUAL PAD)
+0
+5
+2
+SF_Batteries
+BATTCON_20MM_4LEGS_OVERPASTE
+20MM COIN CELL BATTERY (CR2032) HOLDER - SMD (DUAL PAD) (OVERPASTE ON PADS)
+20MM COIN CELL BATTERY (CR2032) HOLDER - SMD (DUAL PAD) (OVERPASTE ON PADS)
+0
+5
+5
+SF_Batteries
+BATTCON_24.5MM_PTH
+24.5MM COIN CELL BATTERY (CR2450) HOLDER - PTH
+24.5MM COIN CELL BATTERY (CR2450) HOLDER - PTH
+0
+3
+3
+SF_Batteries
+BATTERY-AA
+AA BATTERY CLIPS
+AA BATTERY CLIPS
+0
+4
+2
+SF_Batteries
+BATTERY-AA-KIT
+AA BATTERY CLIPS (KIT VARIANT)
+AA BATTERY CLIPS (KIT VARIANT)
+0
+4
+2
+SF_Batteries
+BATTERY-AAA
+AAA BATTERY CLIPS
+AAA BATTERY CLIPS
+0
+4
+2
+SF_Batteries
+BATTERY-AAA-KIT
+AAA BATTERY CLIPS (KIT VARIANT)
+AAA BATTERY CLIPS (KIT VARIANT)
+0
+4
+2
+SF_Batteries
+BATTERY_18650-HOLDER
+18650 LITHIUM ION CELL BATTERY HOLDERS
+18650 LITHIUM ION CELL BATTERY HOLDERS
+0
+6
+2
+SF_Batteries
+LIPO-110
+110MAH LITHIUM POLYMER (LIPO) BATTERY OUTLINE
+110MAH LITHIUM POLYMER (LIPO) BATTERY OUTLINE
+0
+0
+0
+SF_Batteries
+LIPO-1000
+1000MAH LITHIUM POLYMER (LIPO) BATTERY OUTLINE
+1000MAH LITHIUM POLYMER (LIPO) BATTERY OUTLINE
+0
+0
+0
+SF_Batteries
+LIPO-2000
+2000MAH LITHIUM POLYMER (LIPO) BATTERY OUTLINE
+2000MAH LITHIUM POLYMER (LIPO) BATTERY OUTLINE
+0
+0
+0
+SF_Boards
+ARDUINO_MEGA
+ARDUINO MEGA R3 FOOTPRINT
+ARDUINO MEGA R3 FOOTPRINT
+0
+82
+78
+SF_Boards
+ARDUINO_PRO_MINI
+ARDUINO PRO MINI FOOTPRINT
+ARDUINO PRO MINI FOOTPRINT
+0
+34
+34
+SF_Boards
+ARDUINO_R3
+ARDUINO UNO R3 FOOTPRINT
+ARDUINO UNO R3 FOOTPRINT
+0
+38
+34
+SF_Boards
+ARDUINO_R3_NO_HOLES
+ARDUINO UNO R3 FOOTPRINT
+ARDUINO UNO R3 FOOTPRINT
+0
+38
+34
+SF_Boards
+AUDIO-AMP-MONO
+AUDIO AMP MONO PCB
+AUDIO AMP MONO PCB
+0
+10
+10
+SF_Boards
+BEAGLE_BONE_BLACK_CAPE
+BEAGLEBONE BLACK CAPE FOOTPRINT
+BEAGLEBONE BLACK CAPE FOOTPRINT
+0
+92
+18
+SF_Boards
+BREADBOARD-MINI
+BREADBOARD MINI
+BREADBOARD MINI
+0
+0
+0
+SF_Boards
+DIL40_0.9
+DUAL INLINE 40 PIN PACKAGE FOR MBED MICROCONTROLLER DEVELOPMENT PLATFORM.
+DUAL INLINE 40 PIN PACKAGE FOR MBED MICROCONTROLLER DEVELOPMENT PLATFORM.
+0
+40
+40
+SF_Boards
+ELECTRIC_IMP_IMP002
+
+
+0
+35
+35
+SF_Boards
+ESP32_THING
+SPARKFUN ESP32 THING BOARD
+SPARKFUN ESP32 THING BOARD
+0
+40
+40
+SF_Boards
+ESP32_THING_NO_ANT
+
+
+0
+40
+40
+SF_Boards
+FLANGED_RED_ENCLOSURE-DIMENSION
+BIG RED ENCLOSURE PCB
+BIG RED ENCLOSURE PCB
+0
+0
+0
+SF_Boards
+FLANGED_RED_ENCLOSURE-OUTLINE
+BIG RED ENCLOSURE PCB
+BIG RED ENCLOSURE PCB
+0
+0
+0
+SF_Boards
+ISL29125
+SPARKFUN ISL29125 BREAKOUT
+SPARKFUN ISL29125 BREAKOUT
+0
+5
+5
+SF_Boards
+MICRO-SDCARD
+MICROSD CARD FOOTPRINT
+MICROSD CARD FOOTPRINT
+0
+8
+8
+SF_Boards
+MOJO_V3
+MOJO V3 FPGA FOOTPRINT
+MOJO V3 FPGA FOOTPRINT
+0
+110
+104
+SF_Boards
+MOJO_V3_NO_LABEL
+MOJO V3 FPGA FOOTPRINT
+MOJO V3 FPGA FOOTPRINT
+0
+110
+104
+SF_Boards
+PARTICLE_PHOTON
+PARTICLE PHOTON
+PARTICLE PHOTON
+0
+24
+24
+SF_Boards
+PARTICLE_PHOTON_TEMPLATE
+PARTICLE PHOTON TEMPLATE
+PARTICLE PHOTON TEMPLATE
+0
+48
+47
+SF_Boards
+PARTICLE_PHOTON_TEMPLATE_NO_STANDOFF
+
+
+0
+48
+47
+SF_Boards
+PARTICLE_PHOTON_TEMPLATE_WIDE
+PARTICLE PHOTON TEMPLATE WIDE
+PARTICLE PHOTON TEMPLATE WIDE
+0
+48
+47
+SF_Boards
+QDUINO_MINI_V15
+QDUINO MINI BOARD OUTLINE AND PINS
+QDUINO MINI BOARD OUTLINE AND PINS
+0
+27
+27
+SF_Boards
+SD-MMC-CARD
+SD MMC CARD FOOTPRINT
+SD MMC CARD FOOTPRINT
+0
+9
+9
+SF_Boards
+SPARKFUN_BLACKBERRY_TRACKBALLER
+SPARKFUN BLACKBERRY TRACKBALLER
+SPARKFUN BLACKBERRY TRACKBALLER
+0
+11
+11
+SF_Boards
+SPARKFUN_EDISON_DAUGHTER
+SPARKFUN EDISON DAUGHTER
+SPARKFUN EDISON DAUGHTER
+0
+70
+70
+SF_Boards
+SPARKFUN_EDISON_PCB
+SPARKFUN EDISON PCB
+SPARKFUN EDISON PCB
+0
+70
+70
+SF_Boards
+SPARKFUN_ESP8266_THING
+SPARKFUN THING BOARD FOOTPRINT
+SPARKFUN THING BOARD FOOTPRINT
+0
+20
+17
+SF_Boards
+SPARKFUN_ESP8266_THING_DEV
+SPARKFUN THING DEVELOPMENT BOARD FOOTPRINT
+SPARKFUN THING DEVELOPMENT BOARD FOOTPRINT
+0
+20
+18
+SF_Boards
+SPARKFUN_LOGIC_LEVEL_CONVERTER
+SPARKFUN LOGIC LEVEL CONVERTER
+SPARKFUN LOGIC LEVEL CONVERTER
+0
+12
+12
+SF_Boards
+SPARKFUN_LOGIC_LEVEL_CONVERTER_LOCK
+
+
+0
+12
+12
+SF_Boards
+SPARKFUN_MS5803-14BA_BREAKOUT
+SPARKFUN MS5803-14BA BREAKOUT
+SPARKFUN MS5803-14BA BREAKOUT
+0
+7
+7
+SF_Boards
+SPARKFUN_NRF52832_BREAKOUT
+SPARKFUN NRF42832 BREAKOUT
+SPARKFUN NRF42832 BREAKOUT
+0
+42
+41
+SF_Boards
+SPARKFUN_PRO_MICRO
+SPARKFUN PRO MICO FOOTPRINT (WITH USB CONNECTOR)
+SPARKFUN PRO MICO FOOTPRINT (WITH USB CONNECTOR)
+0
+24
+24
+SF_Boards
+TEENSY-3.1
+TEENSY 3 FOOTPRINT
+TEENSY 3 FOOTPRINT
+0
+37
+37
+SF_Boards
+TEENSY-3.1_NOSILK
+TEENSY 3 FOOTPRINT- NO SILK LABEL ON PINS
+TEENSY 3 FOOTPRINT- NO SILK LABEL ON PINS
+0
+37
+37
+SF_Boards
+UNO_R3_SHIELD
+ARDUINO UNO-COMPATIBLE FOOTPRINT
+ARDUINO UNO-COMPATIBLE FOOTPRINT
+0
+32
+30
+SF_Boards
+UNO_R3_SHIELD_ICSP
+ARDUINO UNO-COMPATIBLE FOOTPRINT WITH ICSP
+ARDUINO UNO-COMPATIBLE FOOTPRINT WITH ICSP
+0
+38
+36
+SF_Boards
+UNO_R3_SHIELD_ICSP_NOLABELS
+ARDUINO UNO-COMPATIBLE FOOTPRINT WITH ICSP
+ARDUINO UNO-COMPATIBLE FOOTPRINT WITH ICSP
+0
+38
+36
+SF_Boards
+UNO_R3_SHIELD_LOCK
+ARDUINO UNO-COMPATIBLE FOOTPRINT
+ARDUINO UNO-COMPATIBLE FOOTPRINT
+0
+32
+30
+SF_Boards
+UNO_R3_SHIELD_NOLABELS
+ARDUINO UNO-COMPATIBLE FOOTPRINT
+ARDUINO UNO-COMPATIBLE FOOTPRINT
+0
+32
+30
+SF_Boards
+UNO_R3_SHIELD_NOLABELS_LOCK
+ARDUINO UNO-COMPATIBLE FOOTPRINT
+ARDUINO UNO-COMPATIBLE FOOTPRINT
+0
+32
+30
+SF_Boards
+WIZ811MJ
+WIZNET W5100 NETWORK MODULE WITH MAGJACK - WIZ811MJ FOOTPRINT
+WIZNET W5100 NETWORK MODULE WITH MAGJACK - WIZ811MJ FOOTPRINT
+0
+40
+40
+SF_Capacitors
+0402
+GENERIC 1005 (0402) PACKAGE
+GENERIC 1005 (0402) PACKAGE
+0
+2
+2
+SF_Capacitors
+0603
+GENERIC 1608 (0603) PACKAGE
+GENERIC 1608 (0603) PACKAGE
+0
+2
+2
+SF_Capacitors
+0603-POLAR
+POLARIZED 1608 (0603) PACKAGE
+POLARIZED 1608 (0603) PACKAGE
+0
+2
+2
+SF_Capacitors
+0805
+GENERIC 2012 (0805) PACKAGE
+GENERIC 2012 (0805) PACKAGE
+0
+2
+2
+SF_Capacitors
+1007
+GENERIC 2518 (1007) PACKAGE
+GENERIC 2518 (1007) PACKAGE
+0
+2
+2
+SF_Capacitors
+1206
+GENERIC 3216 (1206) PACKAGE
+GENERIC 3216 (1206) PACKAGE
+0
+2
+2
+SF_Capacitors
+1210
+GENERIC 3225 (1210) PACKAGE
+GENERIC 3225 (1210) PACKAGE
+0
+2
+2
+SF_Capacitors
+CAP-PTH-2.54
+2 PTH SPACED 0.1" APART
+2 PTH SPACED 0.1" APART
+0
+2
+2
+SF_Capacitors
+CAP-PTH-5MM
+2 PTH SPACED 5MM APART
+2 PTH SPACED 5MM APART
+0
+2
+2
+SF_Capacitors
+CAP-PTH-10MM
+2 PTH SPACED 10MM APART
+2 PTH SPACED 10MM APART
+0
+2
+2
+SF_Capacitors
+CAP-PTH-LARGE
+
+
+0
+2
+2
+SF_Capacitors
+CAP-PTH-SMALL-KIT
+CAP-PTH-SMALL-KIT
+CAP-PTH-SMALL-KIT
+0
+2
+2
+SF_Capacitors
+CPOL-RADIAL-2.5MM-5MM
+2.5 MM SPACED PTHS WITH 5 MM DIAMETER OUTLINE AND STANDARD SOLDER MASK
+2.5 MM SPACED PTHS WITH 5 MM DIAMETER OUTLINE AND STANDARD SOLDER MASK
+0
+2
+2
+SF_Capacitors
+CPOL-RADIAL-2.5MM-5MM-KIT
+2.5 MM SPACED PTHS WITH TOP COPPER MASKED
+2.5 MM SPACED PTHS WITH TOP COPPER MASKED
+0
+2
+2
+SF_Capacitors
+CPOL-RADIAL-2.5MM-6.5MM
+2.5 MM SPACED PTHS WITH 6.5 MM DIAMETER OUTLINE
+2.5 MM SPACED PTHS WITH 6.5 MM DIAMETER OUTLINE
+0
+2
+2
+SF_Capacitors
+CPOL-RADIAL-5MM-10MM
+5 MM SPACED PTHS IN 10 MM DIAMETER SILK RING
+5 MM SPACED PTHS IN 10 MM DIAMETER SILK RING
+0
+2
+2
+SF_Capacitors
+CPOL-RADIAL-5MM-10MM-KIT
+5 MM SPACED PTHS, WITH 10 MM SILK RING AND NO EXPOSED COPPER ON TOP
+5 MM SPACED PTHS, WITH 10 MM SILK RING AND NO EXPOSED COPPER ON TOP
+0
+2
+2
+SF_Capacitors
+EIA3216
+GENERIC EIA 3216 (1206) POLARIZED TANTALUM CAPACITOR
+GENERIC EIA 3216 (1206) POLARIZED TANTALUM CAPACITOR
+0
+2
+2
+SF_Capacitors
+EIA3528
+GENERIC EIA 3528 POLARIZED TANTALUM CAPACITOR
+GENERIC EIA 3528 POLARIZED TANTALUM CAPACITOR
+0
+2
+2
+SF_Capacitors
+EIA6032-NOM
+METRIC SIZE CODE EIA 6032-25 MEDIAN (NOMINAL) LAND PROTRUSION
+METRIC SIZE CODE EIA 6032-25 MEDIAN (NOMINAL) LAND PROTRUSION
+0
+2
+2
+SF_Capacitors
+EIA7343
+EIA 7343 TANTALUM CAPACITOR
+EIA 7343 TANTALUM CAPACITOR
+0
+2
+2
+SF_Capacitors
+NIC_10X10.5_CAP
+SOME OLD PACKAGE IN OUR LIBRARY
+SOME OLD PACKAGE IN OUR LIBRARY
+0
+2
+2
+SF_Capacitors
+PANASONIC_C
+PANASONIC ALUMINIUM ELECTROLYTIC CAPACITOR VS-SERIE PACKAGE E
+PANASONIC ALUMINIUM ELECTROLYTIC CAPACITOR VS-SERIE PACKAGE E
+0
+2
+2
+SF_Capacitors
+PANASONIC_D
+PANASONIC ALUMINIUM ELECTROLYTIC CAPACITOR VS-SERIE PACKAGE E
+PANASONIC ALUMINIUM ELECTROLYTIC CAPACITOR VS-SERIE PACKAGE E
+0
+2
+2
+SF_Capacitors
+PANASONIC_G
+PANASONIC ALUMINIUM ELECTROLYTIC CAPACITOR VS-SERIE PACKAGE G
+PANASONIC ALUMINIUM ELECTROLYTIC CAPACITOR VS-SERIE PACKAGE G
+0
+2
+2
+SF_Clocks
+CRYSTAL-PTH-2X6-CYL
+2X6MM CYLINDRICAL CAN (RADIAL) PTH CRYSTAL
+2X6MM CYLINDRICAL CAN (RADIAL) PTH CRYSTAL
+0
+2
+2
+SF_Clocks
+CRYSTAL-PTH-2X6-CYL-KIT
+2X6MM CYLINDRICAL CAN (RADIAL) PTH CRYSTAL
+2X6MM CYLINDRICAL CAN (RADIAL) PTH CRYSTAL
+0
+2
+2
+SF_Clocks
+CRYSTAL-PTH-3X8-CYL
+3X8MM CYLINDRICAL CAN (RADIAL) PTH CRYSTAL
+3X8MM CYLINDRICAL CAN (RADIAL) PTH CRYSTAL
+0
+2
+2
+SF_Clocks
+CRYSTAL-SMD-2.0X1.6MM
+2.0 X 1.6 MM CRYSTAL
+2.0 X 1.6 MM CRYSTAL
+0
+4
+4
+SF_Clocks
+CRYSTAL-SMD-2X6-CYL
+6.0X2.0MM CYLINDRICAL CAN (RADIAL) SMD CRYSTAL
+6.0X2.0MM CYLINDRICAL CAN (RADIAL) SMD CRYSTAL
+0
+3
+3
+SF_Clocks
+CRYSTAL-SMD-3.2X1.5MM
+3.2 X 1.5MM SMD CRYSTAL PACKAGE
+3.2 X 1.5MM SMD CRYSTAL PACKAGE
+0
+2
+2
+SF_Clocks
+CRYSTAL-SMD-3.2X2.5MM
+3.2 X 2.5MM SMD CRYSTAL PACKAGE
+3.2 X 2.5MM SMD CRYSTAL PACKAGE
+0
+4
+4
+SF_Clocks
+CRYSTAL-SMD-5X3.2-2PAD
+5X3.2MM 2-PAD SMD CRYSTAL
+5X3.2MM 2-PAD SMD CRYSTAL
+0
+2
+2
+SF_Clocks
+CRYSTAL-SMD-5X3.2-4PAD
+5X3.2MM SMD CRYSTAL
+5X3.2MM SMD CRYSTAL
+0
+4
+4
+SF_Clocks
+CRYSTAL-SMD-MC-146
+7X1.5MM MC-146 FLAT LEAD SMD CRYSTAL
+7X1.5MM MC-146 FLAT LEAD SMD CRYSTAL
+0
+4
+4
+SF_Clocks
+HC49U
+HC49/U 11.6X4.6MM PTH CRYSTAL (13.46MM HEIGHT)
+HC49/U 11.6X4.6MM PTH CRYSTAL (13.46MM HEIGHT)
+0
+2
+2
+SF_Clocks
+HC49UP
+HC-49/UP 11.4X4.8MM SMD CRYSTAL
+HC-49/UP 11.4X4.8MM SMD CRYSTAL
+0
+2
+2
+SF_Clocks
+HC49US
+HC49/US 11.6X4.6MM PTH CRYSTAL
+HC49/US 11.6X4.6MM PTH CRYSTAL
+0
+2
+2
+SF_Clocks
+OSCILLATOR-SMD-5X3.2
+5.0X3.2 MM 4-SMD OSCILLATOR (POLARIZED)
+5.0X3.2 MM 4-SMD OSCILLATOR (POLARIZED)
+0
+4
+4
+SF_Clocks
+OSCILLATOR-SMD-7.5X5.2-6PIN
+7X5MM, 6-PIN FXO-HC73 OSCILLATOR (POLARIZED)
+7X5MM, 6-PIN FXO-HC73 OSCILLATOR (POLARIZED)
+0
+6
+6
+SF_Clocks
+OSCILLATOR-SMD-7X5-4PAD
+7X5MM, 4-PIN OSCILLATOR (POLARIZED)
+7X5MM, 4-PIN OSCILLATOR (POLARIZED)
+0
+4
+4
+SF_Clocks
+RESONATOR-PTH-7.6X3.8
+7.6X3.8MM 3-PIN PTH RESONATOR
+7.6X3.8MM 3-PIN PTH RESONATOR
+0
+3
+3
+SF_Clocks
+RESONATOR-SMD-3.2X1.3
+3.2X1.3MM 3-PIN SMD RESONATOR
+3.2X1.3MM 3-PIN SMD RESONATOR
+0
+3
+3
+SF_Clocks
+RESONATOR-SMD-4.5X2.0
+4.5X2.0MM 3-PIN SMD RESONATOR
+4.5X2.0MM 3-PIN SMD RESONATOR
+0
+9
+3
+SF_Clocks
+RESONATOR-SMD-7.4X3.4
+7.4X3.4MM 3-PIN SMD RESONATOR
+7.4X3.4MM 3-PIN SMD RESONATOR
+0
+3
+3
+SF_Coils
+0402
+GENERIC 1005 (0402) PACKAGE
+GENERIC 1005 (0402) PACKAGE
+0
+2
+2
+SF_Coils
+0603
+GENERIC 1608 (0603) PACKAGE
+GENERIC 1608 (0603) PACKAGE
+0
+2
+2
+SF_Coils
+0805
+GENERIC 2012 (0805) PACKAGE
+GENERIC 2012 (0805) PACKAGE
+0
+2
+2
+SF_Coils
+COILCRAFT_DA230X
+COILCRAFT DA2303, DA2304
+COILCRAFT DA2303, DA2304
+0
+8
+8
+SF_Coils
+CR54
+CR54 FOOTPRINT
+CR54 FOOTPRINT
+0
+2
+2
+SF_Coils
+CR75
+4600 SERIES FOOTPRINT
+4600 SERIES FOOTPRINT
+0
+2
+2
+SF_Coils
+INDUCTOR_2.2UH
+
+
+0
+2
+2
+SF_Coils
+INDUCTOR_4.7UH
+CDRH2D18/HPNP FOOTPRINT
+CDRH2D18/HPNP FOOTPRINT
+0
+2
+2
+SF_Coils
+INDUCTOR_SDR1307
+SDR1307 SERIES FOOTPRINT
+SDR1307 SERIES FOOTPRINT
+0
+2
+2
+SF_Coils
+SRN6045
+SRN6045 SERIES  FOOTPRINT
+SRN6045 SERIES  FOOTPRINT
+0
+2
+2
+SF_Coils
+TRANSFORMER
+
+
+0
+4
+4
+SF_Coils
+TRANSFORMER_SMD
+TTC-5023
+TTC-5023
+0
+6
+6
+SF_Connectors
+1X01
+PLATED THROUGH HOLE
+PLATED THROUGH HOLE
+0
+1
+1
+SF_Connectors
+1X01NS_KIT
+PLATED THROUGH HOLE - NO SILK OUTLINE KIT VERSION
+PLATED THROUGH HOLE - NO SILK OUTLINE KIT VERSION
+0
+1
+1
+SF_Connectors
+1X01_2MM
+PLATED THROUGH HOLE - 2MM
+PLATED THROUGH HOLE - 2MM
+0
+1
+1
+SF_Connectors
+1X01_LONGPAD
+PLATED THROUGH HOLE - LONG PAD
+PLATED THROUGH HOLE - LONG PAD
+0
+1
+1
+SF_Connectors
+1X01_NO_SILK
+PLATED THROUGH HOLE - NO SILK OUTLINE
+PLATED THROUGH HOLE - NO SILK OUTLINE
+0
+1
+1
+SF_Connectors
+1X01_OFFSET
+PLATED THROUGH HOLE - LONG PAD W/ OFFSET HOLE
+PLATED THROUGH HOLE - LONG PAD W/ OFFSET HOLE
+0
+1
+1
+SF_Connectors
+1X01_POGOPIN_HOLE_0.58_DIA
+POGO PIN HOLE - 0.58"
+POGO PIN HOLE - 0.58"
+0
+1
+1
+SF_Connectors
+1X01_POGOPIN_HOLE_0.061_DIA
+POGO PIN - 0.061"
+POGO PIN - 0.061"
+0
+1
+1
+SF_Connectors
+1X02
+PLATED THROUGH HOLE
+PLATED THROUGH HOLE
+0
+2
+2
+SF_Connectors
+1X02_2.54_SCREWTERM
+2 PIN SCREW TERMINAL - 2.54MM
+2 PIN SCREW TERMINAL - 2.54MM
+0
+2
+2
+SF_Connectors
+1X02_BIG
+PLATED THROUGH HOLE
+PLATED THROUGH HOLE
+0
+2
+2
+SF_Connectors
+1X02_LOCK
+PLATED THROUGH HOLE - LOCKING FOOTPRINT
+PLATED THROUGH HOLE - LOCKING FOOTPRINT
+0
+2
+2
+SF_Connectors
+1X02_LOCK_LONGPADS
+PLATED THROUGH HOLE - LONG PADS WITH LOCKING FOOTPRINT
+PLATED THROUGH HOLE - LONG PADS WITH LOCKING FOOTPRINT
+0
+2
+2
+SF_Connectors
+1X02_LONGPADS
+PLATED THROUGH HOLE - LONG PADS WITHOUT SILK OUTLINE
+PLATED THROUGH HOLE - LONG PADS WITHOUT SILK OUTLINE
+0
+2
+2
+SF_Connectors
+1X02_NO_SILK
+PLATED THROUGH HOLE - NO SILK OUTLINE
+PLATED THROUGH HOLE - NO SILK OUTLINE
+0
+2
+2
+SF_Connectors
+1X02_POKEHOME
+2 PIN POKE-HOME CONNECTOR
+2 PIN POKE-HOME CONNECTOR
+0
+4
+4
+SF_Connectors
+1X02_PP_HOLES_ONLY
+POGO PINS CONNECTOR - NO SILK OUTLINE
+POGO PINS CONNECTOR - NO SILK OUTLINE
+0
+2
+2
+SF_Connectors
+1X02_RA_PTH_FEMALE
+
+
+0
+2
+2
+SF_Connectors
+1X02_XTRA_BIG
+PLATED THROUGH HOLE - 0.1" HOLES
+PLATED THROUGH HOLE - 0.1" HOLES
+0
+2
+2
+SF_Connectors
+1X03
+PLATED THROUGH HOLE - 3 PIN
+PLATED THROUGH HOLE - 3 PIN
+0
+3
+3
+SF_Connectors
+1X03-1MM-RA
+PLATED THROUGH HOLE - 3 PIN SMD
+PLATED THROUGH HOLE - 3 PIN SMD
+0
+5
+5
+SF_Connectors
+1X03_LOCK
+PLATED THROUGH HOLE - 3 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE - 3 PIN LOCKING FOOTPRINT
+0
+3
+3
+SF_Connectors
+1X03_LOCK_LONGPADS
+PLATED THROUGH HOLE - 3 PIN LONG PAD W/ LOCKING FOOTPRINT
+PLATED THROUGH HOLE - 3 PIN LONG PAD W/ LOCKING FOOTPRINT
+0
+3
+3
+SF_Connectors
+1X03_LOCK_NO_SILK
+PLATED THROUGH HOLE - 3 PIN LOCKING FOOTPRINT W/OUT SILK OUTLINE
+PLATED THROUGH HOLE - 3 PIN LOCKING FOOTPRINT W/OUT SILK OUTLINE
+0
+3
+3
+SF_Connectors
+1X03_LONGPADS
+PLATED THROUGH HOLE - 3 PIN LONG PADS
+PLATED THROUGH HOLE - 3 PIN LONG PADS
+0
+3
+3
+SF_Connectors
+1X03_NO_SILK
+PLATED THROUGH HOLE - 3 PIN NO SILK OUTLINE
+PLATED THROUGH HOLE - 3 PIN NO SILK OUTLINE
+0
+3
+3
+SF_Connectors
+1X03_PP_HOLES_ONLY
+POGO PINS - 3 PIN
+POGO PINS - 3 PIN
+0
+3
+3
+SF_Connectors
+1X03_SMD_RA_FEMALE
+SMD - 3 PIN RIGHT ANGLE FEMALE HEADER
+SMD - 3 PIN RIGHT ANGLE FEMALE HEADER
+0
+3
+3
+SF_Connectors
+1X03_SMD_RA_MALE
+SMD- 3 PIN RIGHT ANGLE MALE HEADERS
+SMD- 3 PIN RIGHT ANGLE MALE HEADERS
+0
+3
+3
+SF_Connectors
+1X03_SMD_RA_MALE_POST
+SMD - 3 PIN RIGHT ANGLE MALE HEADER W/ ALIGNMENT POSTS
+SMD - 3 PIN RIGHT ANGLE MALE HEADER W/ ALIGNMENT POSTS
+0
+3
+3
+SF_Connectors
+1X03_SMD_RA_MALE_POST_SMALLER
+SMD - 3 PIN RIGHT ANGLE MALE HEADER W/ ALIGNMENT POSTS
+SMD - 3 PIN RIGHT ANGLE MALE HEADER W/ ALIGNMENT POSTS
+0
+3
+3
+SF_Connectors
+1X03_SMD_RA_MALE_POST_SMALLEST
+
+
+0
+3
+3
+SF_Connectors
+1X04
+PLATED THROUGH HOLE - 4 PIN
+PLATED THROUGH HOLE - 4 PIN
+0
+4
+4
+SF_Connectors
+1X04_1.27MM
+PLATED THROUGH HOLE - 4 PIN
+PLATED THROUGH HOLE - 4 PIN
+0
+4
+4
+SF_Connectors
+1X04_1MM_RA
+SMD- 4 PIN RIGHT ANGLE
+SMD- 4 PIN RIGHT ANGLE
+0
+6
+6
+SF_Connectors
+1X04_1MM_RA_STRESSRELIEF
+QWIIC CONNECTOR WITH MILLED CUTOUT. SLIDING THE CABLE INTO THIS SLOT PREVENTS THE CABLE FROM COMING UNPLUGGED.
+QWIIC CONNECTOR WITH MILLED CUTOUT. SLIDING THE CABLE INTO THIS SLOT PREVENTS THE CABLE FROM COMING UNPLUGGED.
+0
+6
+6
+SF_Connectors
+1X04_LOCK
+PLATED THROUGH HOLE - 4 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE - 4 PIN LOCKING FOOTPRINT
+0
+4
+4
+SF_Connectors
+1X04_LOCK_LONGPADS
+PLATED THROUGH HOLE - 4 PIN LONG PADS W/ LOCKING FOOTPRINT
+PLATED THROUGH HOLE - 4 PIN LONG PADS W/ LOCKING FOOTPRINT
+0
+4
+4
+SF_Connectors
+1X04_LONGPADS
+PLATED THROUGH HOLE - 4 PIN LONG PADS
+PLATED THROUGH HOLE - 4 PIN LONG PADS
+0
+4
+4
+SF_Connectors
+1X04_NO_SILK
+PLATED THROUGH HOLE - 4 PIN NO SILK OUTLINE
+PLATED THROUGH HOLE - 4 PIN NO SILK OUTLINE
+0
+4
+4
+SF_Connectors
+1X04_SMD_LONG
+SMD - 4 PIN W/ LONG SOLDER PADS
+SMD - 4 PIN W/ LONG SOLDER PADS
+0
+4
+4
+SF_Connectors
+1X04_SMD_RA_FEMALE
+SMD - 4 PIN RIGHT-ANGLE FEMALE HEADER
+SMD - 4 PIN RIGHT-ANGLE FEMALE HEADER
+0
+4
+4
+SF_Connectors
+1X04_SMD_RA_MALE
+SMD - 4 PIN RIGHT ANGLE MALE HEADER
+SMD - 4 PIN RIGHT ANGLE MALE HEADER
+0
+4
+4
+SF_Connectors
+1X04_SMD_VERTICAL_COMBO
+SMD - 4 PIN VERTICAL CONNECTOR
+SMD - 4 PIN VERTICAL CONNECTOR
+0
+8
+8
+SF_Connectors
+1X05
+PLATED THROUGH HOLE - 5 PIN
+PLATED THROUGH HOLE - 5 PIN
+0
+5
+5
+SF_Connectors
+1X05_1.27MM
+PLATED THROUGH HOLE - 5 PIN
+PLATED THROUGH HOLE - 5 PIN
+0
+5
+5
+SF_Connectors
+1X05_1MM
+SMD - 5 PIN
+SMD - 5 PIN
+0
+7
+7
+SF_Connectors
+1X05_1MM_RA
+SMD - 5 PIN RIGHT ANGLE
+SMD - 5 PIN RIGHT ANGLE
+0
+7
+7
+SF_Connectors
+1X05_LOCK
+PLATED THROUGH HOLE - 5 PIN WITH LOCKING FOOTPRINT
+PLATED THROUGH HOLE - 5 PIN WITH LOCKING FOOTPRINT
+0
+5
+5
+SF_Connectors
+1X05_LOCK_LONGPADS
+PLATED THROUGH HOLE - 5 PIN LONG PAD WITH LOCKING FOOTPRINT
+PLATED THROUGH HOLE - 5 PIN LONG PAD WITH LOCKING FOOTPRINT
+0
+5
+5
+SF_Connectors
+1X05_LONGPADS
+PLATED THROUGH HOLE - 5 PIN LONG PADS
+PLATED THROUGH HOLE - 5 PIN LONG PADS
+0
+5
+5
+SF_Connectors
+1X05_NO_SILK
+PLATED THROUGH HOLE - 5 PIN NO SILK OUTLINE
+PLATED THROUGH HOLE - 5 PIN NO SILK OUTLINE
+0
+5
+5
+SF_Connectors
+1X06
+PLATED THROUGH HOLE - 6 PIN
+PLATED THROUGH HOLE - 6 PIN
+0
+6
+6
+SF_Connectors
+1X06-1MM
+JST SH VERTICAL  6-PIN CONNECTOR -SMD
+JST SH VERTICAL  6-PIN CONNECTOR -SMD
+0
+8
+8
+SF_Connectors
+1X06-KIT
+PLATED THROUGH HOLE - 6 PIN KIT
+PLATED THROUGH HOLE - 6 PIN KIT
+0
+6
+6
+SF_Connectors
+1X06-SMD-FEMALE
+HEADER - 6 PIN FEMALE SMD
+HEADER - 6 PIN FEMALE SMD
+0
+6
+6
+SF_Connectors
+1X06-SMD_RA_MALE
+SMD - 6 PIN RIGHT ANGLE MALE HEADER
+SMD - 6 PIN RIGHT ANGLE MALE HEADER
+0
+6
+6
+SF_Connectors
+1X06_1.27MM
+PLATED THROUGH HOLE - 6 PIN
+PLATED THROUGH HOLE - 6 PIN
+0
+6
+6
+SF_Connectors
+1X06_FEMALE_LOCK.010
+PLATED THROUGH HOLE - 6 PIN LOCKING HEADER
+PLATED THROUGH HOLE - 6 PIN LOCKING HEADER
+0
+6
+6
+SF_Connectors
+1X06_HOLES_ONLY
+6 PIN HOLES
+6 PIN HOLES
+0
+6
+6
+SF_Connectors
+1X06_LOCK
+PLATED THROUGH HOLE - 6 PIN WITH LOCKING FOOTPRINT
+PLATED THROUGH HOLE - 6 PIN WITH LOCKING FOOTPRINT
+0
+6
+6
+SF_Connectors
+1X06_LOCK_LONGPADS
+PLATED THROUGH HOLE - 6 PIN WITH LOCKING FOOTPRINT WITH LONG PADS
+PLATED THROUGH HOLE - 6 PIN WITH LOCKING FOOTPRINT WITH LONG PADS
+0
+6
+6
+SF_Connectors
+1X06_LONGPADS
+PLATED THROUGH HOLE - 6 PIN WITH LONG PADS
+PLATED THROUGH HOLE - 6 PIN WITH LONG PADS
+0
+6
+6
+SF_Connectors
+1X06_NO_SILK
+PLATED THROUGH HOLE - 6 PIN NO SILK OUTLINE
+PLATED THROUGH HOLE - 6 PIN NO SILK OUTLINE
+0
+6
+6
+SF_Connectors
+1X06_SMD_MALE
+6 PIN SMD MALE HEADER
+6 PIN SMD MALE HEADER
+0
+6
+6
+SF_Connectors
+1X06_SMD_STRAIGHT
+6 PIN SMD FEMALE HEADER
+6 PIN SMD FEMALE HEADER
+0
+6
+6
+SF_Connectors
+1X06_SMD_STRAIGHT_ALT
+6 PIN SMD FEMALE HEADER
+6 PIN SMD FEMALE HEADER
+0
+6
+6
+SF_Connectors
+1X06_SMD_STRAIGHT_COMBO
+6 PIN SMD FEMALE HEADER - COMBINED FOOTPRINT
+6 PIN SMD FEMALE HEADER - COMBINED FOOTPRINT
+0
+12
+12
+SF_Connectors
+1X07
+PLATED THROUGH HOLE -7 PIN
+PLATED THROUGH HOLE -7 PIN
+0
+7
+7
+SF_Connectors
+1X07_HOLES_ONLY
+7 PIN HOLES
+7 PIN HOLES
+0
+7
+7
+SF_Connectors
+1X07_LOCK
+PLATED THROUGH HOLE -7 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -7 PIN LOCKING FOOTPRINT
+0
+7
+7
+SF_Connectors
+1X07_LOCK_LONGPADS
+PLATED THROUGH HOLE -7 PIN LOCKING FOOTPRINT W/ LONG PADS
+PLATED THROUGH HOLE -7 PIN LOCKING FOOTPRINT W/ LONG PADS
+0
+7
+7
+SF_Connectors
+1X07_LONGPADS
+PLATED THROUGH HOLE -7 PIN  LONG PADS
+PLATED THROUGH HOLE -7 PIN  LONG PADS
+0
+7
+7
+SF_Connectors
+1X07_NO_SILK
+PLATED THROUGH HOLE -7 PIN  NO SILK
+PLATED THROUGH HOLE -7 PIN  NO SILK
+0
+7
+7
+SF_Connectors
+1X08
+PLATED THROUGH HOLE -8 PIN
+PLATED THROUGH HOLE -8 PIN
+0
+8
+8
+SF_Connectors
+1X08_FEMALE_LOCK
+PLATED THROUGH HOLE -8 PIN LOCKING FEMALE HEADERS
+PLATED THROUGH HOLE -8 PIN LOCKING FEMALE HEADERS
+0
+8
+8
+SF_Connectors
+1X08_LOCK
+PLATED THROUGH HOLE -8 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -8 PIN LOCKING FOOTPRINT
+0
+8
+8
+SF_Connectors
+1X08_LOCK_LONGPADS
+PLATED THROUGH HOLE -8 PIN LOCKING FOOTPRINT WITH LONG PADS
+PLATED THROUGH HOLE -8 PIN LOCKING FOOTPRINT WITH LONG PADS
+0
+8
+8
+SF_Connectors
+1X08_LOCK_NO_SILK
+PLATED THROUGH HOLE -8 PIN LOCKING FOOTPRINT NO SILK
+PLATED THROUGH HOLE -8 PIN LOCKING FOOTPRINT NO SILK
+0
+8
+8
+SF_Connectors
+1X08_LONGPADS
+PLATED THROUGH HOLE -8 PIN LONG PADS
+PLATED THROUGH HOLE -8 PIN LONG PADS
+0
+8
+8
+SF_Connectors
+1X08_NO_SILK
+PLATED THROUGH HOLE -8 PIN NO SILK
+PLATED THROUGH HOLE -8 PIN NO SILK
+0
+8
+8
+SF_Connectors
+1X08_SMD
+SMD -8 PIN VERTICAL FEMALE
+SMD -8 PIN VERTICAL FEMALE
+0
+8
+8
+SF_Connectors
+1X08_SMD_ALT
+SMD -8 PIN VERTICAL FEMALE
+SMD -8 PIN VERTICAL FEMALE
+0
+8
+8
+SF_Connectors
+1X08_SMD_COMBINED
+SMD -8 PIN VERTICAL FEMALE
+SMD -8 PIN VERTICAL FEMALE
+0
+16
+16
+SF_Connectors
+1X08_SMD_MALE
+SMD -8 PIN VERTICAL MALE
+SMD -8 PIN VERTICAL MALE
+0
+8
+8
+SF_Connectors
+1X09
+PLATED THROUGH HOLE -9 PIN
+PLATED THROUGH HOLE -9 PIN
+0
+9
+9
+SF_Connectors
+1X09_LOCK
+PLATED THROUGH HOLE -9 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -9 PIN LOCKING FOOTPRINT
+0
+9
+9
+SF_Connectors
+1X09_LOCK_LONGPADS
+PLATED THROUGH HOLE -9 PIN LOCKING FOOTPRINT W/ LONG PADS
+PLATED THROUGH HOLE -9 PIN LOCKING FOOTPRINT W/ LONG PADS
+0
+9
+9
+SF_Connectors
+1X09_LONGPADS
+PLATED THROUGH HOLE -9 PIN LONG PADS
+PLATED THROUGH HOLE -9 PIN LONG PADS
+0
+9
+9
+SF_Connectors
+1X09_NO_SILK
+PLATED THROUGH HOLE -9 PIN NO SILK
+PLATED THROUGH HOLE -9 PIN NO SILK
+0
+9
+9
+SF_Connectors
+1X10
+PLATED THROUGH HOLE -10 PIN
+PLATED THROUGH HOLE -10 PIN
+0
+10
+10
+SF_Connectors
+1X10-2MM
+PLATED THROUGH HOLE -10 PIN 2MM
+PLATED THROUGH HOLE -10 PIN 2MM
+0
+10
+10
+SF_Connectors
+1X10-2MM-SMD
+PLATED THROUGH HOLE -10 PIN 2MM SMD
+PLATED THROUGH HOLE -10 PIN 2MM SMD
+0
+10
+10
+SF_Connectors
+1X10_LOCK
+PLATED THROUGH HOLE -10 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -10 PIN LOCKING FOOTPRINT
+0
+10
+10
+SF_Connectors
+1X10_LOCK_LONGPADS
+PLATED THROUGH HOLE -10 PIN LOCKING FOOTPRINT WITH LONG PADS
+PLATED THROUGH HOLE -10 PIN LOCKING FOOTPRINT WITH LONG PADS
+0
+10
+10
+SF_Connectors
+1X10_LOCK_NS
+PLATED THROUGH HOLE -10 PIN LOCKING FOOTPRINT - NO SILK
+PLATED THROUGH HOLE -10 PIN LOCKING FOOTPRINT - NO SILK
+0
+10
+10
+SF_Connectors
+1X10_NO_SILK
+PLATED THROUGH HOLE -10 PIN NO SILK
+PLATED THROUGH HOLE -10 PIN NO SILK
+0
+10
+10
+SF_Connectors
+1X10_SMD_COMBINED
+SMD -10 PIN
+SMD -10 PIN
+0
+20
+20
+SF_Connectors
+1X10_SMD_MALE
+SMD -10 PIN
+SMD -10 PIN
+0
+10
+10
+SF_Connectors
+1X11
+PLATED THROUGH HOLE -11 PIN
+PLATED THROUGH HOLE -11 PIN
+0
+11
+11
+SF_Connectors
+1X11-1.27MM
+PLATED THROUGH HOLE -11 PIN 1.27MM
+PLATED THROUGH HOLE -11 PIN 1.27MM
+0
+11
+11
+SF_Connectors
+1X11_HOLES_ONLY
+11 PIN HOLES
+11 PIN HOLES
+0
+11
+11
+SF_Connectors
+1X11_LOCK
+PLATED THROUGH HOLE -11 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -11 PIN LOCKING FOOTPRINT
+0
+11
+11
+SF_Connectors
+1X11_LOCK_LONGPADS
+PLATED THROUGH HOLE -11 PIN LOCKING FOOTPRINT W/ LONG PADS
+PLATED THROUGH HOLE -11 PIN LOCKING FOOTPRINT W/ LONG PADS
+0
+11
+11
+SF_Connectors
+1X11_LONGPADS
+PLATED THROUGH HOLE -11 PIN W/ LONG PADS
+PLATED THROUGH HOLE -11 PIN W/ LONG PADS
+0
+11
+11
+SF_Connectors
+1X11_NO_SILK
+PLATED THROUGH HOLE -11 PIN NO SILK
+PLATED THROUGH HOLE -11 PIN NO SILK
+0
+11
+11
+SF_Connectors
+1X11_NO_SILK_KIT
+PLATED THROUGH HOLE -11 PIN NO SILK  KIT
+PLATED THROUGH HOLE -11 PIN NO SILK  KIT
+0
+11
+11
+SF_Connectors
+1X12
+PLATED THROUGH HOLE -12 PIN
+PLATED THROUGH HOLE -12 PIN
+0
+12
+12
+SF_Connectors
+1X12_HOLES_ONLY
+HOLES -12 PIN
+HOLES -12 PIN
+0
+12
+12
+SF_Connectors
+1X12_LOCK
+PLATED THROUGH HOLE -12 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -12 PIN LOCKING FOOTPRINT
+0
+12
+12
+SF_Connectors
+1X12_LOCK_LONGPADS
+PLATED THROUGH HOLE -12 PIN LOCKING FOOTPRINT WITH LONG PADS
+PLATED THROUGH HOLE -12 PIN LOCKING FOOTPRINT WITH LONG PADS
+0
+12
+12
+SF_Connectors
+1X12_LOCK_NO_SILK
+PLATED THROUGH HOLE -12 PIN LOCKING FOOTPRINT NO SILK
+PLATED THROUGH HOLE -12 PIN LOCKING FOOTPRINT NO SILK
+0
+12
+12
+SF_Connectors
+1X12_LONGPADS
+PLATED THROUGH HOLE -12 PIN LONG PADS
+PLATED THROUGH HOLE -12 PIN LONG PADS
+0
+12
+12
+SF_Connectors
+1X12_MACHINE-PIN-HEADER_LOCK.004
+PLATED THROUGH HOLE -12 PIN MACHINE PIN HEADERS
+PLATED THROUGH HOLE -12 PIN MACHINE PIN HEADERS
+0
+12
+12
+SF_Connectors
+1X12_NO_SILK
+PLATED THROUGH HOLE -12 PIN NO SILK
+PLATED THROUGH HOLE -12 PIN NO SILK
+0
+12
+12
+SF_Connectors
+1X12_NO_SILK_KIT
+PLATED THROUGH HOLE -12 PIN NO SILK KIT
+PLATED THROUGH HOLE -12 PIN NO SILK KIT
+0
+12
+12
+SF_Connectors
+1X13
+PLATED THROUGH HOLE -13 PIN
+PLATED THROUGH HOLE -13 PIN
+0
+13
+13
+SF_Connectors
+1X13-LONGPADS
+PLATED THROUGH HOLE -13 PIN LONG PADS
+PLATED THROUGH HOLE -13 PIN LONG PADS
+0
+13
+13
+SF_Connectors
+1X13_LOCK
+PLATED THROUGH HOLE -13 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -13 PIN LOCKING FOOTPRINT
+0
+13
+13
+SF_Connectors
+1X13_LOCK_NO_SILK
+PLATED THROUGH HOLE -13 PIN LOCKING FOOTPRINT NO SILK OUTLINE
+PLATED THROUGH HOLE -13 PIN LOCKING FOOTPRINT NO SILK OUTLINE
+0
+13
+13
+SF_Connectors
+1X14
+PLATED THROUGH HOLE -14 PIN
+PLATED THROUGH HOLE -14 PIN
+0
+14
+14
+SF_Connectors
+1X14-LONGPADS
+PLATED THROUGH HOLE -14 PIN LONG PADS
+PLATED THROUGH HOLE -14 PIN LONG PADS
+0
+14
+14
+SF_Connectors
+1X14_LOCK
+PLATED THROUGH HOLE -14 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -14 PIN LOCKING FOOTPRINT
+0
+14
+14
+SF_Connectors
+1X14_LOCK_LONGPADS
+PLATED THROUGH HOLE -14 PIN LOCKING FOOTPRINT W/ LONG PADS
+PLATED THROUGH HOLE -14 PIN LOCKING FOOTPRINT W/ LONG PADS
+0
+14
+14
+SF_Connectors
+1X14_NO_SILK
+PLATED THROUGH HOLE -14 PIN NO SILK OUTLINE
+PLATED THROUGH HOLE -14 PIN NO SILK OUTLINE
+0
+14
+14
+SF_Connectors
+1X15
+PLATED THROUGH HOLE -15 PIN
+PLATED THROUGH HOLE -15 PIN
+0
+15
+15
+SF_Connectors
+1X15_LOCK
+PLATED THROUGH HOLE -15 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -15 PIN LOCKING FOOTPRINT
+0
+15
+15
+SF_Connectors
+1X15_LOCK_LONGPADS
+PLATED THROUGH HOLE -15 PIN LOCKING FOOTPRINT WITH LONG PADS
+PLATED THROUGH HOLE -15 PIN LOCKING FOOTPRINT WITH LONG PADS
+0
+15
+15
+SF_Connectors
+1X15_LOCK_NO_SILK
+PLATED THROUGH HOLE -15 PIN LOCKING FOOTPRINT NO SILK OUTLINE
+PLATED THROUGH HOLE -15 PIN LOCKING FOOTPRINT NO SILK OUTLINE
+0
+15
+15
+SF_Connectors
+1X16
+PLATED THROUGH HOLE -16 PIN
+PLATED THROUGH HOLE -16 PIN
+0
+16
+16
+SF_Connectors
+1X16_LOCK
+PLATED THROUGH HOLE -16 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -16 PIN LOCKING FOOTPRINT
+0
+16
+16
+SF_Connectors
+1X16_LOCK_LONGPADS
+PLATED THROUGH HOLE -16 PIN LOCKING FOOTPRINT W/ LONG PADS
+PLATED THROUGH HOLE -16 PIN LOCKING FOOTPRINT W/ LONG PADS
+0
+16
+16
+SF_Connectors
+1X16_LONGPADS
+PLATED THROUGH HOLE -16 PIN LONG PADS
+PLATED THROUGH HOLE -16 PIN LONG PADS
+0
+16
+16
+SF_Connectors
+1X16_MACHINE-PIN-HEADER_LOCK.004
+PLATED THROUGH HOLE -16 PIN MACHINE PIN HEADER LOCKING FOOTPRINT
+PLATED THROUGH HOLE -16 PIN MACHINE PIN HEADER LOCKING FOOTPRINT
+0
+16
+16
+SF_Connectors
+1X16_NO_SILK
+PLATED THROUGH HOLE -16 PIN NO SILK
+PLATED THROUGH HOLE -16 PIN NO SILK
+0
+16
+16
+SF_Connectors
+1X17
+PLATED THROUGH HOLE -17 PIN
+PLATED THROUGH HOLE -17 PIN
+0
+17
+17
+SF_Connectors
+1X17_NO_SILK
+PLATED THROUGH HOLE -17 PIN NO SILK
+PLATED THROUGH HOLE -17 PIN NO SILK
+0
+17
+17
+SF_Connectors
+1X17_NO_SILK_KIT
+PLATED THROUGH HOLE -17 PIN NO SILK KIT
+PLATED THROUGH HOLE -17 PIN NO SILK KIT
+0
+17
+17
+SF_Connectors
+1X18
+PLATED THROUGH HOLE -18 PIN
+PLATED THROUGH HOLE -18 PIN
+0
+18
+18
+SF_Connectors
+1X19
+PLATED THROUGH HOLE -19 PIN
+PLATED THROUGH HOLE -19 PIN
+0
+19
+19
+SF_Connectors
+1X19_NO_SILK
+PLATED THROUGH HOLE -19 PIN NO SILK
+PLATED THROUGH HOLE -19 PIN NO SILK
+0
+19
+19
+SF_Connectors
+1X20
+PLATED THROUGH HOLE -20 PIN
+PLATED THROUGH HOLE -20 PIN
+0
+20
+20
+SF_Connectors
+1X20_LOCK
+PLATED THROUGH HOLE -20 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -20 PIN LOCKING FOOTPRINT
+0
+20
+20
+SF_Connectors
+1X20_LOCK_LONGPADS
+PLATED THROUGH HOLE -20 PIN LOCKING FOOTPRINT LONG PADS
+PLATED THROUGH HOLE -20 PIN LOCKING FOOTPRINT LONG PADS
+0
+20
+20
+SF_Connectors
+1X20_LOCK_NOSILK
+PLATED THROUGH HOLE -20 PIN LOCKING FOOTPRINT NO SILK
+PLATED THROUGH HOLE -20 PIN LOCKING FOOTPRINT NO SILK
+0
+20
+20
+SF_Connectors
+1X20_LOCK_SPECIAL
+PLATED THROUGH HOLE -20 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -20 PIN LOCKING FOOTPRINT
+0
+20
+20
+SF_Connectors
+1X20_NOSILK
+PLATED THROUGH HOLE -20 PIN NO SILK
+PLATED THROUGH HOLE -20 PIN NO SILK
+0
+20
+20
+SF_Connectors
+1X20_NO_SILK_KIT
+PLATED THROUGH HOLE -20 PIN NO SILK KIT
+PLATED THROUGH HOLE -20 PIN NO SILK KIT
+0
+20
+20
+SF_Connectors
+1X23
+PLATED THROUGH HOLE -23 PIN
+PLATED THROUGH HOLE -23 PIN
+0
+23
+23
+SF_Connectors
+1X23_LOCK
+PLATED THROUGH HOLE -23 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -23 PIN LOCKING FOOTPRINT
+0
+23
+23
+SF_Connectors
+1X23_LONGPADS
+PLATED THROUGH HOLE -23 PIN LONG PADS
+PLATED THROUGH HOLE -23 PIN LONG PADS
+0
+24
+24
+SF_Connectors
+1X24
+PLATED THROUGH HOLE -24 PIN
+PLATED THROUGH HOLE -24 PIN
+0
+24
+24
+SF_Connectors
+1X24_LOCK
+PLATED THROUGH HOLE -24 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -24 PIN LOCKING FOOTPRINT
+0
+24
+24
+SF_Connectors
+1X24_LONGPADS
+PLATED THROUGH HOLE -24 PIN LONG PADS
+PLATED THROUGH HOLE -24 PIN LONG PADS
+0
+24
+24
+SF_Connectors
+1X25
+PLATED THROUGH HOLE -25
+PLATED THROUGH HOLE -25
+0
+25
+25
+SF_Connectors
+1X25_LOCK
+PLATED THROUGH HOLE -25 PIN LOCKING FOOTPRINT
+PLATED THROUGH HOLE -25 PIN LOCKING FOOTPRINT
+0
+25
+25
+SF_Connectors
+1X25_LOCK_LONGPADS
+PLATED THROUGH HOLE -25 PIN LOCKING FOOTPRINT W/ LONG PADS
+PLATED THROUGH HOLE -25 PIN LOCKING FOOTPRINT W/ LONG PADS
+0
+25
+25
+SF_Connectors
+1X25_LONGPAD
+PLATED THROUGH HOLE -25 PIN LONG PADS
+PLATED THROUGH HOLE -25 PIN LONG PADS
+0
+25
+25
+SF_Connectors
+1X27
+PLATED THROUGH HOLE -27 PINS
+PLATED THROUGH HOLE -27 PINS
+0
+27
+27
+SF_Connectors
+1X29
+PLATED THROUGH HOLE -29 PINS
+PLATED THROUGH HOLE -29 PINS
+0
+29
+29
+SF_Connectors
+1X29_NO_SILK
+PLATED THROUGH HOLE -29 PINS NO SILK OUTLINE
+PLATED THROUGH HOLE -29 PINS NO SILK OUTLINE
+0
+29
+29
+SF_Connectors
+1X30
+PLATED THROUGH HOLE -30 PINS
+PLATED THROUGH HOLE -30 PINS
+0
+30
+30
+SF_Connectors
+1X30_NO_SILK
+PLATED THROUGH HOLE -30 PINS NO SILK OUTLINE
+PLATED THROUGH HOLE -30 PINS NO SILK OUTLINE
+0
+30
+30
+SF_Connectors
+1X40
+PLATED THROUGH HOLE -40 PINS
+PLATED THROUGH HOLE -40 PINS
+0
+40
+40
+SF_Connectors
+1X40_OFFSET
+PLATED THROUGH HOLE -40 PINS OFFSET
+PLATED THROUGH HOLE -40 PINS OFFSET
+0
+40
+40
+SF_Connectors
+2X3
+PLATED THROUGH HOLE - 2X3
+PLATED THROUGH HOLE - 2X3
+0
+6
+6
+SF_Connectors
+2X3-NS
+PLATED THROUGH HOLE - 2X3 NO SILK OUTLINE
+PLATED THROUGH HOLE - 2X3 NO SILK OUTLINE
+0
+6
+6
+SF_Connectors
+2X3-SHROUDED
+PLATED THROUGH HOLE - 2X3 SHROUDED HEADER
+PLATED THROUGH HOLE - 2X3 SHROUDED HEADER
+0
+6
+6
+SF_Connectors
+2X3_LOCK
+PLATED THROUGH HOLE - 2X3 LOCKING FOOTPRINT
+PLATED THROUGH HOLE - 2X3 LOCKING FOOTPRINT
+0
+6
+6
+SF_Connectors
+2X3_OFFSET
+PLATED THROUGH HOLE - 2X3 LONG PADS W/ OFFSET HOLES
+PLATED THROUGH HOLE - 2X3 LONG PADS W/ OFFSET HOLES
+0
+6
+6
+SF_Connectors
+2X3_POGO
+PLATED THROUGH HOLE - 2X3 POGO PINS
+PLATED THROUGH HOLE - 2X3 POGO PINS
+0
+6
+6
+SF_Connectors
+2X3_SMD
+SURFACE MOUNT - 2X3
+SURFACE MOUNT - 2X3
+0
+6
+6
+SF_Connectors
+2X3_SMT_POSTS
+SURFACE MOUNT - 2X3 MALE HEADER WITH KEYING POSTS
+SURFACE MOUNT - 2X3 MALE HEADER WITH KEYING POSTS
+0
+6
+6
+SF_Connectors
+2X3_TEST_POINTS
+PLATED THROUGH HOLE - 2X3 TEST POINT HEADER
+PLATED THROUGH HOLE - 2X3 TEST POINT HEADER
+0
+6
+6
+SF_Connectors
+2X4
+PLATED THROUGH HOLE - 2X4
+PLATED THROUGH HOLE - 2X4
+0
+8
+8
+SF_Connectors
+2X5
+PLATED THROUGH HOLE - 2X5
+PLATED THROUGH HOLE - 2X5
+0
+10
+10
+SF_Connectors
+2X5-PTH-1.27MM
+PLATED THROUGH HOLE - 2X5 ARM CORTEX DEBUG CONNECTOR (10-PIN)
+PLATED THROUGH HOLE - 2X5 ARM CORTEX DEBUG CONNECTOR (10-PIN)
+0
+10
+10
+SF_Connectors
+2X5-RA
+PLATED THROUGH HOLE - 2X5 RIGHT ANGLE MALE HEADERS
+PLATED THROUGH HOLE - 2X5 RIGHT ANGLE MALE HEADERS
+0
+10
+10
+SF_Connectors
+2X5-RAF
+PLATED THROUGH HOLE - 2X5 RIGHT ANGLE FEMALE HEADER
+PLATED THROUGH HOLE - 2X5 RIGHT ANGLE FEMALE HEADER
+0
+10
+10
+SF_Connectors
+2X5-SHROUDED
+PLATED THROUGH HOLE - 2X5 SHROUDED HEADER
+PLATED THROUGH HOLE - 2X5 SHROUDED HEADER
+0
+10
+10
+SF_Connectors
+2X5-SHROUDED-NS
+PLATED THROUGH HOLE - 2X5 SHROUDED HEADER NO SILK
+PLATED THROUGH HOLE - 2X5 SHROUDED HEADER NO SILK
+0
+10
+10
+SF_Connectors
+2X5-SHROUDED_LOCK
+PLATED THROUGH HOLE - 2X5 SHROUDED HEADER LOCKING FOOTPRINT
+PLATED THROUGH HOLE - 2X5 SHROUDED HEADER LOCKING FOOTPRINT
+0
+10
+10
+SF_Connectors
+2X5-SHROUDED_SMD
+SURFACE MOUNT - 2X5 SHROUDED HEADER
+SURFACE MOUNT - 2X5 SHROUDED HEADER
+0
+10
+10
+SF_Connectors
+2X5_NOSILK
+PLATED THROUGH HOLE - 2X5 NO SILK OUTLINE
+PLATED THROUGH HOLE - 2X5 NO SILK OUTLINE
+0
+10
+10
+SF_Connectors
+2X5_PTH_SILK_.05
+PLATED THROUGH HOLE - 2X5
+PLATED THROUGH HOLE - 2X5
+0
+10
+10
+SF_Connectors
+2X6
+PLATED THROUGH HOLE - 2X6
+PLATED THROUGH HOLE - 2X6
+0
+12
+12
+SF_Connectors
+2X6_SMD
+SURFACE MOUNT - 2X6
+SURFACE MOUNT - 2X6
+0
+12
+12
+SF_Connectors
+2X8
+PLATED THROUGH HOLE - 2X8
+PLATED THROUGH HOLE - 2X8
+0
+16
+16
+SF_Connectors
+2X10
+PLATED THROUGH HOLE - 2X10
+PLATED THROUGH HOLE - 2X10
+0
+20
+20
+SF_Connectors
+2X10_LOCK
+PLATED THROUGH HOLE - 2X10 LOCKING FOOTPRINT
+PLATED THROUGH HOLE - 2X10 LOCKING FOOTPRINT
+0
+20
+20
+SF_Connectors
+2X10_LOCK_SPECIAL
+PLATED THROUGH HOLE - 2X10 LOCKING FOOTPRINT SPECIAL
+PLATED THROUGH HOLE - 2X10 LOCKING FOOTPRINT SPECIAL
+0
+20
+20
+SF_Connectors
+2X10_NOSILK
+PLATED THROUGH HOLE - 2X10 NO SILK OUTLINE
+PLATED THROUGH HOLE - 2X10 NO SILK OUTLINE
+0
+20
+20
+SF_Connectors
+2X12
+PLATED THROUGH HOLE - 2X12
+PLATED THROUGH HOLE - 2X12
+0
+24
+24
+SF_Connectors
+2X13
+PLATED THROUGH HOLE - 2X13
+PLATED THROUGH HOLE - 2X13
+0
+26
+26
+SF_Connectors
+2X20
+PLATED THROUGH HOLE - 2X20
+PLATED THROUGH HOLE - 2X20
+0
+40
+40
+SF_Connectors
+2X20_NOSILK
+PLATED THROUGH HOLE - 2X20 NO SILK OUTLINE
+PLATED THROUGH HOLE - 2X20 NO SILK OUTLINE
+0
+40
+40
+SF_Connectors
+2X20_SHROUDED
+PLATED THROUGH HOLE - 2X20 SHROUDED HEADER
+PLATED THROUGH HOLE - 2X20 SHROUDED HEADER
+0
+40
+40
+SF_Connectors
+2X20_SHROUDED_SMT
+SURFACE MOUNT - 2X20 SHROUDED HEADER
+SURFACE MOUNT - 2X20 SHROUDED HEADER
+0
+40
+40
+SF_Connectors
+2X26
+PLATED THROUGH HOLE - 2X26
+PLATED THROUGH HOLE - 2X26
+0
+52
+52
+SF_Connectors
+3.81MM_TERMINAL_BLOCK_FEMALE_LOCKING
+MYDAQ FEMALE RIGHT ANGLE TERMINAL BLOCK W/ LOCKING FOOTPRINT
+MYDAQ FEMALE RIGHT ANGLE TERMINAL BLOCK W/ LOCKING FOOTPRINT
+0
+40
+40
+SF_Connectors
+6_PIN_SERIAL_TARGET_SIDE_RA_SMT
+6 PIN SERIAL TARGET - RIGHT ANGLE  SMT
+6 PIN SERIAL TARGET - RIGHT ANGLE  SMT
+0
+6
+6
+SF_Connectors
+6_PIN_SERIAL_TARGET_SIDE_W_SILK
+6 PIN SERIAL TARGET - RIGHT ANGLE  SMT WITH SILK
+6 PIN SERIAL TARGET - RIGHT ANGLE  SMT WITH SILK
+0
+6
+6
+SF_Connectors
+ATX24_RIGHT_ANGLE
+MOLEX MINI-FIT JR. - 24 PIN, RIGHT ANGLE
+MOLEX MINI-FIT JR. - 24 PIN, RIGHT ANGLE
+0
+24
+24
+SF_Connectors
+AUDIO-JACK
+3.5MM STEREO AUDIO JACK
+3.5MM STEREO AUDIO JACK
+0
+5
+5
+SF_Connectors
+AUDIO-JACK-3.5MM-SMD
+3.5MM STEREO AUDIO JACK - SURFACE MOUNT
+3.5MM STEREO AUDIO JACK - SURFACE MOUNT
+0
+5
+5
+SF_Connectors
+AUDIO-JACK-KIT
+3.5MM STEREO AUDIO JACK -KIT VERSION
+3.5MM STEREO AUDIO JACK -KIT VERSION
+0
+5
+5
+SF_Connectors
+AUDIO_JACK_0.25%5c%22_TRS_PTH_RA
+RIGHT ANGLE -1/4" STEREO JACK
+RIGHT ANGLE -1/4" STEREO JACK
+0
+6
+4
+SF_Connectors
+AUDIO_JACK_0.25_TRS_PTH_RA
+RIGHT ANGLE -1/4" STEREO JACK
+RIGHT ANGLE -1/4" STEREO JACK
+0
+6
+4
+SF_Connectors
+AUDIO_JACK_3.5MM_TRRS_SMD_RA
+TRRS 3.5MM RIGHT ANGLE STEREO JACK - SMT
+TRRS 3.5MM RIGHT ANGLE STEREO JACK - SMT
+0
+4
+3
+SF_Connectors
+BANANA_CONN
+BANANA PLUG PTH
+BANANA PLUG PTH
+0
+1
+1
+SF_Connectors
+BC9VPC
+9V BATTERY HOLDER (OPEN) - PTH
+9V BATTERY HOLDER (OPEN) - PTH
+0
+2
+2
+SF_Connectors
+BC9VPC_KIT
+9V BATTERY HOLDER (OPEN) - PTH KIT
+9V BATTERY HOLDER (OPEN) - PTH KIT
+0
+2
+2
+SF_Connectors
+BINDING_POST
+INSULATED BINDING POST
+INSULATED BINDING POST
+0
+1
+1
+SF_Connectors
+BM08B-SRSS-TB
+JST VERTICAL CRIMP CONNECT
+JST VERTICAL CRIMP CONNECT
+0
+10
+10
+SF_Connectors
+BNC
+BNC JACK - MOUSER PART#5227161
+BNC JACK - MOUSER PART#5227161
+0
+4
+4
+SF_Connectors
+BTA
+BRITISH TELECOM CONNECTOR - ANALOG RIGHT ANGLE
+BRITISH TELECOM CONNECTOR - ANALOG RIGHT ANGLE
+0
+6
+6
+SF_Connectors
+BTD
+BRITISH TELECOM CONNECTOR - RIGHT ANGLE FEMALE DIGITAL
+BRITISH TELECOM CONNECTOR - RIGHT ANGLE FEMALE DIGITAL
+0
+6
+6
+SF_Connectors
+DB9
+9 PIN SERIAL CONNECTOR - FEMALE PCB MOUNT RIGHT ANGLE
+9 PIN SERIAL CONNECTOR - FEMALE PCB MOUNT RIGHT ANGLE
+0
+11
+11
+SF_Connectors
+DB9_MALE
+9 PIN SERIAL CONNECTOR - MALE PCB MOUNT RIGHT ANGLE
+9 PIN SERIAL CONNECTOR - MALE PCB MOUNT RIGHT ANGLE
+0
+11
+11
+SF_Connectors
+DEANS
+DEANS CONNECTOR
+DEANS CONNECTOR
+0
+2
+2
+SF_Connectors
+DF40-XC-(X.X)-70DS-0.4V(51)
+HIROSE DF40C-70DP-0.4V(51) PLUG
+HIROSE DF40C-70DP-0.4V(51) PLUG
+0
+70
+70
+SF_Connectors
+DF40C-70DP-0.4(51)
+HIROSE DF30C-70DP-0.4V(51) RECEIVER
+HIROSE DF30C-70DP-0.4V(51) RECEIVER
+0
+74
+74
+SF_Connectors
+DIL28-3-ZIF_SOCKET
+ZIF SOCKET 28-PIN 0.3"
+ZIF SOCKET 28-PIN 0.3"
+0
+28
+28
+SF_Connectors
+DIN5-RA-PTH
+DIN5/180 CONNECTOR - RIGHT ANGLE FEMALE
+DIN5/180 CONNECTOR - RIGHT ANGLE FEMALE
+0
+7
+7
+SF_Connectors
+DIN7
+MINIDIN RIGHT ANGLE
+MINIDIN RIGHT ANGLE
+0
+10
+10
+SF_Connectors
+DS_TOUCH_CONNECTOR
+4-PIN DS TOUCH SCREEN CONNECTOR
+4-PIN DS TOUCH SCREEN CONNECTOR
+0
+6
+6
+SF_Connectors
+EB-85A
+EB-85A CONNECTOR
+EB-85A CONNECTOR
+0
+10
+10
+SF_Connectors
+EDISON_DAUGHTER
+HIROSE DF30C-70DP-0.4V(51) RECEIVER FOOTPRINT W/ EDISON OUTLINE
+HIROSE DF30C-70DP-0.4V(51) RECEIVER FOOTPRINT W/ EDISON OUTLINE
+0
+70
+70
+SF_Connectors
+FTDI_BASIC
+FTDI BASIC
+FTDI BASIC
+0
+6
+6
+SF_Connectors
+JST-2-PTH
+JST 2 PIN RIGHT ANGLE PLATED THROUGH  HOLE
+JST 2 PIN RIGHT ANGLE PLATED THROUGH  HOLE
+0
+2
+2
+SF_Connectors
+JST-2-PTH-KIT
+JST 2 PIN RIGHT ANGLE PLATED THROUGH  HOLE - KIT
+JST 2 PIN RIGHT ANGLE PLATED THROUGH  HOLE - KIT
+0
+2
+2
+SF_Connectors
+JST-2-PTH-NS
+JST 2 PIN RIGHT ANGLE PLATED THROUGH  HOLE- NO SILK
+JST 2 PIN RIGHT ANGLE PLATED THROUGH  HOLE- NO SILK
+0
+2
+2
+SF_Connectors
+JST-2-SMD
+JST-RIGHT ANGLE MALE HEADER SMT
+JST-RIGHT ANGLE MALE HEADER SMT
+0
+4
+4
+SF_Connectors
+JST-2-SMD-VERT
+JST-VERTICAL MALE HEADER SMT
+JST-VERTICAL MALE HEADER SMT
+0
+4
+4
+SF_Connectors
+JST-3-PTH
+JST 3 PIN RIGHT ANGLE PLATED THROUGH HOLE
+JST 3 PIN RIGHT ANGLE PLATED THROUGH HOLE
+0
+3
+3
+SF_Connectors
+JST-3-PTH-NS
+JST 3 PIN RIGHT ANGLE PLATED THROUGH HOLE &NDASH; NO SILK
+JST 3 PIN RIGHT ANGLE PLATED THROUGH HOLE &NDASH; NO SILK
+0
+3
+3
+SF_Connectors
+JST-3-PTH-VERT
+JST 3 PIN VERTICAL PLATED THROUGH HOLE
+JST 3 PIN VERTICAL PLATED THROUGH HOLE
+0
+3
+3
+SF_Connectors
+JST-3-SMD
+JST 3 PIN RIGHT ANGLE SMT
+JST 3 PIN RIGHT ANGLE SMT
+0
+5
+5
+SF_Connectors
+JST-4-PTH
+JST RIGHT ANGLE 4 PIN PLATED THROUGH HOLE
+JST RIGHT ANGLE 4 PIN PLATED THROUGH HOLE
+0
+4
+4
+SF_Connectors
+JST-4-PTH-VERT
+JST VERTICAL 4 PIN PLATED THROUGH HOLE
+JST VERTICAL 4 PIN PLATED THROUGH HOLE
+0
+4
+4
+SF_Connectors
+JST-5-PTH
+JST 5 PIN RIGHT ANGLE PLATED THROUGH HOLE
+JST 5 PIN RIGHT ANGLE PLATED THROUGH HOLE
+0
+5
+5
+SF_Connectors
+JST-5-PTH-VERT
+JST 5 PIN VERTICAL PLATED THROUGH HOLE
+JST 5 PIN VERTICAL PLATED THROUGH HOLE
+0
+5
+5
+SF_Connectors
+JST-6-SMD-VERT-1.0MM
+JST SH VERTICAL 6-PIN SMT
+JST SH VERTICAL 6-PIN SMT
+0
+8
+8
+SF_Connectors
+MAGJACK
+RJ45 ETHERNET MAGJACK-COMPATIBLE
+RJ45 ETHERNET MAGJACK-COMPATIBLE
+0
+14
+14
+SF_Connectors
+MAGJACK-POE
+RJ45 POE MAGJACK
+RJ45 POE MAGJACK
+0
+16
+16
+SF_Connectors
+MICRO-SD-SOCKET
+MICROSD SOCKET SMD
+MICROSD SOCKET SMD
+0
+12
+12
+SF_Connectors
+MICRO-SD-SOCKET-SDIO
+
+
+0
+12
+12
+SF_Connectors
+MOLEX-1X2
+MOLEX 2-PIN PLATED THROUGH-HOLE
+MOLEX 2-PIN PLATED THROUGH-HOLE
+0
+2
+2
+SF_Connectors
+MOLEX-1X2_LOCK
+MOLEX 2-PIN PLATED THROUGH-HOLE LOCKING FOOTPRINT
+MOLEX 2-PIN PLATED THROUGH-HOLE LOCKING FOOTPRINT
+0
+2
+2
+SF_Connectors
+MOLEX-1X3
+PTH - 3 PIN VERTICAL MOLEX POLARIZED HEADER
+PTH - 3 PIN VERTICAL MOLEX POLARIZED HEADER
+0
+3
+3
+SF_Connectors
+MOLEX-1X3_LOCK
+PTH - 3 PIN VERTICAL MOLEX POLARIZED HEADER
+PTH - 3 PIN VERTICAL MOLEX POLARIZED HEADER
+0
+3
+3
+SF_Connectors
+MOLEX-1X4
+MOLEX 4-PIN PLATED THROUGH-HOLE
+MOLEX 4-PIN PLATED THROUGH-HOLE
+0
+4
+4
+SF_Connectors
+MOLEX-1X4_LOCK
+MOLEX 4-PIN PLATED THROUGH-HOLE LOCKING
+MOLEX 4-PIN PLATED THROUGH-HOLE LOCKING
+0
+4
+4
+SF_Connectors
+MOLEX-1X6
+MOLEX 6-PIN PLATED THROUGH-HOLE
+MOLEX 6-PIN PLATED THROUGH-HOLE
+0
+6
+6
+SF_Connectors
+MOLEX-1X6-RA
+MOLEX 6-PIN PLATED THROUGH-HOLE RIGHT ANGLE
+MOLEX 6-PIN PLATED THROUGH-HOLE RIGHT ANGLE
+0
+6
+6
+SF_Connectors
+MOLEX-1X6_LOCK
+MOLEX 6-PIN PLATED THROUGH-HOLE LOCKING FOOTPRINT
+MOLEX 6-PIN PLATED THROUGH-HOLE LOCKING FOOTPRINT
+0
+6
+6
+SF_Connectors
+MOLEX_1X6_RA_LOCK
+MOLEX 6-PIN PLATED THROUGH-HOLE RIGHT ANGLE LOCKING FOOTPRINT
+MOLEX 6-PIN PLATED THROUGH-HOLE RIGHT ANGLE LOCKING FOOTPRINT
+0
+6
+6
+SF_Connectors
+OBDII
+OBD-II AUTOMOTIVE CONNECTOR
+OBD-II AUTOMOTIVE CONNECTOR
+0
+16
+16
+SF_Connectors
+PAD.02X.02
+ELECTRICALLY CONDUCTIVE PAD 0.02" SQUARE
+ELECTRICALLY CONDUCTIVE PAD 0.02" SQUARE
+0
+1
+1
+SF_Connectors
+PAD.03X.03
+ELECTRICALLY CONDUCTIVE PAD 0.03" CIRCLE
+ELECTRICALLY CONDUCTIVE PAD 0.03" CIRCLE
+0
+1
+1
+SF_Connectors
+PAD.03X.04
+ELECTRICALLY CONDUCTIVE PAD 0.04" CIRCLE
+ELECTRICALLY CONDUCTIVE PAD 0.04" CIRCLE
+0
+1
+1
+SF_Connectors
+PAD.03X.05
+ELECTRICALLY CONDUCTIVE PAD 0.05" CIRCLE
+ELECTRICALLY CONDUCTIVE PAD 0.05" CIRCLE
+0
+1
+1
+SF_Connectors
+PIC_ICSP_MINI_5_PIN
+MINI ICSP CONNECTOR - 5 PIN
+MINI ICSP CONNECTOR - 5 PIN
+0
+5
+5
+SF_Connectors
+POWER_JACK_COMBO
+
+
+0
+7
+3
+SF_Connectors
+POWER_JACK_PTH
+DC BARREL POWER JACK/CONNECTOR PTH
+DC BARREL POWER JACK/CONNECTOR PTH
+0
+3
+3
+SF_Connectors
+POWER_JACK_PTH_BREAD
+DC BARREL POWER JACK/CONNECTOR BREADBOARD COMPATIBLE
+DC BARREL POWER JACK/CONNECTOR BREADBOARD COMPATIBLE
+0
+3
+3
+SF_Connectors
+POWER_JACK_PTH_LOCK
+DC BARREL POWER JACK/CONNECTOR PTH LOCKING FOOTPRINT
+DC BARREL POWER JACK/CONNECTOR PTH LOCKING FOOTPRINT
+0
+3
+3
+SF_Connectors
+POWER_JACK_SLOT
+DC BARREL POWER JACK/CONNECTOR PTH SLOT PADS
+DC BARREL POWER JACK/CONNECTOR PTH SLOT PADS
+0
+3
+2
+SF_Connectors
+POWER_JACK_SMD
+DC BARREL POWER JACK/CONNECTOR -SMD
+DC BARREL POWER JACK/CONNECTOR -SMD
+0
+4
+4
+SF_Connectors
+POWER_JACK_SMD_GND
+DC BARREL POWER JACK/CONNECTOR -SMD
+DC BARREL POWER JACK/CONNECTOR -SMD
+0
+4
+3
+SF_Connectors
+POWER_JACK_SMD_OVERPASTE_TOE
+DC BARREL POWER JACK/CONNECTOR -SMD OVERPASTE
+DC BARREL POWER JACK/CONNECTOR -SMD OVERPASTE
+0
+4
+4
+SF_Connectors
+PSP_CONNECTOR
+ZIF PSP CONNECTOR
+ZIF PSP CONNECTOR
+0
+43
+40
+SF_Connectors
+PSP_TOUCH_CONNECTOR
+SMD PSP TOUCH SCREEN CONNECTOR
+SMD PSP TOUCH SCREEN CONNECTOR
+0
+4
+4
+SF_Connectors
+RCA
+RCA JACK - PLATED THROUGH-HOLE
+RCA JACK - PLATED THROUGH-HOLE
+0
+3
+3
+SF_Connectors
+RCA_LOCK
+RCA JACK - PLATED THROUGH-HOLE LOCKING
+RCA JACK - PLATED THROUGH-HOLE LOCKING
+0
+3
+3
+SF_Connectors
+RJ11-6
+RJ11 6-PIN SOCKET WITH PCB MOUNTING POST
+RJ11 6-PIN SOCKET WITH PCB MOUNTING POST
+0
+6
+6
+SF_Connectors
+RJ45-8
+RJ45 SOCKET WITH PCB MOUNTING POSTS
+RJ45 SOCKET WITH PCB MOUNTING POSTS
+0
+8
+8
+SF_Connectors
+SAMTECH_FTSH-105-01
+ARM CORTEX DEBUG CONNECTOR (10-PIN)
+ARM CORTEX DEBUG CONNECTOR (10-PIN)
+0
+10
+10
+SF_Connectors
+SCREENKEY_MATING_CONNECTOR
+FPC/FFC LOCKING CONNECTOR - SMD
+FPC/FFC LOCKING CONNECTOR - SMD
+0
+16
+16
+SF_Connectors
+SCREWTERMINAL-3.5MM-2
+SCREW TERMINAL  3.5MM PITCH - 2 PIN PTH
+SCREW TERMINAL  3.5MM PITCH - 2 PIN PTH
+0
+2
+2
+SF_Connectors
+SCREWTERMINAL-3.5MM-2-NS
+SCREW TERMINAL  3.5MM PITCH - 2 PIN PTH NO SILK OUTLINE
+SCREW TERMINAL  3.5MM PITCH - 2 PIN PTH NO SILK OUTLINE
+0
+2
+2
+SF_Connectors
+SCREWTERMINAL-3.5MM-2_LOCK
+SCREW TERMINAL  3.5MM PITCH - 2 PIN PTH LOCKING
+SCREW TERMINAL  3.5MM PITCH - 2 PIN PTH LOCKING
+0
+2
+2
+SF_Connectors
+SCREWTERMINAL-3.5MM-3
+SCREW TERMINAL  3.5MM PITCH -3 PIN PTH
+SCREW TERMINAL  3.5MM PITCH -3 PIN PTH
+0
+3
+3
+SF_Connectors
+SCREWTERMINAL-3.5MM-3-NS
+SCREW TERMINAL  3.5MM PITCH -3 PIN PTH &NDASH; NO SILK
+SCREW TERMINAL  3.5MM PITCH -3 PIN PTH &NDASH; NO SILK
+0
+3
+3
+SF_Connectors
+SCREWTERMINAL-3.5MM-3_LOCK.007S
+SCREW TERMINAL  3.5MM PITCH -3 PIN PTH LOCKING
+SCREW TERMINAL  3.5MM PITCH -3 PIN PTH LOCKING
+0
+3
+3
+SF_Connectors
+SCREWTERMINAL-3.5MM-4
+SCREW TERMINAL  3.5MM PITCH -4 PIN PTH
+SCREW TERMINAL  3.5MM PITCH -4 PIN PTH
+0
+4
+4
+SF_Connectors
+SCREWTERMINAL-3.5MM-4_LOCK
+SCREW TERMINAL  3.5MM PITCH -4 PIN PTH LOCKING
+SCREW TERMINAL  3.5MM PITCH -4 PIN PTH LOCKING
+0
+4
+4
+SF_Connectors
+SCREWTERMINAL-3.5MM-5
+SCREW TERMINAL  3.5MM PITCH -5 PIN PTH
+SCREW TERMINAL  3.5MM PITCH -5 PIN PTH
+0
+5
+5
+SF_Connectors
+SCREWTERMINAL-3.5MM-6
+SCREW TERMINAL  3.5MM PITCH -6 PIN PTH
+SCREW TERMINAL  3.5MM PITCH -6 PIN PTH
+0
+6
+6
+SF_Connectors
+SCREWTERMINAL-3.5MM-8
+SCREW TERMINAL  3.5MM PITCH -8 PIN PTH
+SCREW TERMINAL  3.5MM PITCH -8 PIN PTH
+0
+8
+8
+SF_Connectors
+SCREWTERMINAL-5MM-2
+SCREW TERMINAL  5MM PITCH -2 PIN PTH
+SCREW TERMINAL  5MM PITCH -2 PIN PTH
+0
+2
+2
+SF_Connectors
+SCREWTERMINAL-5MM-3
+SCREW TERMINAL  5MM PITCH -3 PIN PTH
+SCREW TERMINAL  5MM PITCH -3 PIN PTH
+0
+3
+3
+SF_Connectors
+SD
+SD/MMC SOCKET
+SD/MMC SOCKET
+0
+13
+13
+SF_Connectors
+SIMHOLDER
+SIM CARD SOCKET SMT
+SIM CARD SOCKET SMT
+0
+6
+6
+SF_Connectors
+SMTSO-256-ET-0.165DIA
+SMTSO-256-ET FLUSH MOUNT NUT
+SMTSO-256-ET FLUSH MOUNT NUT
+0
+1
+1
+SF_Connectors
+SNAP-FEMALE
+SEW-ON FABRIC SNAP - FEMALE
+SEW-ON FABRIC SNAP - FEMALE
+0
+1
+1
+SF_Connectors
+SNAP-MALE
+SEW-ON FABRIC SNAP - MALE
+SEW-ON FABRIC SNAP - MALE
+0
+1
+1
+SF_Connectors
+SPRING-CONNECTOR
+SPRING CONNECTOR
+SPRING CONNECTOR
+0
+1
+1
+SF_Connectors
+SPRINGTERMINAL-2.54MM-2
+SPRING TERMINAL- PCB MOUNT 2 PIN PTH
+SPRING TERMINAL- PCB MOUNT 2 PIN PTH
+0
+4
+4
+SF_Connectors
+STEREOJACK2.5MM
+2.5MM STEREO AUDIO JACK - SMT
+2.5MM STEREO AUDIO JACK - SMT
+0
+5
+5
+SF_Connectors
+STEREOJACK2.5MM_SPECIAL_HOLES-ONLY
+2.5MM STEREO AUDIO JACK - PTH HOLES ONLY
+2.5MM STEREO AUDIO JACK - PTH HOLES ONLY
+0
+4
+3
+SF_Connectors
+STEREOJACK2.5MM_SPECIAL_POGOPINS
+2.5MM STEREO AUDIO JACK - PTH POGO PIN COMPATIBLE
+2.5MM STEREO AUDIO JACK - PTH POGO PIN COMPATIBLE
+0
+4
+3
+SF_Connectors
+STEREOJACK2.5MM_STEREOJACK2.5MM
+2.5MM STEREO AUDIO JACK - PTH
+2.5MM STEREO AUDIO JACK - PTH
+0
+4
+3
+SF_Connectors
+TP_15TH
+ELECTRICALLY CONDUCTIVE VIA 0.015" DRILL
+ELECTRICALLY CONDUCTIVE VIA 0.015" DRILL
+0
+1
+1
+SF_Connectors
+U.FL
+U.FL SMD ANTENNA CONNECTOR
+U.FL SMD ANTENNA CONNECTOR
+0
+4
+4
+SF_Connectors
+USB-A-H
+USB TYPE 'A' MALE CONNECTOR - PTH
+USB TYPE 'A' MALE CONNECTOR - PTH
+0
+6
+5
+SF_Connectors
+USB-A-PCB
+CARD-EDGE USB A CONNECTOR.
+CARD-EDGE USB A CONNECTOR.
+0
+4
+3
+SF_Connectors
+USB-A-PCB-NOPASTE
+
+
+0
+4
+3
+SF_Connectors
+USB-A-S-NOSILK-FEMALE
+USB TYPE 'A' FEMALE CONNECTOR - SMT NO SILK
+USB TYPE 'A' FEMALE CONNECTOR - SMT NO SILK
+0
+6
+5
+SF_Connectors
+USB-A-S-SILK-FEMALE
+USB TYPE 'A' FEMALE CONNECTOR - SMT SILK OUTLINE
+USB TYPE 'A' FEMALE CONNECTOR - SMT SILK OUTLINE
+0
+6
+5
+SF_Connectors
+USB-A-SMT-MALE
+USB TYPE 'A' MALE CONNECTOR - SMT
+USB TYPE 'A' MALE CONNECTOR - SMT
+0
+6
+5
+SF_Connectors
+USB-AB-MICRO-SMD
+USB TYPE AB - SMT
+USB TYPE AB - SMT
+0
+8
+6
+SF_Connectors
+USB-B-MICRO-SMD
+USB - MICROB SMD
+USB - MICROB SMD
+0
+8
+6
+SF_Connectors
+USB-B-MICRO-SMD_RED_PASTE
+USB - MICROB SMD REDUCED PASTE
+USB - MICROB SMD REDUCED PASTE
+0
+8
+6
+SF_Connectors
+USB-B-PTH
+USB TYPE B FEMALE PTH MOUNTED
+USB TYPE B FEMALE PTH MOUNTED
+0
+6
+5
+SF_Connectors
+USB-MICROB
+USB TYPE MICROUSB CONNECTOR-NO BOSSED PINS
+USB TYPE MICROUSB CONNECTOR-NO BOSSED PINS
+0
+9
+9
+SF_Connectors
+USB-MICROB-PTH
+
+
+0
+17
+15
+SF_Connectors
+USB-MINIB
+USB TYPE MINI-B SURFACE MOUNTED
+USB TYPE MINI-B SURFACE MOUNTED
+0
+9
+9
+SF_Connectors
+USB_MICROB_VERTICAL
+USB MICRO-B PLUG CONNECTOR
+USB MICRO-B PLUG CONNECTOR
+0
+9
+6
+SF_Displays
+LCD-8X2
+8X2 CHARACTER LCD W/ BACKLIGHT
+8X2 CHARACTER LCD W/ BACKLIGHT
+0
+16
+16
+SF_Displays
+LCD-8X2-KIT
+LCD-8X2 FOR KITS
+LCD-8X2 FOR KITS
+0
+16
+16
+SF_Displays
+LCD-16X2
+LCD-16X2
+LCD-16X2
+0
+16
+16
+SF_Displays
+LCD-16X2_NOHOLESNOSILK
+LCD-16X2 NO SILK OR MOUNTING HOLES
+LCD-16X2 NO SILK OR MOUNTING HOLES
+0
+16
+16
+SF_Displays
+LCD-16X2_NOSILK
+LCD-16X2
+LCD-16X2
+0
+16
+16
+SF_Displays
+LCD-16X2_NOSILK-KIT
+LCD-16X2 FOR KITS
+LCD-16X2 FOR KITS
+0
+18
+18
+SF_Displays
+LCD-16X2_NOSILK-KIT-4BIT
+LCD-16X2, 4 BIT FOR KITS
+LCD-16X2, 4 BIT FOR KITS
+0
+14
+14
+SF_Displays
+LCD-G12864
+G12864
+G12864
+0
+20
+20
+SF_Displays
+LCD_BACKLIGHT_PADS
+PADS FOR FLYING BACKLIGHT LEADS
+PADS FOR FLYING BACKLIGHT LEADS
+0
+2
+2
+SF_Displays
+NOKIA6100_LCD
+NOKIA 6100 LED SHAPE AND CONNECTOR
+NOKIA 6100 LED SHAPE AND CONNECTOR
+0
+10
+10
+SF_Displays
+OLED-0.66-64X48
+OLDE DISPLAY, 0.66 INCH
+OLDE DISPLAY, 0.66 INCH
+0
+28
+28
+SF_Displays
+OLED-UG-2832HLBEG04
+OLDE DISPLAY
+OLDE DISPLAY
+0
+30
+30
+SF_Displays
+OLED-UG-2832TSWGG01
+OLDE DISPLAY
+OLDE DISPLAY
+0
+15
+15
+SF_Displays
+OLED-UG-2832TSWGG01-REAR
+OLDE DISPLAY
+OLDE DISPLAY
+0
+15
+15
+SF_Electromechanical
+BUZZER-12MM
+12MM BUZZER - PTH
+12MM BUZZER - PTH
+0
+2
+2
+SF_Electromechanical
+BUZZER-12MM-KIT
+12MM BUZZER - PTH (KIT VARIANT)
+12MM BUZZER - PTH (KIT VARIANT)
+0
+2
+2
+SF_Electromechanical
+BUZZER-12MM-NS
+12MM BUZZER - PTH (NO SILKSCREENT VARIANT)
+12MM BUZZER - PTH (NO SILKSCREENT VARIANT)
+0
+2
+2
+SF_Electromechanical
+BUZZER-12MM-NS-KIT
+12MM BUZZER - PTH (KIT, NO-SILKSCREEN VARIANT)
+12MM BUZZER - PTH (KIT, NO-SILKSCREEN VARIANT)
+0
+2
+2
+SF_Electromechanical
+BUZZER-CCV
+9MM BUZZER - SMD
+9MM BUZZER - SMD
+0
+2
+2
+SF_Electromechanical
+BUZZER-CCV-KIT
+9MM BUZZER - SMD (KIT VARIANT)
+9MM BUZZER - SMD (KIT VARIANT)
+0
+2
+2
+SF_Electromechanical
+HEATSINK_PRT-9576
+
+
+0
+2
+2
+SF_Electromechanical
+PCB_MOUNT_SPEAKER
+SPEAKER - PCB MOUNT
+SPEAKER - PCB MOUNT
+0
+2
+2
+SF_Electromechanical
+RELAY-JZC
+RELAY SPDT SEALED (JZC-11F-5V-1Z)
+RELAY SPDT SEALED (JZC-11F-5V-1Z)
+0
+5
+5
+SF_Electromechanical
+RELAY-T90
+RELAY SPDT SEALED - 20A (JQX-15F/005)
+RELAY SPDT SEALED - 20A (JQX-15F/005)
+0
+5
+4
+SF_Electromechanical
+VIBE-MOTOR-10MM
+VIBRATION MOTOR
+VIBRATION MOTOR
+0
+2
+2
+SF_Fuses
+1206
+GENERIC 3216 (1206) PACKAGE
+GENERIC 3216 (1206) PACKAGE
+0
+2
+2
+SF_Fuses
+PTH
+TWO 0.8 MM PTHS SPACED 0.2 IN APART FOR THROUGH HOLE PARTS.
+TWO 0.8 MM PTHS SPACED 0.2 IN APART FOR THROUGH HOLE PARTS.
+0
+2
+2
+SF_GPS
+ANT-GPS-2X7MM
+GPS CHIP ANTENNA - 7.0 X 2.0 X 0.8 MM
+GPS CHIP ANTENNA - 7.0 X 2.0 X 0.8 MM
+0
+2
+2
+SF_GPS
+ANT-GPS-2X8MM
+GPS CHIP ANTENNA - 2.0 X 8.0 X 1.5 MM
+GPS CHIP ANTENNA - 2.0 X 8.0 X 1.5 MM
+0
+2
+2
+SF_GPS
+COPERNICUS
+TRIMBLE COPERNICUS AND COPERNICUS II GPS RECEIVER
+TRIMBLE COPERNICUS AND COPERNICUS II GPS RECEIVER
+0
+28
+28
+SF_GPS
+EM-506_OUTLINE
+EM-406 AND EM-506 MODULE DIMENSIONS
+EM-406 AND EM-506 MODULE DIMENSIONS
+0
+0
+0
+SF_GPS
+GP3906-TLP
+GP3906-TLP POT GPS MODULE
+GP3906-TLP POT GPS MODULE
+0
+20
+20
+SF_GPS
+JST-6PIN-1MM
+6-PIN VERTICAL JST CONNECTOR
+6-PIN VERTICAL JST CONNECTOR
+0
+8
+8
+SF_GPS
+TITAN_X1_GPS
+
+
+0
+24
+24
+SF_GPS
+VENUS638FLPX
+SKYTRAQ VENUS638FLPX GPS RECEIVER - 44-PIN 10 X 10 MM QFN
+SKYTRAQ VENUS638FLPX GPS RECEIVER - 44-PIN 10 X 10 MM QFN
+0
+69
+69
+SF_Hardware
+6400BG_HEATSINK
+6400BG HEATSINK
+6400BG HEATSINK
+0
+0
+0
+SF_Hardware
+ACTOBOTICS_CHANNEL_3
+
+
+0
+0
+0
+SF_Hardware
+ACTOBOTICS_CHANNEL_3.75
+
+
+0
+0
+0
+SF_Hardware
+ACTOBOTICS_CHANNEL_4.5
+
+
+0
+0
+0
+SF_Hardware
+ACTOBOTICS_CHANNEL_6
+
+
+0
+0
+0
+SF_Hardware
+ACTOBOTICS_CHANNEL_9
+
+
+0
+0
+0
+SF_Hardware
+ACTOBOTICS_CHANNEL_12
+
+
+0
+0
+0
+SF_Hardware
+ACTOBOTICS_CHANNEL_15
+
+
+0
+0
+0
+SF_Hardware
+ACTOBOTICS_CHANNEL_18
+
+
+0
+0
+0
+SF_Hardware
+ACTOBOTICS_CHANNEL_24
+
+
+0
+0
+0
+SF_Hardware
+ACTOBOTICS_CHANNEL_SINGLE_DRILL_REF
+
+
+0
+0
+0
+SF_Hardware
+MAGNET-18MM
+MAGNET DISK - 0.709"
+MAGNET DISK - 0.709"
+0
+0
+0
+SF_Hardware
+STAND-OFF
+STANDOFF (#4 SCREW)
+STANDOFF (#4 SCREW)
+0
+0
+0
+SF_Hardware
+STAND-OFF-TIGHT
+STANDOFF (#4 SCREW) - TIGHT FIT AROUND SCREW BODY
+STANDOFF (#4 SCREW) - TIGHT FIT AROUND SCREW BODY
+0
+0
+0
+SF_Hardware
+STANDOFF-ELECTRICAL
+STANDOFF (#4 SCREW) - W/ ELECTRICAL CONNECTION
+STANDOFF (#4 SCREW) - W/ ELECTRICAL CONNECTION
+0
+1
+1
+SF_Hardware
+STANDOFF_GROUNDING
+
+
+0
+9
+1
+SF_Hardware
+VIA-.010
+
+
+0
+1
+1
+SF_Hardware
+VIA-.013
+
+
+0
+1
+1
+SF_Hardware
+VIA-.015
+
+
+0
+1
+1
+SF_Jumpers
+SMT-JUMPER_2_NC_PASTE_NO-SILK
+
+
+0
+2
+2
+SF_Jumpers
+SMT-JUMPER_2_NC_PASTE_SILK
+
+
+0
+2
+2
+SF_Jumpers
+SMT-JUMPER_2_NC_TRACE_NO-SILK
+
+
+0
+2
+2
+SF_Jumpers
+SMT-JUMPER_2_NC_TRACE_SILK
+
+
+0
+2
+2
+SF_Jumpers
+SMT-JUMPER_2_NO_NO-SILK
+
+
+0
+2
+2
+SF_Jumpers
+SMT-JUMPER_2_NO_NO-SILK_ROUND
+
+
+0
+2
+2
+SF_Jumpers
+SMT-JUMPER_2_NO_SILK
+
+
+0
+2
+2
+SF_Jumpers
+SMT-JUMPER_2_NO_SILK_ROUND
+
+
+0
+2
+2
+SF_Jumpers
+SMT-JUMPER_3_1-NC_PASTE_NO-SILK
+
+
+0
+3
+3
+SF_Jumpers
+SMT-JUMPER_3_1-NC_PASTE_SILK
+
+
+0
+3
+3
+SF_Jumpers
+SMT-JUMPER_3_1-NC_TRACE_NO-SILK
+
+
+0
+3
+3
+SF_Jumpers
+SMT-JUMPER_3_1-NC_TRACE_SILK
+
+
+0
+3
+3
+SF_Jumpers
+SMT-JUMPER_3_2-NC_PASTE_NO-SILK
+
+
+0
+3
+3
+SF_Jumpers
+SMT-JUMPER_3_2-NC_PASTE_SILK
+
+
+0
+3
+3
+SF_Jumpers
+SMT-JUMPER_3_2-NC_TRACE_NO-SILK
+
+
+0
+3
+3
+SF_Jumpers
+SMT-JUMPER_3_2-NC_TRACE_SILK
+
+
+0
+3
+3
+SF_Jumpers
+SMT-JUMPER_3_NO_NO-SILK
+
+
+0
+3
+3
+SF_Jumpers
+SMT-JUMPER_3_NO_SILK
+
+
+0
+3
+3
+SF_LED
+7-SEGMENT-1DIGIT-PTH
+7 SEGMENT DISPLAY STOREFRONT SKU#: COM-08546
+7 SEGMENT DISPLAY STOREFRONT SKU#: COM-08546
+0
+10
+10
+SF_LED
+7-SEGMENT-1DIGIT-PTH-EZ
+
+
+0
+10
+10
+SF_LED
+7-SEGMENT-4DIGIT-20MM
+
+
+0
+12
+12
+SF_LED
+7-SEGMENT-4DIGIT-YOUNGSUN
+THIS IS A PACKAGE FOR THE 4-DIGIT 7-SEGMENT RED LED FROM YOUNG SUN.
+THIS IS A PACKAGE FOR THE 4-DIGIT 7-SEGMENT RED LED FROM YOUNG SUN.
+0
+16
+16
+SF_LED
+7-SEGMENT-4DIGIT-YOUNGSUN-LONGPADS
+
+
+0
+16
+16
+SF_LED
+APA102C
+
+
+0
+6
+6
+SF_LED
+CHIPLED-6
+CHIPLED-6 PACKAGE
+CHIPLED-6 PACKAGE
+0
+6
+6
+SF_LED
+DIP12-HP-BUBBLE
+
+
+0
+12
+12
+SF_LED
+FKIT-LED-1206
+LED 1206 SMT
+LED 1206 SMT
+0
+2
+2
+SF_LED
+LED-0603
+LED 0603 SMT
+LED 0603 SMT
+0
+2
+2
+SF_LED
+LED-1206
+LED 1206 SMT
+LED 1206 SMT
+0
+2
+2
+SF_LED
+LED-1206-BOTTOM
+LED 1206 SMT
+LED 1206 SMT
+0
+2
+2
+SF_LED
+LED-RGB-THRU
+LED - RGB PTH
+LED - RGB PTH
+0
+4
+4
+SF_LED
+LED-TRICOLOR-5050
+5050 SMD RGB LED
+5050 SMD RGB LED
+0
+6
+6
+SF_LED
+LED-TRICOLOR-5050-IC
+5060 SMD RGB LED
+5060 SMD RGB LED
+0
+6
+6
+SF_LED
+LED-TRICOLOR-SMD
+TRI-COLOR SMD
+TRI-COLOR SMD
+0
+4
+4
+SF_LED
+LED_3MM
+LED 3MM PTH
+LED 3MM PTH
+0
+2
+2
+SF_LED
+LED_3MM-NS
+LED 3MM PTH- NO SILK
+LED 3MM PTH- NO SILK
+0
+2
+2
+SF_LED
+LED_5MM
+LED 5MM PTH
+LED 5MM PTH
+0
+2
+2
+SF_LED
+LED_5MM-KIT
+LED 5MM KIT PTH
+LED 5MM KIT PTH
+0
+2
+2
+SF_LED
+LED_10MM
+LED 10MM PTH
+LED 10MM PTH
+0
+2
+2
+SF_LED
+LED_550_T1-.75_RT_ANG_PCB
+
+
+0
+2
+2
+SF_LED
+LED_BARGRAPH_10
+10 SEGMENT LED BAR GRAPH
+10 SEGMENT LED BAR GRAPH
+0
+20
+20
+SF_LED
+LED_BAR_SMD
+SMA-B520LB LED BARGRAPH - 5 SEGMENT
+SMA-B520LB LED BARGRAPH - 5 SEGMENT
+0
+6
+6
+SF_LED
+LED_PIRANHA_5MM
+LED 5MM PTH - PIRANHA
+LED 5MM PTH - PIRANHA
+0
+4
+4
+SF_LED
+LED_RING
+16 LED RING - LED-CCL-A
+16 LED RING - LED-CCL-A
+0
+20
+20
+SF_LED
+LTE-302
+IR EMITTER/DETECTOR
+IR EMITTER/DETECTOR
+0
+2
+2
+SF_LED
+LTST-C195KGJRKT
+0606 - LED SMT
+0606 - LED SMT
+0
+4
+4
+SF_LED
+P-LCC-4-3
+LED P-LCC-4-3 - SMT
+LED P-LCC-4-3 - SMT
+0
+4
+4
+SF_LED
+PLCC-6-LED
+PLCC-6-LED
+PLCC-6-LED
+0
+6
+6
+SF_LED
+RGB_BAR_GRAPH
+
+
+0
+25
+25
+SF_LED
+SFH4641
+SFH4641
+SFH4641
+0
+2
+2
+SF_LED
+SFH4641-NARROW
+SFH4641
+SFH4641
+0
+2
+2
+SF_LED
+SFH4641-OVERSIZE
+SFH4641
+SFH4641
+0
+2
+2
+SF_LED
+SFH4641-SHORT
+SFH4641
+SFH4641
+0
+2
+2
+SF_LED
+SFH4641-SHORT2
+SFH4641
+SFH4641
+0
+2
+2
+SF_LED
+SUPER_BRIGHT_SMD_LED_3014
+3014 PACKAGE FOR LEDS
+3014 PACKAGE FOR LEDS
+0
+2
+2
+SF_LED
+WS2812B
+WS2812B
+WS2812B
+0
+4
+4
+SF_PowerSymbols
+2PT_GND_TIE
+
+
+0
+2
+2
+SF_RF
+ANT-2.4GHZ-6.5X2.2MM
+2.45GHZ CHIP ANTENNA - 6.5 X 2.2 X 1.0 MM
+2.45GHZ CHIP ANTENNA - 6.5 X 2.2 X 1.0 MM
+0
+2
+2
+SF_RF
+ANT-2.4GHZ-8.0X1.0MM
+2.4GHZ CHIP ANTENNA - 8.0X1.0MM
+2.4GHZ CHIP ANTENNA - 8.0X1.0MM
+0
+2
+2
+SF_RF
+ANT-2.4GHZ-9.5X2.0MM
+2.4GHZ CHIP ANTENNA - 9.5 X 2.0 X 1.2 MM
+2.4GHZ CHIP ANTENNA - 9.5 X 2.0 X 1.2 MM
+0
+2
+2
+SF_RF
+BALUN-0805
+BALUN - 0805 PACKAGE
+BALUN - 0805 PACKAGE
+0
+6
+6
+SF_RF
+BC118
+BLUE CREATION BC118 BLUETOOTH 4.0 AUDIO MODULE
+BLUE CREATION BC118 BLUETOOTH 4.0 AUDIO MODULE
+0
+35
+35
+SF_RF
+BC127
+BC127 BLUETOOTH 4.0 AUDIO MODULE
+BC127 BLUETOOTH 4.0 AUDIO MODULE
+0
+51
+51
+SF_RF
+BLUERADIO_BR-LE4.0-S2
+BLUERADIO BR-LE4.0-S2 BLUETOOTH 4.0 MODULE
+BLUERADIO BR-LE4.0-S2 BLUETOOTH 4.0 MODULE
+0
+30
+30
+SF_RF
+BTM182
+RAYSON BTM-182 BLUETOOTH MODULE
+RAYSON BTM-182 BLUETOOTH MODULE
+0
+32
+32
+SF_RF
+ID-12
+ID-2, ID-12, AND ID-20 LOW-VOLTAGE RFID READERS
+ID-2, ID-12, AND ID-20 LOW-VOLTAGE RFID READERS
+0
+11
+11
+SF_RF
+ID-12_LOCK
+ID-2, ID-12, AND ID-20 LOW-VOLTAGE RFID READERS
+ID-2, ID-12, AND ID-20 LOW-VOLTAGE RFID READERS
+0
+12
+12
+SF_RF
+ID-12_SMD
+ID-2, ID-12, AND ID-20 LOW-VOLTAGE RFID READERS - SMD FOOTPRINT
+ID-2, ID-12, AND ID-20 LOW-VOLTAGE RFID READERS - SMD FOOTPRINT
+0
+12
+12
+SF_RF
+RF-LINK_RX
+RF LINK RECEIVER, PTH PACKAGE
+RF LINK RECEIVER, PTH PACKAGE
+0
+8
+4
+SF_RF
+RF-LINK_TX
+RF LINK TRANSMITTER, PTH PACKAGE
+RF LINK TRANSMITTER, PTH PACKAGE
+0
+4
+4
+SF_RF
+RFD77101
+SIMBLEE ? BLE MODULE RFD77101
+SIMBLEE ? BLE MODULE RFD77101
+0
+45
+45
+SF_RF
+RFM22-XXX-S2
+HOPE RF RFM22 RF TRANSCEIVER
+HOPE RF RFM22 RF TRANSCEIVER
+0
+16
+16
+SF_RF
+RFM69CW-XXXS2
+HOPE RF RFM69CW RF TRANSCIEVER
+HOPE RF RFM69CW RF TRANSCIEVER
+0
+14
+14
+SF_RF
+RFM69HCW-XXXS2
+HOPE RF RFM69HCW RF TRANSCIEVER
+HOPE RF RFM69HCW RF TRANSCIEVER
+0
+16
+16
+SF_RF
+RFM69W-XXXS2
+HOPE RF RFM69HW RF TRANSCEIVER
+HOPE RF RFM69HW RF TRANSCEIVER
+0
+16
+16
+SF_RF
+RMCM01
+POLAR RMCM-01 HEART RATE RECEIVER MODULE
+POLAR RMCM-01 HEART RATE RECEIVER MODULE
+0
+11
+11
+SF_RF
+RN-52
+ROVING NETWORKS RN-52 BLUETOOTH AUDIO MODULE
+ROVING NETWORKS RN-52 BLUETOOTH AUDIO MODULE
+0
+50
+50
+SF_RF
+RN41
+ROVING NETWORKS RN-41 BLUETOOTH MODULE
+ROVING NETWORKS RN-41 BLUETOOTH MODULE
+0
+32
+32
+SF_RF
+RN171
+ROVING NETWORKS RN-171 WI-FI MODULE
+ROVING NETWORKS RN-171 WI-FI MODULE
+0
+49
+49
+SF_RF
+SD-CARD
+SD CARD SOCKET
+SD CARD SOCKET
+0
+13
+13
+SF_RF
+SM130
+SM130 13.56 MHZ RFID MIFARE(R) R/W MODULE
+SM130 13.56 MHZ RFID MIFARE(R) R/W MODULE
+0
+28
+28
+SF_RF
+SM5100B
+SM5100B GSM/GPRS MODULE - 60-PIN 0.5MM-PITCH BOARD-TO-BOARD CONNECTOR
+SM5100B GSM/GPRS MODULE - 60-PIN 0.5MM-PITCH BOARD-TO-BOARD CONNECTOR
+0
+60
+60
+SF_RF
+TRACE_ANTENNA_2.4GHZ_15.2MM
+2.4GHZ MEANDER PCB TRACE ANTENNA
+2.4GHZ MEANDER PCB TRACE ANTENNA
+0
+2
+2
+SF_RF
+TRACE_ANTENNA_2.4GHZ_25.7MM
+2.4GHZ INVERTED F PCB TRACE ANTENNA
+2.4GHZ INVERTED F PCB TRACE ANTENNA
+0
+3
+3
+SF_RF
+WIFLY_GSX
+ROVING NETWORKS RN-131C (WIFLY GSX) 802.11B/G MODULE
+ROVING NETWORKS RN-131C (WIFLY GSX) 802.11B/G MODULE
+0
+44
+44
+SF_RF
+XBEE
+DIGI XBEE AND XBEE-PRO RF MODULES
+DIGI XBEE AND XBEE-PRO RF MODULES
+0
+20
+20
+SF_RF
+XBEE-LOCK
+DIGI XBEE AND XBEE-PRO RF MODULES (LOCKING FOOTPRINT)
+DIGI XBEE AND XBEE-PRO RF MODULES (LOCKING FOOTPRINT)
+0
+20
+20
+SF_RF
+XBEE-LONGPAD
+DIGI XBEE AND XBEE-PRO RF MODULES (LONG PADS)
+DIGI XBEE AND XBEE-PRO RF MODULES (LONG PADS)
+0
+20
+20
+SF_RF
+XBEE-SILK
+DIGI XBEE AND XBEE-PRO RF MODULES (SILKSCREEN DIMENSION INDICATORS)
+DIGI XBEE AND XBEE-PRO RF MODULES (SILKSCREEN DIMENSION INDICATORS)
+0
+20
+20
+SF_RF
+XBEE-SMD
+DIGI XBEE AND XBEE-PRO RF MODULES (SMD PADS)
+DIGI XBEE AND XBEE-PRO RF MODULES (SMD PADS)
+0
+20
+20
+SF_RF
+XTEND-DIGI-MODEM
+DIGI XTEND 900 1W RF MODULE
+DIGI XTEND 900 1W RF MODULE
+0
+20
+20
+SF_Resistors
+0402
+GENERIC 1005 (0402) PACKAGE
+GENERIC 1005 (0402) PACKAGE
+0
+2
+2
+SF_Resistors
+0603
+GENERIC 1608 (0603) PACKAGE
+GENERIC 1608 (0603) PACKAGE
+0
+2
+2
+SF_Resistors
+0805
+GENERIC 2012 (0805) PACKAGE
+GENERIC 2012 (0805) PACKAGE
+0
+2
+2
+SF_Resistors
+0805-ARV
+4X2012(0805) RESISTOR ARRAY
+4X2012(0805) RESISTOR ARRAY
+0
+8
+8
+SF_Resistors
+1206
+GENERIC 3216 (1206) PACKAGE
+GENERIC 3216 (1206) PACKAGE
+0
+2
+2
+SF_Resistors
+1210
+GENERIC 3225 (1210) PACKAGE
+GENERIC 3225 (1210) PACKAGE
+0
+2
+2
+SF_Resistors
+2010
+GENERIC 5025 (2010) PACKAGE
+GENERIC 5025 (2010) PACKAGE
+0
+2
+2
+SF_Resistors
+AXIAL-0.1
+AXIAL-0.1
+AXIAL-0.1
+0
+2
+2
+SF_Resistors
+AXIAL-0.1-KIT
+AXIAL-0.1-KIT
+AXIAL-0.1-KIT
+0
+2
+2
+SF_Resistors
+AXIAL-0.3
+AXIAL-0.3
+AXIAL-0.3
+0
+2
+2
+SF_Resistors
+AXIAL-0.3-KIT
+AXIAL-0.3-KIT
+AXIAL-0.3-KIT
+0
+2
+2
+SF_Resistors
+AXIAL-0.3EZ
+THIS IS THE "EZ" VERSION OF THE STANDARD .3" SPACED RESISTOR PACKAGE.
+THIS IS THE "EZ" VERSION OF THE STANDARD .3" SPACED RESISTOR PACKAGE.
+0
+2
+2
+SF_Resistors
+AXIAL-2.0
+
+
+0
+2
+2
+SF_Resistors
+C2031N-1A2-B10K-GP
+
+
+0
+3
+3
+SF_Resistors
+POT-DUAL-PTH-PANASONIC-VERT
+PANASONIC DUAL-GANG 12MM PTH POTENTIOMETER
+PANASONIC DUAL-GANG 12MM PTH POTENTIOMETER
+0
+8
+8
+SF_Resistors
+POT-DUAL-PTH-PANASONIC-VERT-KIT
+PANASONIC DUAL-GANG 12MM PTH POTENTIOMETER (KIT VARIANT)
+PANASONIC DUAL-GANG 12MM PTH POTENTIOMETER (KIT VARIANT)
+0
+8
+8
+SF_Resistors
+POT-PTH-ALPS
+9MM SQUARE ROTARY POTENTIOMETER - PTH
+9MM SQUARE ROTARY POTENTIOMETER - PTH
+0
+5
+5
+SF_Resistors
+POT-PTH-ALPS-KIT
+9MM SQUARE ROTARY POTENTIOMETER - PTH (KIT VARIANT)
+9MM SQUARE ROTARY POTENTIOMETER - PTH (KIT VARIANT)
+0
+5
+5
+SF_Resistors
+POT-SWITCH-PTH
+17MM PTH POTENTIOMETER (POT) WITH SWITCH
+17MM PTH POTENTIOMETER (POT) WITH SWITCH
+0
+5
+5
+SF_Resistors
+RPACK-SIP-PTH-5
+BASED ON THIS DATASHEET.
+BASED ON THIS DATASHEET.
+0
+6
+6
+SF_Resistors
+SLIDER-MEDIUM
+SLIDE POTENTIOMETER - PTH, 30MM TRAVEL
+SLIDE POTENTIOMETER - PTH, 30MM TRAVEL
+0
+3
+3
+SF_Resistors
+SLIDER-MEDIUM-KIT
+SLIDE POTENTIOMETER - PTH, 30MM TRAVEL (KIT VARIANT)
+SLIDE POTENTIOMETER - PTH, 30MM TRAVEL (KIT VARIANT)
+0
+3
+3
+SF_Resistors
+SLIDER-SMALL
+SLIDE POTENTIOMETER - PTH, 20MM TRAVEL
+SLIDE POTENTIOMETER - PTH, 20MM TRAVEL
+0
+3
+3
+SF_Resistors
+SLIDER-XLARGE
+SLIDE POTENTIOMETER - PTH 60MM TRAVEL
+SLIDE POTENTIOMETER - PTH 60MM TRAVEL
+0
+3
+3
+SF_Resistors
+TRIMPOT-PTH-3386U
+TRIMPOT - PTH, TRIMPOT W/ FINGER-ADJUSTABLE KNOB
+TRIMPOT - PTH, TRIMPOT W/ FINGER-ADJUSTABLE KNOB
+0
+3
+3
+SF_Resistors
+TRIMPOT-SMD-3MM-CLOSED
+TRIMPOT - SMD, 3MM SQUARE, CLOSED-FRAME
+TRIMPOT - SMD, 3MM SQUARE, CLOSED-FRAME
+0
+3
+3
+SF_Resistors
+TRIMPOT-SMD-3MM-OPEN
+TRIMPOT - SMD, 3MM SQUARE, OPEN-FRAME
+TRIMPOT - SMD, 3MM SQUARE, OPEN-FRAME
+0
+3
+3
+SF_Resistors
+TRIMPOT-SMD-5MM
+TRIMPOT - SMD, 5MM SQUARE, CLOSED-FRAME
+TRIMPOT - SMD, 5MM SQUARE, CLOSED-FRAME
+0
+3
+3
+SF_Resistors
+TRIMPOT-SMD-TC33X
+BOURNS TC33X TRIMPOT - SMD, 3MM SQUARE, OPEN-FRAME
+BOURNS TC33X TRIMPOT - SMD, 3MM SQUARE, OPEN-FRAME
+0
+3
+3
+SF_Silicon-Custom
+78XXL
+VOLTAGE REGULATOR
+VOLTAGE REGULATOR
+0
+3
+3
+SF_Silicon-Custom
+AD9837
+
+
+0
+11
+11
+SF_Silicon-Custom
+ADMP401
+ADMP401 BOTTOM PORT MICROPHONE
+ADMP401 BOTTOM PORT MICROPHONE
+0
+5
+5
+SF_Silicon-Custom
+ALS-PT19
+ALS-PT19-315C/L177/TR8 AMBIENT LIGHT SENSOR
+ALS-PT19-315C/L177/TR8 AMBIENT LIGHT SENSOR
+0
+2
+2
+SF_Silicon-Custom
+APDS-9960
+APDS-9960 PROXIMITY, LIGHT, RGB, GESTURE SENSOR
+APDS-9960 PROXIMITY, LIGHT, RGB, GESTURE SENSOR
+0
+8
+8
+SF_Silicon-Custom
+BGA-116
+
+
+0
+116
+116
+SF_Silicon-Custom
+BGA8DS
+
+
+0
+8
+8
+SF_Silicon-Custom
+BMP180
+BMP180 PRESSURE SENSOR
+BMP180 PRESSURE SENSOR
+0
+7
+7
+SF_Silicon-Custom
+BPW34
+BPW34, BPW34S PIN PHOTODIODE
+BPW34, BPW34S PIN PHOTODIODE
+0
+2
+2
+SF_Silicon-Custom
+BRM-2508
+BRM-2A18 INFRARED RECEIVER - HORIZONTAL FACING
+BRM-2A18 INFRARED RECEIVER - HORIZONTAL FACING
+0
+3
+3
+SF_Silicon-Custom
+BRM-2508_VERT
+BRM-2A18 INFRARED RECEIVE - VERTICAL FACINGR
+BRM-2A18 INFRARED RECEIVE - VERTICAL FACINGR
+0
+3
+3
+SF_Silicon-Custom
+DC-DC_CONVERTER
+
+
+0
+10
+10
+SF_Silicon-Custom
+DC-DC_CONVERTER_78XX
+
+
+0
+3
+3
+SF_Silicon-Custom
+DFN-6-3X3-HTU21D
+6-PIN DUAL FLAT NO-LEAD (DFN) W/ CENTER PAD (3.0 X 3.0 MM) - DESIGNED FOR HTU21D
+6-PIN DUAL FLAT NO-LEAD (DFN) W/ CENTER PAD (3.0 X 3.0 MM) - DESIGNED FOR HTU21D
+0
+7
+7
+SF_Silicon-Custom
+DFN-6-3X3-SI7021
+6-PIN DFN W/ CENTER PAD (3 X 3 MM) - DESIGNED FOR SI7021
+6-PIN DFN W/ CENTER PAD (3 X 3 MM) - DESIGNED FOR SI7021
+0
+7
+7
+SF_Silicon-Custom
+DIODE-1N4001
+
+
+0
+2
+2
+SF_Silicon-Custom
+DIODE-1N4001-KIT
+
+
+0
+2
+2
+SF_Silicon-Custom
+DIODE-1N4148
+
+
+0
+2
+2
+SF_Silicon-Custom
+DIODE-1N4148-KIT
+
+
+0
+2
+2
+SF_Silicon-Custom
+DIP08-KIT
+
+
+0
+8
+8
+SF_Silicon-Custom
+DIP14-KIT
+
+
+0
+14
+14
+SF_Silicon-Custom
+DIP16-KIT
+
+
+0
+16
+16
+SF_Silicon-Custom
+DIP28-SIMON-KIT
+28-PIN "EZ" PACKAGE.
+28-PIN "EZ" PACKAGE.
+0
+27
+27
+SF_Silicon-Custom
+DPAK-5
+DPAK 5, CENTER LEAD CROP, CASE 175AA
+DPAK 5, CENTER LEAD CROP, CASE 175AA
+0
+5
+5
+SF_Silicon-Custom
+GAS_SENSOR
+GAS SENSORS - MQ-3, MQ-4, MQ-6, MQ-7, MQ-8
+GAS SENSORS - MQ-3, MQ-4, MQ-6, MQ-7, MQ-8
+0
+6
+6
+SF_Silicon-Custom
+GEIGER_TUBE
+LND, INC LND712 GEIGER TUBE
+LND, INC LND712 GEIGER TUBE
+0
+2
+2
+SF_Silicon-Custom
+GP1A57HR
+SHARP GP1A57HR TRANSMISSIVE PHOTOINTERRUPTER
+SHARP GP1A57HR TRANSMISSIVE PHOTOINTERRUPTER
+0
+5
+5
+SF_Silicon-Custom
+HIH-4030
+HIH-4030 HUMIDITY SENSOR
+HIH-4030 HUMIDITY SENSOR
+0
+4
+4
+SF_Silicon-Custom
+HTSSOP28
+
+
+0
+50
+29
+SF_Silicon-Custom
+LCC-8
+8-PIN LCC (5 X 5 X 2 MM)
+8-PIN LCC (5 X 5 X 2 MM)
+0
+8
+8
+SF_Silicon-Custom
+LCC-36
+36-PIN LCC (9 X 9 MM)
+36-PIN LCC (9 X 9 MM)
+0
+36
+36
+SF_Silicon-Custom
+LFCSP-16-3X3
+16-PIN LEAD FRAME CHIP SCALE (LFCSP) W/ CENTER PAD (3 X 3 MM)
+16-PIN LEAD FRAME CHIP SCALE (LFCSP) W/ CENTER PAD (3 X 3 MM)
+0
+17
+17
+SF_Silicon-Custom
+LFCSP-16-4X4
+16-PIN LFCSP W/ CENTER PAD (4 X 4 MM)
+16-PIN LFCSP W/ CENTER PAD (4 X 4 MM)
+0
+17
+17
+SF_Silicon-Custom
+LGA-8-5X3
+8-PIN LAND GRID ARRAY (LGA) (5 X 3 MM)
+8-PIN LAND GRID ARRAY (LGA) (5 X 3 MM)
+0
+8
+8
+SF_Silicon-Custom
+LGA-12
+LGA-12 2X2X1 MM 12-LEAD
+LGA-12 2X2X1 MM 12-LEAD
+0
+12
+12
+SF_Silicon-Custom
+LGA-14
+14-PIN LGA (3 X 5 X 1 MM) (1:1 FOOTPRINT)
+14-PIN LGA (3 X 5 X 1 MM) (1:1 FOOTPRINT)
+0
+14
+14
+SF_Silicon-Custom
+LGA-16-4X4
+16-PIN LGA PACKAGE
+16-PIN LGA PACKAGE
+0
+16
+16
+SF_Silicon-Custom
+LGA-24
+LGA 4X4X1 MM 24-LEAD
+LGA 4X4X1 MM 24-LEAD
+0
+24
+24
+SF_Silicon-Custom
+LGA-24-3.5X3
+24-PIN LGA (3.5 X 3 MM)
+24-PIN LGA (3.5 X 3 MM)
+0
+24
+24
+SF_Silicon-Custom
+LGA10-MILLABLE
+10-PIN LGA PACKAGE - 2.7 X 4.0MM, 0.6MM PITCH
+10-PIN LGA PACKAGE - 2.7 X 4.0MM, 0.6MM PITCH
+0
+11
+11
+SF_Silicon-Custom
+LGA20
+
+
+0
+20
+20
+SF_Silicon-Custom
+LTR-301
+LTR-301 IR PHOTOTRANSISTOR (SIDE-RECEIVING)
+LTR-301 IR PHOTOTRANSISTOR (SIDE-RECEIVING)
+0
+2
+2
+SF_Silicon-Custom
+MICROFET_2X2
+1206-8 CHIPFET
+1206-8 CHIPFET
+0
+8
+8
+SF_Silicon-Custom
+MICROPHONE-PTH-9.7MM
+MICROPHONE - 9.7 MM DIAMETER, PTH
+MICROPHONE - 9.7 MM DIAMETER, PTH
+0
+2
+2
+SF_Silicon-Custom
+MICROPHONE-SMD-6MM
+SMD OMNI-DIRECTIONAL CONDENSER MICROPHONE
+SMD OMNI-DIRECTIONAL CONDENSER MICROPHONE
+0
+2
+2
+SF_Silicon-Custom
+ML8511
+ML8511 UV SENSOR 12-PIN (4 X 3.7 MM)
+ML8511 UV SENSOR 12-PIN (4 X 3.7 MM)
+0
+12
+12
+SF_Silicon-Custom
+MULTIWATT15
+MULTIWATT15V PACKAGE FOR THE L298 DUAL FULL BRIDGE DRIVER
+MULTIWATT15V PACKAGE FOR THE L298 DUAL FULL BRIDGE DRIVER
+0
+15
+15
+SF_Silicon-Custom
+MULTIWATT15_6400BGHEATSINK
+
+
+0
+15
+15
+SF_Silicon-Custom
+MULTIWATT15_6400BGHEATSINK_2
+
+
+0
+17
+17
+SF_Silicon-Custom
+MULTIWATT15_YB324GHEATSINK
+
+
+0
+15
+15
+SF_Silicon-Custom
+OLGA-14
+OLGA - 14 PIN
+OLGA - 14 PIN
+0
+14
+14
+SF_Silicon-Custom
+PANASONIC_SMINI2-F5-B
+FROM HTTP://WWW.SEMICON.PANASONIC.CO.JP/DS4/DZ2J150_E.PDF
+FROM HTTP://WWW.SEMICON.PANASONIC.CO.JP/DS4/DZ2J150_E.PDF
+0
+2
+2
+SF_Silicon-Custom
+PCA9306DC
+PCA9306DC
+PCA9306DC
+0
+8
+8
+SF_Silicon-Custom
+PDSO-N12
+12-PIN VSON 2.5 X 4.0 MM IC
+12-PIN VSON 2.5 X 4.0 MM IC
+0
+17
+17
+SF_Silicon-Custom
+PHOTOCELL
+CDS PHOTOCOUNDUCTIVE PHOTOCELL (PTH)
+CDS PHOTOCOUNDUCTIVE PHOTOCELL (PTH)
+0
+2
+2
+SF_Silicon-Custom
+PHOTOCELL-KIT
+CDS PHOTOCOUNDUCTIVE PHOTOCELL (PTH) - KIT
+CDS PHOTOCOUNDUCTIVE PHOTOCELL (PTH) - KIT
+0
+2
+2
+SF_Silicon-Custom
+PT17-21C-L41-TR8
+
+
+0
+2
+2
+SF_Silicon-Custom
+Q5-DD_SPX29300
+
+
+0
+6
+6
+SF_Silicon-Custom
+QFN-16
+16-PIN QUAD FLAT NO-LEAD (QFN) (3 X 3 MM)
+16-PIN QUAD FLAT NO-LEAD (QFN) (3 X 3 MM)
+0
+16
+16
+SF_Silicon-Custom
+QRD1114
+QRD1113, QRD1114 REFLECTIVE OBJECT SENSOR
+QRD1113, QRD1114 REFLECTIVE OBJECT SENSOR
+0
+4
+4
+SF_Silicon-Custom
+QRE1113
+QRE1113, QRE1113GR SMD REFLECTIVE OBJECT SENSOR
+QRE1113, QRE1113GR SMD REFLECTIVE OBJECT SENSOR
+0
+4
+4
+SF_Silicon-Custom
+QRE1113-W
+QRE1113, QRE1113GR SMD REFLECTIVE OBJECT SENSOR (WIDE PIN FOOTPRINT)
+QRE1113, QRE1113GR SMD REFLECTIVE OBJECT SENSOR (WIDE PIN FOOTPRINT)
+0
+4
+4
+SF_Silicon-Custom
+RFD77402
+
+
+0
+12
+12
+SF_Silicon-Custom
+SHT1X
+SHT1X (SHT10, SHT11, SHT15) HUMIDITY AND TEMPERATURE SENSORS
+SHT1X (SHT10, SHT11, SHT15) HUMIDITY AND TEMPERATURE SENSORS
+0
+8
+8
+SF_Silicon-Custom
+SON10
+
+
+0
+10
+10
+SF_Silicon-Custom
+T5403
+T5400, T54003 DIGITAL BAROMETRIC PRESSURE SENSOR
+T5400, T54003 DIGITAL BAROMETRIC PRESSURE SENSOR
+0
+8
+8
+SF_Silicon-Custom
+TCM8240MD
+TCM8240 CMOS CAMERA
+TCM8240 CMOS CAMERA
+0
+24
+24
+SF_Silicon-Custom
+TEMT6000
+3-PIN TEMT6000 AMBIENT LIGHT SENSOR
+3-PIN TEMT6000 AMBIENT LIGHT SENSOR
+0
+3
+3
+SF_Silicon-Custom
+TMB-6
+6-PIN TMB
+6-PIN TMB
+0
+6
+6
+SF_Silicon-Custom
+V-REG_DPACK
+DPAK
+DPAK
+0
+3
+3
+SF_Silicon-Custom
+VL6180
+VL6180
+VL6180
+0
+12
+12
+SF_Silicon-Custom
+VNH2SP30
+
+
+0
+33
+31
+SF_Silicon-Custom
+_STN_SCANTOOL_QFN-28-S
+QUAD FLAT NO LEADS PACKAGE
+QUAD FLAT NO LEADS PACKAGE
+0
+29
+29
+SF_Silicon-Standard
+8-SMD
+
+
+0
+8
+8
+SF_Silicon-Standard
+D2PACK_A
+D2PAK/A V-REG PACKAGE
+D2PAK/A V-REG PACKAGE
+0
+4
+4
+SF_Silicon-Standard
+DFN-6-2X2
+6-PIN DUAL-FLAT NO-LEAD (DFN) (2.0 X 2.0 MM)
+6-PIN DUAL-FLAT NO-LEAD (DFN) (2.0 X 2.0 MM)
+0
+6
+6
+SF_Silicon-Standard
+DFN-6-3X3
+6-PIN DUAL FLAT NO-LEAD (DFN) W/ CENTER PAD (3.0 X 3.0 MM) - DESIGNED FOR HTU21D
+6-PIN DUAL FLAT NO-LEAD (DFN) W/ CENTER PAD (3.0 X 3.0 MM) - DESIGNED FOR HTU21D
+0
+7
+7
+SF_Silicon-Standard
+DFN-8
+NOW FOLLOWS HTTP://PDFSERV.MAXIMINTEGRATED.COM/LAND_PATTERNS/90-0065.PDF
+NOW FOLLOWS HTTP://PDFSERV.MAXIMINTEGRATED.COM/LAND_PATTERNS/90-0065.PDF
+0
+9
+9
+SF_Silicon-Standard
+DFN-10
+10-PIN DUAL-FLAT NO-LEAD (DFN) (2.0 X 2.0 MM) (1:1 FOOTPRINT)
+10-PIN DUAL-FLAT NO-LEAD (DFN) (2.0 X 2.0 MM) (1:1 FOOTPRINT)
+0
+10
+10
+SF_Silicon-Standard
+DHVQFN-16-2.5X3.5MM
+16-PIN DHVQFN (SOT763-1) - 2.5 X 3.5 X 0.85 MM
+16-PIN DHVQFN (SOT763-1) - 2.5 X 3.5 X 0.85 MM
+0
+17
+17
+SF_Silicon-Standard
+DIL18
+DUAL IN LINE PACKAGE - 18 PIN
+DUAL IN LINE PACKAGE - 18 PIN
+0
+18
+18
+SF_Silicon-Standard
+DIP6SMD
+
+
+0
+6
+6
+SF_Silicon-Standard
+DIP08
+DUAL IN LINE PACKAGE
+DUAL IN LINE PACKAGE
+0
+8
+8
+SF_Silicon-Standard
+DIP8SMD
+
+
+0
+6
+6
+SF_Silicon-Standard
+DIP14
+
+
+0
+14
+14
+SF_Silicon-Standard
+DIP16
+DUAL IN LINE PACKAGE
+DUAL IN LINE PACKAGE
+0
+16
+16
+SF_Silicon-Standard
+DIP18
+DUAL IN LINE
+DUAL IN LINE
+0
+18
+18
+SF_Silicon-Standard
+DIP28
+STANDARD 28-PIN DIP PACKAGE.
+STANDARD 28-PIN DIP PACKAGE.
+0
+28
+28
+SF_Silicon-Standard
+DPAK
+
+
+0
+3
+3
+SF_Silicon-Standard
+HVSS0P-10
+
+
+0
+11
+11
+SF_Silicon-Standard
+LCC20
+LEADLESS CHIP CARRIER CERAMIC PACKAGE
+LEADLESS CHIP CARRIER CERAMIC PACKAGE
+0
+20
+20
+SF_Silicon-Standard
+LFCSP_20
+
+
+0
+21
+21
+SF_Silicon-Standard
+LGA-8-2.5X2.5
+LGA 8-PIN &NDASH;  2.5MM X 2.5MM, 0.65MM PITCH
+LGA 8-PIN &NDASH;  2.5MM X 2.5MM, 0.65MM PITCH
+0
+8
+8
+SF_Silicon-Standard
+LGA-16-3X2.5
+16-PIN LGA (3 X 3.25 MM) (1:1 FOOTPRINT)
+16-PIN LGA (3 X 3.25 MM) (1:1 FOOTPRINT)
+0
+16
+16
+SF_Silicon-Standard
+LGA-16-3X3
+16-PIN LAND GRID ARRAY (LGA) (3 X 3 MM)
+16-PIN LAND GRID ARRAY (LGA) (3 X 3 MM)
+0
+16
+16
+SF_Silicon-Standard
+LGA10
+
+
+0
+11
+11
+SF_Silicon-Standard
+LPCC-16
+16-PIN LCC (3 X 3 X 0.9 MM)
+16-PIN LCC (3 X 3 X 0.9 MM)
+0
+16
+16
+SF_Silicon-Standard
+LQFP-48
+LQFP -48
+LQFP -48
+0
+48
+48
+SF_Silicon-Standard
+LQFP-80
+LQFP-80
+LQFP-80
+0
+80
+80
+SF_Silicon-Standard
+MLF32
+32M1-A MICRO LEAD FRAME PACKAGE (MLF)
+32M1-A MICRO LEAD FRAME PACKAGE (MLF)
+0
+32
+32
+SF_Silicon-Standard
+MLF32-PAD
+
+
+0
+33
+33
+SF_Silicon-Standard
+MS5803
+MS5803-14BA PRESSURE SENSOR 8-PIN 6.4 X6.2 MM
+MS5803-14BA PRESSURE SENSOR 8-PIN 6.4 X6.2 MM
+0
+8
+8
+SF_Silicon-Standard
+MSOP-10-GNDPAD
+10-LEAD MSOP W/ CENTER GND PAD
+10-LEAD MSOP W/ CENTER GND PAD
+0
+11
+11
+SF_Silicon-Standard
+MSOP-12_GND
+
+
+0
+13
+13
+SF_Silicon-Standard
+MSOP8
+8M, 8-LEAD, 0.118" WIDE, MINIATURE SMALL OUTLINE PACKAGE
+8M, 8-LEAD, 0.118" WIDE, MINIATURE SMALL OUTLINE PACKAGE
+0
+8
+8
+SF_Silicon-Standard
+MSOP10
+10 LEAD PLATIC MSOP
+10 LEAD PLATIC MSOP
+0
+10
+10
+SF_Silicon-Standard
+ODFN-6
+6-PIN OPTICAL DUAL FLAT NO-LEAD (ODFN) (1.65 X 1.65 MM)
+6-PIN OPTICAL DUAL FLAT NO-LEAD (ODFN) (1.65 X 1.65 MM)
+0
+6
+6
+SF_Silicon-Standard
+PLCC20S
+PLCC 20 PIN SQUARE
+PLCC 20 PIN SQUARE
+0
+20
+20
+SF_Silicon-Standard
+POWER-SOP8
+8M, 8-LEAD, 0.118" WIDE, MINIATURE SMALL OUTLINE PACKAGE
+8M, 8-LEAD, 0.118" WIDE, MINIATURE SMALL OUTLINE PACKAGE
+0
+9
+9
+SF_Silicon-Standard
+POWERSO20
+
+
+0
+20
+20
+SF_Silicon-Standard
+POWERSO20_L298_PAD
+
+
+0
+21
+21
+SF_Silicon-Standard
+PSOP-8
+PSOP-8
+PSOP-8
+0
+8
+8
+SF_Silicon-Standard
+PVQFN-N16
+16-PIN VSON (VQFN) 3.0 X 3.0 MM IC
+16-PIN VSON (VQFN) 3.0 X 3.0 MM IC
+0
+17
+17
+SF_Silicon-Standard
+QFN-8_PAD
+
+
+0
+13
+13
+SF_Silicon-Standard
+QFN-10-RSE
+
+
+0
+10
+10
+SF_Silicon-Standard
+QFN-10_PAD
+
+
+0
+15
+15
+SF_Silicon-Standard
+QFN-20
+20-PIN QUAD FLAT NO-LEAD (QFN) (3 X 3 MM)
+20-PIN QUAD FLAT NO-LEAD (QFN) (3 X 3 MM)
+0
+20
+20
+SF_Silicon-Standard
+QFN-20-3X3MM
+20-PIN QFN PACKAGE 3 X 3 MM
+20-PIN QFN PACKAGE 3 X 3 MM
+0
+21
+21
+SF_Silicon-Standard
+QFN-24
+24-PIN QFN (4 X 4 MM) (1:1 FOOTPRINT)
+24-PIN QFN (4 X 4 MM) (1:1 FOOTPRINT)
+0
+24
+24
+SF_Silicon-Standard
+QFN-24-EP
+24-PIN QFN W/ CENTER PAD (4 X 4 MM)
+24-PIN QFN W/ CENTER PAD (4 X 4 MM)
+0
+25
+25
+SF_Silicon-Standard
+QFN-28
+
+
+0
+29
+29
+SF_Silicon-Standard
+QFN-28-5MM
+
+
+0
+29
+29
+SF_Silicon-Standard
+QFN-28-5MM-1to1
+
+
+0
+29
+29
+SF_Silicon-Standard
+QFN-28-5MM_ALT1
+
+
+0
+29
+29
+SF_Silicon-Standard
+QFN-28-5MM_ALT2
+
+
+0
+29
+29
+SF_Silicon-Standard
+QFN-32
+QFN 32-PIN PACKAGE W/ THERMAL PAD
+QFN 32-PIN PACKAGE W/ THERMAL PAD
+0
+33
+33
+SF_Silicon-Standard
+QFN-40
+40-QFN FROM CYPRESS 4245 DATASHEET, WITH SPARKFUN DFM
+40-QFN FROM CYPRESS 4245 DATASHEET, WITH SPARKFUN DFM
+0
+41
+41
+SF_Silicon-Standard
+QFN-44
+
+
+0
+44
+44
+SF_Silicon-Standard
+QFN-44-NOPAD
+
+
+0
+44
+44
+SF_Silicon-Standard
+QFN-44-NOPAD_1to1
+
+
+0
+44
+44
+SF_Silicon-Standard
+QFN-44-NOPAD_1to1-LESS_PASTE
+
+
+0
+44
+44
+SF_Silicon-Standard
+QFN-46-13.5X16.3MM
+TEXAS INSTRUMENTS CC3000 WI-FI MODULE
+TEXAS INSTRUMENTS CC3000 WI-FI MODULE
+0
+46
+37
+SF_Silicon-Standard
+QFN-48
+48-PIN QFN (7X7MM, 0.5MM PITCH)
+48-PIN QFN (7X7MM, 0.5MM PITCH)
+0
+49
+49
+SF_Silicon-Standard
+QFN-64-9X9MM
+64-PIN QFN 9X9MM, 0.5MM PITCH
+64-PIN QFN 9X9MM, 0.5MM PITCH
+0
+64
+64
+SF_Silicon-Standard
+QFN-68
+
+
+0
+69
+69
+SF_Silicon-Standard
+QFN16-3X3MM
+3MM X 3MM QFN 16 PIN
+3MM X 3MM QFN 16 PIN
+0
+17
+17
+SF_Silicon-Standard
+QFN20
+
+
+0
+21
+21
+SF_Silicon-Standard
+QFN20-4X4MM
+QFN 20-PIN, 4X4MM
+QFN 20-PIN, 4X4MM
+0
+21
+21
+SF_Silicon-Standard
+QFN24-3X3
+24-PIN QFN -  3.0 X 3.0 MM - NO CENTER PAD
+24-PIN QFN -  3.0 X 3.0 MM - NO CENTER PAD
+0
+24
+24
+SF_Silicon-Standard
+QFN48-0.4MM
+QFN 48 PIN
+QFN 48 PIN
+0
+49
+49
+SF_Silicon-Standard
+QFN48-6X6MM
+QFN-48 PIN 6X6MM
+QFN-48 PIN 6X6MM
+0
+49
+49
+SF_Silicon-Standard
+SC70
+SC-70
+SC-70
+0
+5
+5
+SF_Silicon-Standard
+SC70-6
+SC-88/SC70-6/SOT-363 6-PIN PACKAGE
+SC-88/SC70-6/SOT-363 6-PIN PACKAGE
+0
+6
+6
+SF_Silicon-Standard
+SMA-DIODE
+DIODE
+DIODE
+0
+2
+2
+SF_Silicon-Standard
+SO08
+SOIC, 0.15 INCH WIDTH
+SOIC, 0.15 INCH WIDTH
+0
+8
+8
+SF_Silicon-Standard
+SO08-EIAJ
+FITS EIAJ PACKAGES (WIDE VERSION OF THE SOIC-8).
+FITS EIAJ PACKAGES (WIDE VERSION OF THE SOIC-8).
+0
+8
+8
+SF_Silicon-Standard
+SO08-TIGHT
+
+
+0
+8
+8
+SF_Silicon-Standard
+SO08_PAD
+SOIC, 0.15 INCH WIDTH
+SOIC, 0.15 INCH WIDTH
+0
+9
+9
+SF_Silicon-Standard
+SO14
+SOIC, 0.15 INCH WIDTH
+SOIC, 0.15 INCH WIDTH
+0
+14
+14
+SF_Silicon-Standard
+SO16
+SOIC, 0.15 INCH WIDTH
+SOIC, 0.15 INCH WIDTH
+0
+16
+16
+SF_Silicon-Standard
+SO16A
+SOP-16L
+SOP-16L
+0
+16
+16
+SF_Silicon-Standard
+SO18L
+
+
+0
+18
+18
+SF_Silicon-Standard
+SO18W
+SMALL OUTLINE WIDE PLASTIC GULL WING
+SMALL OUTLINE WIDE PLASTIC GULL WING
+0
+18
+18
+SF_Silicon-Standard
+SO20-0.3
+20-PIN SOIC (0.3" WIDE)
+20-PIN SOIC (0.3" WIDE)
+0
+20
+20
+SF_Silicon-Standard
+SOD-323
+SOD-323 (SMALL OUTLINE DIODE)
+SOD-323 (SMALL OUTLINE DIODE)
+0
+2
+2
+SF_Silicon-Standard
+SOD-523
+SOD-523 (SMALL OUTLINE DIODE)
+SOD-523 (SMALL OUTLINE DIODE)
+0
+2
+2
+SF_Silicon-Standard
+SOIC-8
+8-PIN SOIC 208-MIL
+8-PIN SOIC 208-MIL
+0
+8
+8
+SF_Silicon-Standard
+SOIC-18
+
+
+0
+18
+18
+SF_Silicon-Standard
+SOIC-28
+
+
+0
+28
+28
+SF_Silicon-Standard
+SOP20W
+SMALL OUTLINE PACKAGE
+SMALL OUTLINE PACKAGE
+0
+20
+20
+SF_Silicon-Standard
+SOT23-3
+SOT23-3
+SOT23-3
+0
+3
+3
+SF_Silicon-Standard
+SOT23-5
+SMALL OUTLINE TRANSISTOR
+SMALL OUTLINE TRANSISTOR
+0
+5
+5
+SF_Silicon-Standard
+SOT23-6
+SOT23-6
+SOT23-6
+0
+6
+6
+SF_Silicon-Standard
+SOT26
+FOOTPRINT FOR SOT-26 PART DMP2240UDM
+FOOTPRINT FOR SOT-26 PART DMP2240UDM
+0
+6
+6
+SF_Silicon-Standard
+SOT223
+SOT-223
+SOT-223
+0
+4
+4
+SF_Silicon-Standard
+SOT323
+
+
+0
+3
+3
+SF_Silicon-Standard
+SOT353
+SOT353 AKA SC70-5
+SOT353 AKA SC70-5
+0
+5
+5
+SF_Silicon-Standard
+SOT563
+6-PIN SOT563 (1:1 FOOTPRINT)
+6-PIN SOT563 (1:1 FOOTPRINT)
+0
+6
+6
+SF_Silicon-Standard
+SSOP16
+
+
+0
+16
+16
+SF_Silicon-Standard
+SSOP20
+SHRINK SMALL OUTLINE PACKAGE
+SHRINK SMALL OUTLINE PACKAGE
+0
+20
+20
+SF_Silicon-Standard
+SSOP20_L
+SSOP-20 -LONG VERSION
+SSOP-20 -LONG VERSION
+0
+20
+20
+SF_Silicon-Standard
+SSOP24
+
+
+0
+24
+24
+SF_Silicon-Standard
+SSOP28DB
+SMALL SHRINK OUTLINE PACKAGE - 28 DB
+SMALL SHRINK OUTLINE PACKAGE - 28 DB
+0
+28
+28
+SF_Silicon-Standard
+SSOP_20
+20-PIN .65MM PITCH/5.2MM BODY SMT
+20-PIN .65MM PITCH/5.2MM BODY SMT
+0
+20
+20
+SF_Silicon-Standard
+TDFN-8
+TDFN - 8PIN, 2MMX3MM
+TDFN - 8PIN, 2MMX3MM
+0
+9
+9
+SF_Silicon-Standard
+TO-39
+TO-39 4-PIN PTH
+TO-39 4-PIN PTH
+0
+4
+4
+SF_Silicon-Standard
+TO-92
+TO 92
+TO 92
+0
+3
+3
+SF_Silicon-Standard
+TO-92-AMMO
+TO-92 3-PIN PTH AMMO PACKAGE
+TO-92 3-PIN PTH AMMO PACKAGE
+0
+3
+3
+SF_Silicon-Standard
+TO-92-EZ
+
+
+0
+3
+3
+SF_Silicon-Standard
+TO-92-KIT
+TO-92 3-PIN PTH FOOTPRINT - KIT VERSION
+TO-92 3-PIN PTH FOOTPRINT - KIT VERSION
+0
+3
+3
+SF_Silicon-Standard
+TO-220-ALT
+
+
+0
+3
+3
+SF_Silicon-Standard
+TO-252
+
+
+0
+3
+3
+SF_Silicon-Standard
+TO-263_D2PAK
+
+
+0
+3
+3
+SF_Silicon-Standard
+TO220-ADJ
+
+
+0
+3
+3
+SF_Silicon-Standard
+TO220-IGO
+
+
+0
+3
+3
+SF_Silicon-Standard
+TO220V
+TO 220 VERTICAL PACKAGE WORKS WITH VARIOUS PARTS INCLUDING N-CHANNEL MOSFET SPARKFUN SKU: COM-10213
+TO 220 VERTICAL PACKAGE WORKS WITH VARIOUS PARTS INCLUDING N-CHANNEL MOSFET SPARKFUN SKU: COM-10213
+0
+3
+3
+SF_Silicon-Standard
+TQFP-48
+48-PIN TQFP (7X7MM, 0.5MM PITCH)
+48-PIN TQFP (7X7MM, 0.5MM PITCH)
+0
+48
+48
+SF_Silicon-Standard
+TQFP-100-14X14MM
+
+
+0
+100
+100
+SF_Silicon-Standard
+TQFP32-5MM
+TQFP - 32
+TQFP - 32
+0
+32
+32
+SF_Silicon-Standard
+TQFP32-08
+THIN PLASIC QUAD FLAT PACKAGE GRID 0.8 MM
+THIN PLASIC QUAD FLAT PACKAGE GRID 0.8 MM
+0
+32
+32
+SF_Silicon-Standard
+TQFP44
+
+
+0
+44
+44
+SF_Silicon-Standard
+TQFP64
+64-LEAD TQFP PLASTIC THIN QUAD FLATPACK - 10X10X1MM BODY, 2MMFP
+64-LEAD TQFP PLASTIC THIN QUAD FLATPACK - 10X10X1MM BODY, 2MMFP
+0
+64
+64
+SF_Silicon-Standard
+TQFP64_14X14MM
+64-LEAD TQFP PLASTIC THIN QUAD FLATPACK - 14X14X1MM BODY
+64-LEAD TQFP PLASTIC THIN QUAD FLATPACK - 14X14X1MM BODY
+0
+64
+64
+SF_Silicon-Standard
+TQFP100
+100-LEAD THIN QUAD FLAT PACK PACKAGE OUTLINE
+100-LEAD THIN QUAD FLAT PACK PACKAGE OUTLINE
+0
+100
+100
+SF_Silicon-Standard
+TSOP572
+TSOP572
+TSOP572
+0
+4
+4
+SF_Silicon-Standard
+TSSOP-14
+
+
+0
+14
+14
+SF_Silicon-Standard
+TSSOP-28_4MM
+
+
+0
+28
+28
+SF_Silicon-Standard
+TSSOP14
+TSSOP  (THIN SHRINK SMALL OUTLINE PLASTIC) - 14
+TSSOP  (THIN SHRINK SMALL OUTLINE PLASTIC) - 14
+0
+14
+14
+SF_Silicon-Standard
+TSSOP16
+TSOP16
+TSOP16
+0
+16
+16
+SF_Silicon-Standard
+TSSOP28
+
+
+0
+28
+28
+SF_Silicon-Standard
+UFDFN-20
+UFDFN-20
+UFDFN-20
+0
+20
+20
+SF_Silicon-Standard
+VQFN-28
+
+
+0
+29
+29
+SF_Silicon-Standard
+VSSOP-10
+
+
+0
+10
+10
+SF_Silicon-Standard
+WQFN-24
+WQFN - 24 PIN
+WQFN - 24 PIN
+0
+25
+25
+SF_Silicon-Standard
+WSON-8-PAD
+
+
+0
+9
+9
+SF_Silicon-Standard
+WSON-12
+WSON-12
+WSON-12
+0
+13
+13
+SF_Silicon-Standard
+WSON8-6X5MM
+
+
+0
+9
+9
+SF_Switches
+BUTTON-18MM
+MAGNETIC METAL SNAPS
+MAGNETIC METAL SNAPS
+0
+2
+2
+SF_Switches
+BUTTON-CONDUCTIVE
+CONDUCTIVE BUTTON
+CONDUCTIVE BUTTON
+0
+2
+2
+SF_Switches
+BUTTONPAD-2X2
+2X2 BUTTON PAD W/ RGB LEDS
+2X2 BUTTON PAD W/ RGB LEDS
+0
+24
+24
+SF_Switches
+BUTTONPAD-2X2-SINGLE-LED
+2X2 BUTTON PAD W/ SINGLE LEDS
+2X2 BUTTON PAD W/ SINGLE LEDS
+0
+16
+16
+SF_Switches
+BUTTONPAD-2X2-SINGLE-LED-KIT
+2X2 BUTTON PAD W/ SINGLE LEDS
+2X2 BUTTON PAD W/ SINGLE LEDS
+0
+16
+16
+SF_Switches
+BUTTONPAD-2X2-STAGGERED
+2X2 BUTTON PAD W/ RGB LEDS - STAGGERED LED FOOTPRINT
+2X2 BUTTON PAD W/ RGB LEDS - STAGGERED LED FOOTPRINT
+0
+24
+24
+SF_Switches
+BUTTONPAD-4X4
+4X4 BUTTON PAD W/ RGB LEDS
+4X4 BUTTON PAD W/ RGB LEDS
+0
+96
+50
+SF_Switches
+BUTTONPAD-4X4-STAGGERED
+4X4 BUTTON PAD W/ RGB LEDS - STAGGERED LED FOOTPRINT
+4X4 BUTTON PAD W/ RGB LEDS - STAGGERED LED FOOTPRINT
+0
+96
+50
+SF_Switches
+CHERRY-MX-LED
+CHERRY MX SWITCH - ELECTROMECHANICAL SWITH W/ LED
+CHERRY MX SWITCH - ELECTROMECHANICAL SWITH W/ LED
+0
+4
+4
+SF_Switches
+DIPSWITCH-02-50MIL
+2-PIN DIP SWITCH - SMD, 0.05"-PITCH
+2-PIN DIP SWITCH - SMD, 0.05"-PITCH
+0
+4
+4
+SF_Switches
+DIPSWITCH-02-209-2LPST
+2-POSITION DIP SWITCH - PTH 0.1"-PITCH
+2-POSITION DIP SWITCH - PTH 0.1"-PITCH
+0
+4
+4
+SF_Switches
+DIPSWITCH-02-CHS-02A
+2-POSITION DIP SWITCH - SMD, J-HOOK PADS, 0.05"-PITCH
+2-POSITION DIP SWITCH - SMD, J-HOOK PADS, 0.05"-PITCH
+0
+4
+4
+SF_Switches
+DIPSWITCH-04-SMD
+4-POSITION DIP SWITCH - SMD, 0.1"-PITCH
+4-POSITION DIP SWITCH - SMD, 0.1"-PITCH
+0
+8
+8
+SF_Switches
+DIPSWITCH-06-SMD
+
+
+0
+12
+12
+SF_Switches
+DIPSWITCH-08
+8-POSITION DIP SWITCH - PTH, 0.1"-PITCH
+8-POSITION DIP SWITCH - PTH, 0.1"-PITCH
+0
+16
+16
+SF_Switches
+ENCODER-16MM-QUAD
+ROTARY ENCODER - 16MM TOP WIDTH
+ROTARY ENCODER - 16MM TOP WIDTH
+0
+5
+5
+SF_Switches
+ENCODER_LED_2
+ILLUMINATED ROTARY ENCODER W/ 2 LEDS
+ILLUMINATED ROTARY ENCODER W/ 2 LEDS
+0
+9
+9
+SF_Switches
+ENCODER_LED_2_KIT
+ILLUMINATED ROTARY ENCODER W/ 2 LEDS - KIT PACKAGE
+ILLUMINATED ROTARY ENCODER W/ 2 LEDS - KIT PACKAGE
+0
+9
+9
+SF_Switches
+ENCODER_LED_3
+ILLUMINATED ROTARY ENCODER W/ RGB LED AND SELECT SWITCH
+ILLUMINATED ROTARY ENCODER W/ RGB LED AND SELECT SWITCH
+0
+10
+10
+SF_Switches
+ENCODER_LED_3_KIT
+ILLUMINATED ROTARY ENCODER W/ RGB LED AND SELECT SWITCH
+ILLUMINATED ROTARY ENCODER W/ RGB LED AND SELECT SWITCH
+0
+10
+10
+SF_Switches
+JOYSTICK
+THUMB JOYSTICK
+THUMB JOYSTICK
+0
+14
+11
+SF_Switches
+JOYSTICK-PSP1000
+PSP-1000 THUMB SLIDE JOYSTICK
+PSP-1000 THUMB SLIDE JOYSTICK
+0
+4
+4
+SF_Switches
+JOYSTICK_MINI
+SMALL TACTILE JOYSTICK W/ SELECT SWITCH
+SMALL TACTILE JOYSTICK W/ SELECT SWITCH
+0
+8
+8
+SF_Switches
+NAV_SWITCH
+NAVIGATION SWITCH
+NAVIGATION SWITCH
+0
+5
+5
+SF_Switches
+REED_SWITCH_GLASS
+REED SWITCH - GLASS CASE - PTH
+REED SWITCH - GLASS CASE - PTH
+0
+2
+2
+SF_Switches
+REED_SWITCH_PLASTIC
+REED SWITCH - INSULATED CASE - PTH
+REED SWITCH - INSULATED CASE - PTH
+0
+2
+2
+SF_Switches
+ROTARY_ENC_PLAIN
+ROTARY ENCODER W/ SELECT SWITCH
+ROTARY ENCODER W/ SELECT SWITCH
+0
+7
+7
+SF_Switches
+ROTARY_SWITCH_1X10
+10-POSITION ROTARY SWITCH
+10-POSITION ROTARY SWITCH
+0
+11
+11
+SF_Switches
+ROTARY_SWITCH_1X10_KIT
+10-POSITION ROTARY SWITCH - KIT VERSION
+10-POSITION ROTARY SWITCH - KIT VERSION
+0
+11
+11
+SF_Switches
+RockerSwitch_RA
+
+
+0
+4
+2
+SF_Switches
+STOMP_SWITCH_3PDT
+3-POLE, DOUBLE-THROW (3PDT) STOMP SWITCH
+3-POLE, DOUBLE-THROW (3PDT) STOMP SWITCH
+0
+9
+9
+SF_Switches
+SWITCH TACTILE SPST-NO 0.05A 12V
+
+
+0
+4
+3
+SF_Switches
+SWITCH_DPDT_PTH_GPI-152-3013
+CW INDUSTRIES  GPI-152-3013  DPDT SWITCH - PTH
+CW INDUSTRIES  GPI-152-3013  DPDT SWITCH - PTH
+0
+10
+10
+SF_Switches
+SWITCH_DPDT_SMD_AYZ0202
+ITT INDUSTRIES AYZ0202 DPDT SWITCH - SMD
+ITT INDUSTRIES AYZ0202 DPDT SWITCH - SMD
+0
+6
+6
+SF_Switches
+SWITCH_ROCKER_SPDT_0.4VA_28V
+
+
+0
+5
+5
+SF_Switches
+SWITCH_SP3T_SMD
+CUS LOW-PROFILE SP3T SLIDE SWITCH - SMD
+CUS LOW-PROFILE SP3T SLIDE SWITCH - SMD
+0
+8
+8
+SF_Switches
+SWITCH_SPDT_PTH_11.6X4.0MM
+SPDT PTH SLIDE SWITCH
+SPDT PTH SLIDE SWITCH
+0
+3
+3
+SF_Switches
+SWITCH_SPDT_PTH_11.6X4.0MM_KIT
+SPDT PTH SLIDE SWITCH - KIT FOOTPRINT
+SPDT PTH SLIDE SWITCH - KIT FOOTPRINT
+0
+3
+3
+SF_Switches
+SWITCH_SPDT_PTH_11.6X4.0MM_LOCK
+SPDT PTH SLIDE SWITCH - LOCKING FOOTPRINT
+SPDT PTH SLIDE SWITCH - LOCKING FOOTPRINT
+0
+3
+3
+SF_Switches
+SWITCH_SPST_SMD_A
+SPDT SLIDE SWITCH - SMD
+SPDT SLIDE SWITCH - SMD
+0
+7
+7
+SF_Switches
+SWITCH_TACTILE_SPST-NO_0.05A_12V
+
+
+0
+4
+3
+SF_Switches
+SWITCH_TOGGLE_SPST_RIGHT_ANGLE
+
+
+0
+5
+5
+SF_Switches
+TACTILE_SWITCH_LED_PTH_12MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - W/ LED - PTH
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - W/ LED - PTH
+0
+6
+6
+SF_Switches
+TACTILE_SWITCH_LED_PTH_12MM_KIT
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - W/ LED - PTH, KIT VARIANT
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - W/ LED - PTH, KIT VARIANT
+0
+6
+6
+SF_Switches
+TACTILE_SWITCH_PTH_6.0MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, 6.0MM SQUARE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, 6.0MM SQUARE
+0
+4
+4
+SF_Switches
+TACTILE_SWITCH_PTH_6.0MM_KIT
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, 6.0MM SQUARE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, 6.0MM SQUARE
+0
+4
+4
+SF_Switches
+TACTILE_SWITCH_PTH_12MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, 12MM SQUARE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, 12MM SQUARE
+0
+4
+4
+SF_Switches
+TACTILE_SWITCH_PTH_RIGHT_ANGLE_KIT
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, RIGHT-ANGLE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, RIGHT-ANGLE
+0
+4
+3
+SF_Switches
+TACTILE_SWITCH_SMD_4.5MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 4.5MM SQUARE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 4.5MM SQUARE
+0
+4
+4
+SF_Switches
+TACTILE_SWITCH_SMD_4.6X2.8MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 4.6 X 2.8MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 4.6 X 2.8MM
+0
+4
+4
+SF_Switches
+TACTILE_SWITCH_SMD_5.2MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 5.2MM SQUARE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 5.2MM SQUARE
+0
+4
+4
+SF_Switches
+TACTILE_SWITCH_SMD_6.0X3.5MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 6.0 X 3.5 MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 6.0 X 3.5 MM
+0
+2
+2
+SF_Switches
+TACTILE_SWITCH_SMD_6.2MM_TALL
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 6.2MM SQUARE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 6.2MM SQUARE
+0
+4
+4
+SF_Switches
+TACTILE_SWITCH_SMD_12MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 12MM SQUARE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, 12MM SQUARE
+0
+4
+4
+SF_Switches
+TACTILE_SWITCH_SMD_RIGHT_ANGLE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, RIGHT-ANGLE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - SMD, RIGHT-ANGLE
+0
+2
+2
+SF_Switches
+TOGGLE_SWITCH-102-C3
+
+
+0
+5
+5
+SF_Switches
+TRACKBALL
+TRACKBALL - MECHANICAL
+TRACKBALL - MECHANICAL
+0
+0
+0
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
@@ -88066,6 +95724,13 @@ hall current
 0
 6
 6
+Sensor_Current
+LEM_LA25-NP
+LEM LA 25-NP Current Transducer (https://www.lem.com/sites/default/files/products_datasheets/la%2025-np.pdf)
+Current sensor LEM
+0
+13
+13
 Sensor_Current
 LEM_LA25-P
 LEM Current Transducer (https://www.lem.com/sites/default/files/products_datasheets/la_25-p.pdf)
@@ -89015,6 +96680,13 @@ Symbol
 RoHS-Logo_40mm_SilkScreen
 Restriction of Hazardous Substances Directive Logo
 Logo RoHS
+0
+0
+0
+Symbol
+Smolhaj_Scale_0.1
+BLÅHAJ , smol 50cm nominal, 1:10 scale (56mm Snoot-Flosse), MPN 205.406.63 (https://www.ikea.com/gb/en/p/blahaj-soft-toy-baby-shark-20540663/)
+Ikea Smol Haj
 0
 0
 0
@@ -93905,6 +101577,13 @@ Transformer current sense SMD
 8
 8
 Transformer_SMD
+Transformer_ED8_4-Lead_10.5x8mm_P5mm
+Isolated audio transformer, ED8, 4-lead, body 10.5x8mm body, pitch 5mm, height 5mm, https://gitlab.com/kicad/libraries/kicad-footprints/-/merge_requests/3626
+permalloy core 
+0
+4
+4
+Transformer_SMD
 Transformer_Ethernet_Bel_S558-5999-T7-F
 Ethernet Transformer, Bel S558-5999-T7-F, https://www.belfuse.com/resources/ICMs/lan-/S558-5999-T7-F.pdf
 Ethernet Transformer
@@ -94472,6 +102151,13 @@ Transformer Toroid tapped horizontal laying Diameter 14mm Amidon T50
 6
 6
 Transformer_THT
+Transformer_Triad_VPP16-310
+Power transformer, 2x Pri, 2x Sec, 230/115 VAC to 16/8V (0.31/0.62 A)
+power center-tap
+0
+8
+8
+Transformer_THT
 Transformer_Wuerth_750343373
 Transformer, horizontal core with bobbin, 10 pin, 3.81mm pitch, 15.24mm row spacing, 22x23x17.53mm (https://katalog.we-online.com/ctm/datasheet/750343373.pdf)
 transformer flyback
@@ -94527,6 +102213,34 @@ igbt diode module
 0
 28
 28
+Transistor_Power_Module
+Infineon_AG-ECONO3
+35-lead TH, EconoPACK 3, similar(+0.5mm for Fab layer on Y) as Littelfuse_Package_W_XN2MM, https://www.infineon.com/dgdl/Infineon-FS200R12N3T7-DataSheet-v01_00-EN.pdf?fileId=8ac78c8c80027ecd018083b6ce263011
+igbt diode module
+0
+35
+35
+Transistor_Power_Module
+Infineon_AG-ECONO3B
+41-lead TH, EconoPACK 3B, https://www.infineon.com/dgdl/Infineon-FS300R12N3E7-DataSheet-v01_00-EN.pdf?fileId=8ac78c8c8900bb57018901d6e6f6124b
+igbt diode module
+0
+41
+41
+Transistor_Power_Module
+Infineon_EasyPACK-1B
+22-lead TH, EasyPACK 1B, https://www.infineon.com/dgdl/Infineon-FS30R06W1E3-DataSheet-v02_01-EN.pdf?fileId=db3a304313b8b5a60113cecd4c3102c1
+igbt diode module
+0
+22
+15
+Transistor_Power_Module
+Infineon_EasyPACK-1B_PressFIT
+22-lead TH, EasyPACK 1B, https://www.infineon.com/dgdl/Infineon-FS30R06W1E3-DataSheet-v02_01-EN.pdf?fileId=db3a304313b8b5a60113cecd4c3102c1
+igbt diode module
+0
+22
+15
 Transistor_Power_Module
 Infineon_EasyPIM-1B
 35-lead TH, EasyPIM 1B, https://www.infineon.com/dgdl/Infineon-FP10R06W1E3-DS-v02_01-en_de.pdf?fileId=db3a304412b407950112b43312285a63
