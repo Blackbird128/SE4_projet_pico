@@ -2550,6 +2550,12 @@
 		(uuid "6a307d7f-2833-45dd-a2dd-72199337d9d9")
 	)
 	(junction
+		(at 121.92 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8019352e-4394-4fc1-9951-d001d96ec491")
+	)
+	(junction
 		(at 121.92 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2584,12 +2590,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d21c3bc9-6252-4c4a-956f-4b9f8d41b9c3")
-	)
-	(junction
-		(at 121.92 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d785b35d-1821-4b9f-ac1c-01bb49db53e0")
 	)
 	(junction
 		(at 39.37 140.97)
@@ -2672,16 +2672,6 @@
 			(type default)
 		)
 		(uuid "023d417e-340e-4fbf-9ad2-5de8b5a1a600")
-	)
-	(wire
-		(pts
-			(xy 121.92 92.71) (xy 121.92 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "048669b8-15c4-4902-b246-8763ea57cd62")
 	)
 	(wire
 		(pts
@@ -2842,6 +2832,16 @@
 			(type default)
 		)
 		(uuid "3b3125f8-6711-441a-ac26-897ae7f042e7")
+	)
+	(wire
+		(pts
+			(xy 121.92 93.98) (xy 121.92 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b4ac9ee-3a83-4250-a274-b8d67b0d6a18")
 	)
 	(wire
 		(pts
@@ -3205,7 +3205,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 99.06) (xy 142.24 92.71)
+			(xy 142.24 99.06) (xy 142.24 93.98)
 		)
 		(stroke
 			(width 0)
@@ -3275,7 +3275,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 88.9) (xy 121.92 92.71)
+			(xy 121.92 88.9) (xy 121.92 93.98)
 		)
 		(stroke
 			(width 0)
@@ -3365,7 +3365,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 92.71) (xy 142.24 92.71)
+			(xy 121.92 93.98) (xy 142.24 93.98)
 		)
 		(stroke
 			(width 0)
@@ -4228,7 +4228,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0e0dba98-fe98-41ac-83a7-078f0afb317c")
-		(property "Reference" "J8"
+		(property "Reference" "J9"
 			(at 43.18 95.25 0)
 			(effects
 				(font
@@ -4325,7 +4325,7 @@
 		(instances
 			(project "Arduino Uno SMD"
 				(path "/a569fb01-6252-4b3a-9dcb-3675b5ce6f3f"
-					(reference "J8")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -5005,7 +5005,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4e4cef11-dd52-4723-b0cb-77596e0a6069")
-		(property "Reference" "J1"
+		(property "Reference" "J8"
 			(at 143.51 34.29 0)
 			(effects
 				(font
@@ -5069,7 +5069,7 @@
 		(instances
 			(project "Arduino Uno SMD"
 				(path "/a569fb01-6252-4b3a-9dcb-3675b5ce6f3f"
-					(reference "J1")
+					(reference "J8")
 					(unit 1)
 				)
 			)
