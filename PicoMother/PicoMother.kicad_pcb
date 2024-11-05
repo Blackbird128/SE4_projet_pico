@@ -9,7 +9,7 @@
 	(paper "A4")
 	(title_block
 		(title "PicoMother")
-		(date "2024-10-23")
+		(date "2024-11-05")
 		(rev "1")
 		(company "Bonningre Louis")
 		(comment 1 "Antoine Lecomte")
@@ -83,7 +83,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "GERBER_B8")
 		)
 	)
 	(net 0 "")
