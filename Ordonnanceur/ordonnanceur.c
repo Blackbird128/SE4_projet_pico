@@ -5,12 +5,11 @@
 #include "pico_serial.h"
 #include "pico_SPI.h"
 #include "pico_s7s.h"
+#include "taches.h"
 
 #define NB_TASKS 5
 
 int courant = 0;
-
-unsigned char serial_buffer;
 
 task Taches[NB_TASKS] = {
   {Led2, 0x0700},
@@ -69,59 +68,13 @@ void ordonnanceur(){
     if (courant == NB_TASKS) courant = 0;
 }
 
-//Ci dessous les differentes taches
-
-void Led1(){
-    while(1){
-        PORTC ^= 0x08;
-        _delay_ms(333);
-    }
-}
-
-void Led2(){
-    while(1){
-        PORTD ^= 0x10;
-        _delay_ms(400);
-    }
-}
-
-void SerialWrite(){
-    while (1){
-        //Send_String("LOULOUTOINE"); //Test
-        Serial_Transmit('\r');
-        Serial_Transmit(serial_buffer);
-    }
-}
-
-void SerialRead(){
-    while(1){
-        serial_buffer = Serial_Receive();
-    }
-}
-
-void s7s(){
-    int i = 0;
-    while(1){
-        clearDisplaySPI();
-        SPI_send(i);
-        SPI_send(i);
-        SPI_send(i);
-        SPI_send(i);
-        i++;
-        if (i > 15){
-            i = 0;
-        }
-        _delay_ms(50);
-    }
-}
-
 int main(void){
     DDRD |= 0x12; //Déclaration des sorties
     DDRC |= 0x09;
     init_minuteur(256, PERIODE);
     Serial_Init(MYUBRR); // Initialisation de la communication serie
 
-    SPI_init(); // Initialisation ISP 
+    SPI_init(); // Initialisation ISP
     S7S_init(); //Initialisation écran (sur port J6 )
     clearDisplaySPI();
 

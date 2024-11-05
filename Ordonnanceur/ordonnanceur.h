@@ -1,6 +1,3 @@
-#ifndef ORDONNANCEUR_H
-#define ORDONNANCEUR_H
-
 // Déclarations et constantes
 #define INT_BAS 0
 #define INT_CHANGE  1
@@ -93,13 +90,17 @@ typedef struct task{
     "pop r0 \n\t" \
     );
 
+/*
+ * Cette fonction initialise le minuteur
+ */
 void init_minuteur(int diviseur, long periode);
-void Led1(void);
-void Led2(void);
-void SerialRead();
-void SerialWrite();
-void init_task(int t);
-void ordonnanceur(void);
-void s7s();
 
-#endif
+/*
+ * Initialisation des taches du tableau
+ */
+void init_task(int t);
+
+/*
+ * Ordonnanceur qui selectionne la tache suivante
+ */
+void ordonnanceur(void);
