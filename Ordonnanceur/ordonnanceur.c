@@ -5,11 +5,12 @@
 #include "pico_serial.h"
 #include "pico_SPI.h"
 #include "pico_s7s.h"
-#include "taches.h"
+
 
 #define NB_TASKS 5
 
 int courant = 0;
+unsigned char serial_buffer;
 
 task Taches[NB_TASKS] = {
   {Led2, 0x0700},
@@ -18,6 +19,18 @@ task Taches[NB_TASKS] = {
   {SerialWrite, 0x0400},
   {s7s, 0x0500}
 };
+
+
+void Sleeping(){
+  for (int i = 0; i < NB_TASKS;i++){
+    if (Taches[i].etat.sit == ENDORMI) Taches[i].etat.time.tempsendormi -= 20;
+    if (Taches[i].etat.time.tempsendormi <= 0) {
+      Taches[i].etat.time.tempsendormi = 0;
+      Taches[i].etat.sit = ACTIF;
+    }
+  }
+}
+
 
 void init_minuteur(int diviseur,long periode){
 TCCR1A=0;               // Le mode choisi n'utilise pas ce registre
@@ -45,6 +58,7 @@ void init_task(int t){
     asm volatile("push %0" : : "r" ((adresse & 0xff00) >> 8));
     portSAVE_Registers();
     Taches[t].stack = SP;
+    Taches[t].etat.sit = ACTIF;
     SP = oldSP;
 }
 
@@ -62,10 +76,69 @@ ISR(TIMER1_COMPA_vect, ISR_NAKED){
     asm volatile("reti");
 }
 
+
 void ordonnanceur(){
     PORTC ^= 0x01; // On fait clignoter une des led (J1) à chaque fois que l'ordonnanceur est appelé
-    courant++;
+    Sleeping();
+    do{
+    courant ++;
     if (courant == NB_TASKS) courant = 0;
+    }while (Taches[courant].etat.sit == ENDORMI);
+}
+
+
+
+
+//Ci dessous les differentes taches
+void makeSleep(int t){
+  Taches[courant].etat.sit = ENDORMI;
+  Taches[courant].etat.time.tempsendormi = t;
+  TCNT1 = 0;
+  TIMER1_COMPA_vect();
+}
+
+void Led1(){
+    while(1){
+        PORTC ^= 0x08;
+        makeSleep(333);
+    }
+}
+
+void Led2(){
+    while(1){
+        PORTD ^= 0x10;
+        makeSleep(400);
+    }
+}
+
+void SerialWrite(){
+    while (1){
+        //Send_String("LOULOUTOINE"); //Test
+        Serial_Transmit('\r');
+        Serial_Transmit(serial_buffer);
+    }
+}
+
+void SerialRead(){
+    while(1){
+        serial_buffer = Serial_Receive();
+    }
+}
+
+void s7s(){
+    int i = 0;
+    while(1){
+        clearDisplaySPI();
+        SPI_send(i);
+        SPI_send(i);
+        SPI_send(i);
+        SPI_send(i);
+        i++;
+        if (i > 15){
+            i = 0;
+        }
+        makeSleep(500);
+    }
 }
 
 int main(void){

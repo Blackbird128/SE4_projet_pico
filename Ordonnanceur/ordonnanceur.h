@@ -7,9 +7,22 @@
 #define CTC1  WGM12   // Meilleur nom pour le bit
 #define PERIODE 20
 
+#define ENDORMI 1
+#define ACTIF 0
+
+typedef union{
+  int tempsendormi;
+} Time;
+
+typedef struct{
+  int sit;
+  Time time;
+} Etat;
+
 typedef struct task{
   void (*start)(void);
   uint16_t stack;
+  Etat etat;
 } task;
 
 // Sauvegarde des registres
@@ -104,3 +117,9 @@ void init_task(int t);
  * Ordonnanceur qui selectionne la tache suivante
  */
 void ordonnanceur(void);
+
+void Led1(void);
+void Led2(void);
+void SerialRead();
+void SerialWrite();
+void s7s();
