@@ -86,10 +86,6 @@ void ordonnanceur(){
     }while (Taches[courant].etat.sit == ENDORMI);
 }
 
-
-
-
-//Ci dessous les differentes taches
 void makeSleep(int t){
   Taches[courant].etat.sit = ENDORMI;
   Taches[courant].etat.time.tempsendormi = t;
@@ -97,6 +93,8 @@ void makeSleep(int t){
   TIMER1_COMPA_vect();
 }
 
+
+//Ci dessous les differentes taches
 void Led1(){
     while(1){
         PORTC ^= 0x08;
