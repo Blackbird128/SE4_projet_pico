@@ -134,6 +134,6 @@ void append(char* name, char* data, int len)
 }
 
 int main(){
-
+    append("fichier", "coucou", 16);
     return 0;
 }
