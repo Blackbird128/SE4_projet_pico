@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "PicoMother")
-		(date "2024-11-05")
-		(rev "1")
+		(date "2024-12-03")
+		(rev "1.1")
 		(company "Bonningre Louis")
 		(comment 1 "Antoine Lecomte")
 	)
@@ -6095,7 +6095,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C7"
-			(at 2.8183 0.0508 360)
+			(at 2.8183 0.0508 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "7e10abb2-a596-4aed-9be9-f520183068b8")
@@ -6107,7 +6107,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 2.5815 0 360)
+			(at 2.5815 0 0)
 			(layer "F.Fab")
 			(uuid "61576783-c114-4679-9492-0dd2c0733734")
 			(effects
