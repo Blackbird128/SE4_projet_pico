@@ -7,7 +7,7 @@ export CFLAGS =  -Wall -I. -DF_CPU=16000000 -Os #-g
 export LDFLAGS = -g $(TARGET_ARCH) -lm -Wl,--gc-sections #	-Os
 
 
-TARGET = at90usb82-bl-usb-1_0_5
+TARGET = blink
 TERM = /dev/ttyACM0
 #TERM = /dev/ttyACM0
 CPPFLAGS = -mmcu=$(MCU)
@@ -26,7 +26,7 @@ ass:$(C_SRC)
 	$(CC) -S $(CPPFLAGS) $(CFLAGS) $< -o $@
 
 clean:
-	rm -f *.o
+	rm -f *.o *.elf
 
 %.o:%.c
 	$(CC) -c $(CPPFLAGS) $(CFLAGS) $< -o $@
@@ -39,10 +39,10 @@ $(TARGET).hex: $(TARGET).elf
 	avr-objcopy -j .text -j .data -O ihex $(TARGET).elf $(TARGET).hex
 	avr-objcopy -j .eeprom --set-section-flags=.eeprom="alloc,load" --change-section-lma .eeprom=0 -O ihex $(TARGET).elf eeprom.hex
 
-upload:
+upload: $(TARGET).hex
 	stty -F $(TERM) hupcl # reset
-	$(DUDE) $(PGMERISP) -U flash:w:$(TARGET).hex
-	#$(DUDE) $(PGMERISP) -U lfuse:w:0xEF:m -U hfuse:w:0xD8:m -U flash:w:$(TARGET).hex
+	$(DUDE) $(PGMER) -U flash:w:$(TARGET).hex
+#	$(DUDE) $(PGMERISP) -U flash:w:$(TARGET).hex
 
 size: $(TARGET).elf
 	avr-size --format=avr --mcu=$(MCU) $(TARGET).elf
