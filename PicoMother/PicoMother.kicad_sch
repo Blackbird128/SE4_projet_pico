@@ -3799,7 +3799,7 @@
 			)
 		)
 	)
-	(global_label "D-"
+	(global_label "D+"
 		(shape input)
 		(at 146.05 106.68 180)
 		(fields_autoplaced yes)
@@ -3997,7 +3997,7 @@
 			)
 		)
 	)
-	(global_label "D+"
+	(global_label "D-"
 		(shape input)
 		(at 146.05 109.22 180)
 		(fields_autoplaced yes)
