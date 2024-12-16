@@ -2,7 +2,7 @@
 
 #define DISPLAY_DDR DDRB
 #define DISPLAY_PORT PORTB
-#define DISPLAY_PIN 2 //Port J6 du shield
+#define DISPLAY_PIN 2 //Port J3 de la picoMother
 
 /*
  * Cette fonction déclare le pin CS de l'écran en sorti

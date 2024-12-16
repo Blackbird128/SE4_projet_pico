@@ -2,11 +2,13 @@
 #include <string.h>
 #include <stdio.h>
 
-#define SS 2
-#define MOSI 3
-#define SCK 5
+#define SS PINB2
+#define MOSI PINB3
+#define MISO PINB4
+#define SCK PINB5
 
 /*
  * Initialisation du SPI
  */
 void SPI_init();
+uint8_t SPI_transmit(uint8_t data);

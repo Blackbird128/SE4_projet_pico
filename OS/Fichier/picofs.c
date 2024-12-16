@@ -366,7 +366,7 @@ void CAT(const char *filesystem_path, const char *filename) {
             
             return; // Fichier affiché, sortie de la fonction
         }
-    } Encore plus
+    }
     
     // Si le fichier n'a pas été trouvé
     printf("Le fichier \"%s\" n'a pas été trouvé.\n", filename);
