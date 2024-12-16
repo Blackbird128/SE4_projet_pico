@@ -2,9 +2,9 @@
 
 /* Constantes */
 
-#define	SD_DDR			DDRD
-#define	SD_PORT			PORTD
-#define SD_PIN			4
+#define	SD_DDR			DDRB
+#define	SD_PORT			PORTB
+#define SD_PIN			2
 
 #define SD_PROTECT_BLOCK_ZERO	1	/* Protect block zero from write if nonzero */
 #define SD_INIT_TIMEOUT		300	/* init timeout ms */
