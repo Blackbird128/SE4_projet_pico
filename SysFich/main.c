@@ -50,7 +50,7 @@ int main(void)
         }
 
         // update address to 0x00000100
-        addr = 0x00000001;
+        addr = 0x00000010;
 
         // fill buffer with 0x55
         for(uint16_t i = 0; i < 512; i++) buf[i] = 0xCA;

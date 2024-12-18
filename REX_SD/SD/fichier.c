@@ -12,7 +12,7 @@
 #include "SdInfo.h"
 #include "Sd2Card.h"
 
-#define BLOC_NO		16
+#define BLOC_NO		1
 #define BLOC_TAILLE	512
 
 int main(void)
@@ -47,7 +47,7 @@ int statut=readBlock(&sd,BLOC_NO,bloc);
 #ifdef DEBUG
 printf("statut=%x\n",statut);
 int i;
-for(i=0;i<3;i++) printf("bloc[%d]=%x ",i,bloc[i]);
+for(i=0;i<512;i++) printf("bloc[%d]= %x\n ",i,bloc[i]);
 printf("\n");
 #endif
 #endif
