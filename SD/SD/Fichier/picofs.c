@@ -3,7 +3,7 @@
 #include <string.h>
 #define CHUNK_SIZE 64
 
-#define BLOCK_SIZE 256
+#define BLOCK_SIZE 512
 #define MAX_FILENAME_LENGTH 16
 #define MAX_BLOCKS_PER_FILE 2040
 #define MAX_FILES_IN_DIRECTORY 64

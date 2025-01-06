@@ -6,13 +6,14 @@
 #include "sdcard.h"
 #include "sdprint.h"
 
-
-
 int main(void)
 {
+    int block_num_read = 12; //numero du block a lire
+    int block_num_write = 2; //numero du block a ecrire
+
     // array to hold responses
     uint8_t res[5], buf[512], token;
-    uint32_t addr = 0x00000000;
+    uint32_t addr = 512 * block_num_read; //On utilise une carte SD standard (pas SDHC) il faut multiplier l'adresse par 512
 
     // initialize UART
     UART_init();
@@ -50,10 +51,10 @@ int main(void)
         }
 
         // update address to 0x00000100
-        addr = 0x00000010;
+        addr = 512 * block_num_write;
 
-        // fill buffer with 0x55
-        for(uint16_t i = 0; i < 512; i++) buf[i] = 0xCA;
+        // fill buffer with 0x01
+        for(uint16_t i = 0; i < 512; i++) buf[i] = 0x01;
 
         UART_pputs("Writing 0x55 to sector: 0x");
         UART_puthex8((uint8_t)(addr >> 24));
