@@ -14,15 +14,15 @@
 
 //Lets go faire notre propre systeme de fichier ;)
 
-struct file{
+struct Fichier{
+    uint8_t available;
+    uint8_t starting_block;
     char name[FILE_NAME];
-    int starting_block;
-    int available;
-}toc;
+}typedef Fichier;
 
 uint8_t buffer[BLOCK_SIZE]; //variable global d'un buffer de la meme taille qu'un block de la carte SD
 
-void test_lecture(int block){
+void lecture_block(int block){
     uint8_t res, token;
     uint32_t addr = 512 * block; //On utilise une carte SD standard (pas SDHC) il faut multiplier l'adresse par 512
 
@@ -44,7 +44,7 @@ void test_lecture(int block){
     }
 }
 
-void test_ecriture(int block){
+void ecriture_block(int block){
     uint8_t res, token;
     uint32_t addr = 512 * block; //On utilise une carte SD standard (pas SDHC) il faut multiplier l'adresse par 512
 
@@ -66,39 +66,84 @@ void test_ecriture(int block){
     }
 }
 
+
+
 /*
  * Cette fonction formate les blocks utilisés par notre systeme de fichier
+ * Et rend disponible tout les fichiers dans la TOC
  */
 void FORMAT(){
+    //On rempli le buffer de 0x00
     for(uint16_t i = 0; i < 512; i++){
         buffer[i] = 0x00;
     }
-    for(int i = 0; i < BLOCK_PAR_FILE * MAX_FILE; i++){
-        test_ecriture(i);
+    for(int i = 0; i < FIRST_FILE_BLOCK + BLOCK_PAR_FILE * MAX_FILE; i++){
+        //on remplie tout les blocs de données et la TOC avec les 0x00
+        ecriture_block(i);
+    }
+
+    Fichier fichier; //Création d'une struct Fichier
+    fichier.available = 0x01;
+
+    UART_puthex8(sizeof(Fichier));
+
+    //On ecrit la TOC dans le buffer (on place des structs file avec available -> 0x01)
+    for(int j = 0; j < MAX_FILE; j++) {
+
+        fichier.starting_block = FIRST_FILE_BLOCK + (j * BLOCK_PAR_FILE);
+
+        int start_index = j * sizeof(Fichier);
+        for (int k = 0; k < sizeof(Fichier); k++) {
+            buffer[start_index + k] = ((uint8_t*)&fichier)[k];  // copie octet par octet
+        }
+    }
+}
+
+/*
+ * Cette fonction parcours la TOC et imprime sur le port serie le nom des files pour lesquels available est a 0x00
+ * Si available est a 0x00 c'est que les blocs correspondants a ce fichier contiennent des données
+ */
+void LS(){
+    //On rempli le buffer avec la TOC (block 0 de la carte SD)
+    lecture_block(0);
+
+    for (int i = 0; i < MAX_FILE; i++){
+        // Création d'un struct fichier
+        Fichier fichier;
+
+        // On rempli Fichier avec les infos du buffer
+        for (int j = 0; j < sizeof(Fichier); j++) {
+            ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
+        }
+
+        // Fichier non dispo donc un fichier est stocké sur la carte
+        if (fichier.available == 0x00) {
+            UART_pputs("Fichier : ");
+            UART_puts(fichier.name);
+            UART_pputs("\r\n");
+        }
     }
 }
 
 int main(void)
 {
-    // initialize UART
     UART_init();
-
-    // initialize SPI
     SPI_init(SPI_MASTER | SPI_FOSC_128 | SPI_MODE_0);
 
-    // initialize sd card
+    //Initialisation carte SD
     if(SD_init() != SD_SUCCESS)
     {
-        UART_pputs("Error initializing SD CARD\r\n");
+        UART_pputs("Erreur Initialisation de la carte SD\r\n");
         return 0;
     }
-    UART_pputs("SD Card initialized\r\n");
+    UART_pputs("Carte SD connectee\r\n");
 
-    test_lecture(0);
-    test_ecriture(1);
-    test_lecture(1);
+    lecture_block(0);
+    ecriture_block(1);
+    lecture_block(1);
     FORMAT();
-    test_lecture(1);
+    lecture_block(1);
+    LS();
 
-    while(1) ;
+    while(1){}
 }
