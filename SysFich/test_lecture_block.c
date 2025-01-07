@@ -5,7 +5,7 @@
 #include "spi.h"
 #include "sdcard.h"
 #include "sdprint.h"
-
+/*
 int main(void)
 {
     int block_num_read = 12; //numero du block a lire
@@ -78,3 +78,4 @@ int main(void)
 
     while(1) ;
 }
+*/

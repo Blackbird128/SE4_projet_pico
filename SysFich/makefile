@@ -7,7 +7,7 @@ export CFLAGS =  -Wall -I. -DF_CPU=16000000 -Os #-g
 export LDFLAGS = -g $(TARGET_ARCH) -lm -Wl,--gc-sections #	-Os
 
 
-TARGET = main
+TARGET = sys_fichier
 #TERM = /dev/ttyUSB0
 TERM = /dev/ttyACM0
 TERM_MAC = /dev/cu.usbmodem21301

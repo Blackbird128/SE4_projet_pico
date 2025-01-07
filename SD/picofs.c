@@ -21,17 +21,19 @@
 
 
 void readBlock(unsigned int num, int offset, unsigned char *storage, int size) {
-    FILE *file = fopen("filesystem.bin", "rb+"); // Utiliser "rb+" pour ouvrir le fichier en lecture et écriture
-    if (file == NULL) {
-        perror("Erreur lors de l'ouverture du fichier");
-        return;
+    uint8_t token;
+
+    //UART_puts_p(num);
+    if(SD_readSingleBlock(num*512,storage, &token) != 0){
+        UART_pputs("Error de con\r\n");
+    }else{
+        UART_pputs("pas d'Error de con\r\n");
     }
-    fseek(file, num * BLOCK_SIZE + offset, SEEK_SET);
-    fread(storage, 1, size, file);
-    fclose(file);
 }
 
 void writeBlock(unsigned int num, int offset, const unsigned char *storage, int size) {
+
+    /*
     FILE *file = fopen("filesystem.bin", "rb+"); // Utiliser "rb+" pour ouvrir le fichier en lecture et écriture
     if (file == NULL) {
         perror("Erreur lors de l'ouverture du fichier");
@@ -40,6 +42,7 @@ void writeBlock(unsigned int num, int offset, const unsigned char *storage, int 
     fseek(file, num * BLOCK_SIZE + offset, SEEK_SET);
     fwrite(storage, 1, size, file);
     fclose(file);
+    */
 }
 
 
@@ -54,13 +57,13 @@ void LS() {
         // Vérifier si le nom de fichier est vide
         if (buffer[0] != 0) {
             // Afficher le nom du fichier
-            printf("%s\n", buffer);
+            UART_pputs("yoooo\n");
             fileCount++;
         }
     }
 
     if (fileCount == 0) {
-        printf("Aucun fichier trouvé.\n");
+        UART_pputs("Aucun fichier trouvé.\n");
     }
 }
 
@@ -470,8 +473,23 @@ void CP(const char *filesystem_path, const char *source_filename, const char *de
 
 
 
-int main(int argc, char *argv[]) {
+int main(void) {
+    // initialize UART
+    UART_init();
+
+    // initialize SPI
+    SPI_init(SPI_MASTER | SPI_FOSC_128 | SPI_MODE_0);
+
+    // initialize sd card
+    if(SD_init() != SD_SUCCESS)
+    {
+        UART_pputs("Error initializing SD CARD\r\n");
+    }
+    UART_pputs("la\r\n");
+
+    LS();
     // Vérification du nombre d'arguments
+    /*
     if (argc < 3) {
         printf("Usage: %s filesystem_path ACTION [arguments...]\n", argv[0]);
         printf("Actions:\n");
@@ -532,6 +550,7 @@ int main(int argc, char *argv[]) {
         printf("Action non reconnue. Actions possibles : LS, TYPE, CAT, RM, MV.\n");
         return 1;
     }
+    */
 
     return 0;
 }
