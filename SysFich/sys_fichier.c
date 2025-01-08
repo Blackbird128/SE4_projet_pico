@@ -1,15 +1,16 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/pgmspace.h>
+#include <string.h>
 #include "uart.h"
 #include "spi.h"
 #include "sdcard.h"
 #include "sdprint.h"
 
 #define FILE_NAME 16
-#define FIRST_FILE_BLOCK 2 //premier bloc libre apres la TOC
+#define FIRST_FILE_BLOCK 2 // On garde les deux premiers blocs pour la TOC
 #define BLOCK_PAR_FILE 4
-#define MAX_FILE 4
+#define MAX_FILE 8
 #define BLOCK_SIZE 512
 
 //Lets go faire notre propre systeme de fichier ;)
@@ -18,7 +19,7 @@ struct Fichier{
     uint8_t available;
     uint8_t starting_block;
     char name[FILE_NAME];
-}typedef Fichier;
+}typedef Fichier; //Taille 18 octets
 
 uint8_t buffer[BLOCK_SIZE]; //variable global d'un buffer de la meme taille qu'un block de la carte SD
 
@@ -66,8 +67,6 @@ void ecriture_block(int block){
     }
 }
 
-
-
 /*
  * Cette fonction formate les blocks utilisés par notre systeme de fichier
  * Et rend disponible tout les fichiers dans la TOC
@@ -77,15 +76,16 @@ void FORMAT(){
     for(uint16_t i = 0; i < 512; i++){
         buffer[i] = 0x00;
     }
-    for(int i = 0; i < FIRST_FILE_BLOCK + BLOCK_PAR_FILE * MAX_FILE; i++){
+    for(int i = 0; i < FIRST_FILE_BLOCK + (BLOCK_PAR_FILE * MAX_FILE); i++){
         //on remplie tout les blocs de données et la TOC avec les 0x00
+
+        UART_puthex8(i);
         ecriture_block(i);
     }
 
     Fichier fichier; //Création d'une struct Fichier
     fichier.available = 0x01;
-
-    UART_puthex8(sizeof(Fichier));
+    strncpy(fichier.name, "                ", FILE_NAME); //nom vide (charactere 20 en hex)
 
     //On ecrit la TOC dans le buffer (on place des structs file avec available -> 0x01)
     for(int j = 0; j < MAX_FILE; j++) {
@@ -93,10 +93,14 @@ void FORMAT(){
         fichier.starting_block = FIRST_FILE_BLOCK + (j * BLOCK_PAR_FILE);
 
         int start_index = j * sizeof(Fichier);
+
         for (int k = 0; k < sizeof(Fichier); k++) {
             buffer[start_index + k] = ((uint8_t*)&fichier)[k];  // copie octet par octet
         }
     }
+    ecriture_block(0);
+
+    UART_pputs("Formatage termine\r\n");
 }
 
 /*
@@ -125,10 +129,50 @@ void LS(){
     }
 }
 
+/*
+ * Cette fonction crée un fichier si il n'exite pas, si il existe les données en parametres sont ajoutées à la fin du fichier
+ */
+void APPEND(char *name, uint8_t *data){
+
+    if (fichier_existe(name)) {
+        // Le fichier existe on Append les données
+
+    } else {
+        //LE fichier n'existe pas on le crée
+
+    }
+
+}
+
+/*
+ * Cette fonction renvoie 1 si le fichier passé en paramètre existe, 0 si il n'existe pas
+ */
+int fichier_existe(char *name) {
+    // lecture de la TOC dans le buffer
+    lecture_block(0);
+    Fichier fichier;
+
+    //parcours de la toc
+    for (int i = 0; i < MAX_FILE; i++) {
+        //remplit la struct Fichier
+        for (int j = 0; j < sizeof(Fichier); j++) {
+            ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
+        }
+        if (fichier.available == 0x00) {
+            if (strncmp(fichier.name, name, FILE_NAME) == 0) {
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
+
 int main(void)
 {
     UART_init();
     SPI_init(SPI_MASTER | SPI_FOSC_128 | SPI_MODE_0);
+
+    _delay_ms(3000);
 
     //Initialisation carte SD
     if(SD_init() != SD_SUCCESS)
@@ -138,12 +182,11 @@ int main(void)
     }
     UART_pputs("Carte SD connectee\r\n");
 
-    lecture_block(0);
-    ecriture_block(1);
-    lecture_block(1);
     FORMAT();
-    lecture_block(1);
+    lecture_block(0);
     LS();
+    lecture_block(0);
+
 
     while(1){}
 }
