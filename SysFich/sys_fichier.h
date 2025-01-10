@@ -21,8 +21,12 @@ int first_file_available();
 
 void clear_buffer();
 
+Fichier get_Fichier(char *name);
+
 void FORMAT();
 
 void LS();
 
 void APPEND(char *name, uint8_t *data, int taille);
+
+void READ(char *name);

@@ -11,22 +11,19 @@
 
 //Lets go faire notre propre systeme de fichier ;)
 
-uint8_t buffer[BLOCK_SIZE]; //variable global d'un buffer de la meme taille qu'un block de la carte SD
+uint8_t buffer[BLOCK_SIZE]; //variable globale d'un buffer de la même taille qu'un bloc de la carte SD
 
 /*
- * Fonction de lecture du bloc passé en parametre
+ * Fonction de lecture du bloc passé en paramètre
  * les données lues sont placées dans le buffer
  */
 void lecture_block(int block){
     uint8_t res, token;
-    uint32_t addr = 512 * block; //On utilise une carte SD standard (pas SDHC) il faut multiplier le numero de bloc par 512
+    uint32_t addr = 512 * block; //On utilise une carte SD standard (pas SDHC) il faut multiplier le numéro de bloc par 512
 
     // Lecture de secteur
     res = SD_readSingleBlock(addr, buffer, &token);
-    //UART_pputs("\r\nReponse:\r\n");
-
-    //Lecteur de l'état de la carte SD
-    //SD_printR1(res);
+    (void)res;
 
     // Impression en cas d'erreur
     if(!(token & 0xF0)){
@@ -49,9 +46,6 @@ void ecriture_block(int block){
     // Ecriture du buffer sur le secteur de la carte
     res = SD_writeSingleBlock(addr, buffer, &token);
 
-    //UART_pputs("\r\nReponse:\r\n");
-    //SD_printR1(res);
-
     // if no errors writing
     if(res == 0x00){
         if(token == SD_DATA_ACCEPTED);
@@ -67,9 +61,9 @@ int fichier_existe(char *name) {
     lecture_block(0);
     Fichier fichier;
 
-    //parcours de la toc
+    //parcours de la TOC
     for (int i = 0; i < MAX_FILE; i++) {
-        //remplit la struct Fichier
+        //remplissage de la struct Fichier
         for (int j = 0; j < sizeof(Fichier); j++) {
             ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
         }
@@ -115,9 +109,29 @@ void clear_buffer(){
     }
 }
 
+/*
+ * Cette fonction renvoie la struct Fichier du fichier dont le nom est passé en paramètre
+ */
+Fichier get_Fichier(char *name){
+    // lecture de la TOC dans le buffer
+    lecture_block(0);
+    Fichier fichier;
+
+    //parcours de la toc
+    for (int i = 0; i < MAX_FILE; i++) {
+        //remplit la struct Fichier
+        for (int j = 0; j < sizeof(Fichier); j++) {
+            ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
+        }
+        if (strncmp(fichier.name, name, FILE_NAME) == 0) {
+                return fichier;
+        }
+    }
+    return fichier;
+}
 
 /*
- * Cette fonction formate les blocks utilisés par notre systeme de fichier
+ * Cette fonction formate les blocks utilisés par notre système de fichier
  * Et rend disponible tout les fichiers dans la TOC
  */
 void FORMAT(){
@@ -134,7 +148,7 @@ void FORMAT(){
     fichier.available = 0x01;
     strncpy(fichier.name, "                ", FILE_NAME); //nom vide (charactere 20 en hex)
 
-    //On ecrit la TOC dans le buffer (on place des structs file avec available -> 0x01)
+    //On écrit la TOC dans le buffer (on place des structs Fichier avec available -> 0x01)
     for(int j = 0; j < MAX_FILE; j++) {
 
         fichier.starting_block = FIRST_FILE_BLOCK + (j * BLOCK_PAR_FILE);
@@ -151,8 +165,8 @@ void FORMAT(){
 }
 
 /*
- * Cette fonction parcours la TOC et imprime sur le port serie le nom des Fichiers pour lesquels available est a 0x00
- * Si available est a 0x00 c'est que les blocs correspondants à ce fichier contiennent des données
+ * Cette fonction parcours la TOC et imprime sur le port série le nom des Fichiers pour lesquels available est à 0x00
+ * Si available est à 0x00 c'est que que le fichier existe
  */
 void LS(){
     UART_pputs("Fichier(s) sur la carte SD :\r\n");
@@ -177,7 +191,7 @@ void LS(){
 }
 
 /*
- * Cette fonction crée un fichier si il n'exite pas, si il existe les données en parametres sont ajoutées à la fin du fichier
+ * Cette fonction crée un fichier si il n'existe pas, si il existe les données en paramètres sont ajoutées à la fin du fichier
  */
 void APPEND(char *name, uint8_t *data, int taille){
 
@@ -196,7 +210,7 @@ void APPEND(char *name, uint8_t *data, int taille){
             UART_pputs("Plus de place pour le fichier\r\n");
             return;
         }
-        //Le fichier a écrire depasse la taille max
+        //Le fichier à écrire dépasse la taille max
         if (taille > BLOCK_PAR_FILE * BLOCK_SIZE){
             UART_pputs("Fichier trop gros pour notre systeme de fichiers");
         }
@@ -208,17 +222,17 @@ void APPEND(char *name, uint8_t *data, int taille){
 
         lecture_block(0);
 
-        //Il faut ecrire le fichier au bon index du buffer
+        //Il faut écrire le fichier au bon index du buffer
         int i = 0;
         for (int j = index * sizeof(Fichier); j < index * sizeof(Fichier) + sizeof(Fichier); j++) {
             buffer[j] = ((uint8_t*)&fichier)[i];
             i++;
         }
 
-        // mise a jour de la TOC
+        // mise à jour de la TOC
         ecriture_block(0);
 
-        clear_buffer(); //Necessaire car il contient la TOC
+        clear_buffer(); //Nécessaire car il contient actuellement la TOC
 
         // Ajouter les données dans les blocs du fichier
         int current_block = fichier.starting_block;
@@ -244,26 +258,71 @@ void APPEND(char *name, uint8_t *data, int taille){
 
 }
 
-int main(void)
-{
+/*
+ * Cette fonction lit le fichier dont le nom est passé en paramètre
+ * On envoie directement le contenu du fichier sur la "sortie" série car l'Atmega 328p n'a pas assez de mémoire pour stocker un fichier de taille BLOCK_SIZE * BLOCK_PAR_FILE
+ */
+void READ(char *name){
+
+    Fichier fichier;
+
+    // Si le fichier n'est pas trouvé, on quitte la fonction READ
+    if (!fichier_existe(name)) {
+        UART_pputs("Fichier non trouvé.\r\n");
+        return;
+    }
+
+    fichier = get_Fichier(name);
+
+    // On lit les blocs du fichier
+    int current_block = fichier.starting_block;
+
+    int run = 1;
+    int colonne = 0;
+    uint8_t octet;
+    // Lecture des blocs jusqu'à trouver le caractère nul 0x00
+    while (run) {
+        lecture_block(current_block);
+        for (int i = 0; i < BLOCK_SIZE; i++) {
+            octet = buffer[i];
+            if (octet== 0x00){
+                run = 0;
+            } else {
+                UART_puthex8(octet);
+                UART_pputs(" ");
+
+                // Un peu de mise en page sur le retour série
+                colonne ++;
+                if (colonne > 19){
+                    UART_pputs("\r\n");
+                    colonne = 0;
+                }
+            }
+        }
+        current_block++;
+    }
+    UART_pputs("\r\n"); //retour chariot et retour à la ligne
+}
+
+int main(void){
+
     UART_init();
     SPI_init(SPI_MASTER | SPI_FOSC_128 | SPI_MODE_0);
 
     _delay_ms(500);
 
     //Initialisation carte SD
-    if(SD_init() != SD_SUCCESS)
-    {
+    if(SD_init() != SD_SUCCESS){
         UART_pputs("Erreur Initialisation de la carte SD\r\n");
         return 0;
     }
-    UART_pputs("Carte SD connectee\r\n");
+    UART_pputs("Carte SD connectée\r\n");
 
     FORMAT();
 
     LS();
 
-    APPEND("louis.test","12345678901234567890louis",25);
+    APPEND("louis.test",(uint8_t*)"12345678901234567890louis",25);
 
     lecture_block(0); //La TOC
     SD_printBuf(buffer);
@@ -273,6 +332,10 @@ int main(void)
 
     LS();
 
+    READ("louis");
+    _delay_ms(1000);
+    READ("louis.test");
 
+    UART_pputs("terminé\r\n");
     while(1){}
 }
