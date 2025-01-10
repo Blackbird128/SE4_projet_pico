@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "PicoMother")
-		(date "2024-12-03")
-		(rev "1.1")
+		(date "2025-01-10")
+		(rev "1.2")
 		(company "Bonningre Louis")
 		(comment 1 "Lecomte Antoine")
 	)

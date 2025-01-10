@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "PicoMother")
-		(date "2024-12-03")
-		(rev "1.1")
+		(date "2025-01-10")
+		(rev "1.2")
 		(company "Bonningre Louis")
 		(comment 1 "Lecomte Antoine")
 	)
@@ -1800,6 +1800,12 @@
 		)
 	)
 	(junction
+		(at 128.27 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1df8cd45-1ffd-4fb4-9949-2b5d486245ac")
+	)
+	(junction
 		(at 165.1 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1828,12 +1834,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "90e79bc8-3195-4e33-b263-d0b8e2c74c3b")
-	)
-	(junction
-		(at 129.54 101.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "98483ca2-7667-44b8-bafe-c1cc8c27b829")
 	)
 	(junction
 		(at 165.1 85.09)
@@ -1929,13 +1929,13 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 96.52) (xy 129.54 101.6)
+			(xy 128.27 101.6) (xy 129.54 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1cd8a9a7-6b0a-4ed8-9896-fcaf89c0557f")
+		(uuid "0bc717ec-6e09-4d74-be2e-997f2b210099")
 	)
 	(polyline
 		(pts
@@ -1946,16 +1946,6 @@
 			(type default)
 		)
 		(uuid "1ed470be-7535-4a1d-b6a2-483c00b71cc4")
-	)
-	(wire
-		(pts
-			(xy 137.16 101.6) (xy 143.51 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22f1c93a-e955-46d9-8c9f-61baaddd7357")
 	)
 	(wire
 		(pts
@@ -2079,6 +2069,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 96.52) (xy 143.51 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cb1ecfc-3f09-4f6b-b4ce-00e343f11900")
+	)
+	(wire
+		(pts
 			(xy 250.19 62.23) (xy 245.11 62.23)
 		)
 		(stroke
@@ -2119,7 +2119,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 101.6) (xy 129.54 101.6)
+			(xy 119.38 101.6) (xy 128.27 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2226,6 +2226,16 @@
 			(type default)
 		)
 		(uuid "9e6a1ac6-a583-48c5-b4bb-b15699f4c93f")
+	)
+	(wire
+		(pts
+			(xy 128.27 96.52) (xy 128.27 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa23d043-b32d-42f1-9f3c-3868f07bf6e6")
 	)
 	(wire
 		(pts
@@ -2389,6 +2399,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 101.6) (xy 143.51 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed588460-e22e-4fef-934e-93db34c61a85")
+	)
+	(wire
+		(pts
 			(xy 165.1 68.58) (xy 163.83 68.58)
 		)
 		(stroke
@@ -2513,7 +2533,7 @@
 	)
 	(global_label "CS3"
 		(shape input)
-		(at 119.38 63.5 0)
+		(at 143.51 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2523,7 +2543,7 @@
 		)
 		(uuid "0fa4dac2-6d6f-4c54-9e60-5390e0b5a41b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.0542 63.5 0)
+			(at 150.1842 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2645,7 +2665,7 @@
 	)
 	(global_label "CS_SD"
 		(shape input)
-		(at 129.54 96.52 0)
+		(at 119.38 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2655,7 +2675,7 @@
 		)
 		(uuid "4f81b018-583b-480a-8fb7-4593a24b9d2d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.4518 96.52 0)
+			(at 128.2918 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
