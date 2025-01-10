@@ -3,7 +3,7 @@ export CC = avr-gcc
 export MCU = atmega328p
 export TARGET_ARCH = -mmcu=$(MCU)
 
-export CFLAGS =  -Wall -I. -DF_CPU=16000000 -Os #-g
+export CFLAGS = -Wall -I. -Ilib_SD -DF_CPU=16000000 -Os #-g
 export LDFLAGS = -g $(TARGET_ARCH) -lm -Wl,--gc-sections #	-Os
 
 
@@ -17,7 +17,7 @@ PGMERISP = -c stk500v1 -b 115200 -P $(TERM)
 ARVDUDECONF= -C /usr/local/arduino/arduino-0021/hardware/tools/avrdude.conf
 export DUDE = /usr/bin/avrdude -F -v -p $(MCU) $(AVRDUDECONF)
 
-C_SRC = $(wildcard *.c)
+C_SRC = $(wildcard *.c) lib_SD/sdcard.c lib_SD/uart.c lib_SD/spi.c lib_SD/sdprint.c
 OBJS = $(C_SRC:.c=.o)
 
 
@@ -27,7 +27,7 @@ ass:$(C_SRC)
 	$(CC) -S $(CPPFLAGS) $(CFLAGS) $< -o $@
 
 clean:
-	rm -f *.o *.hex *.elf $(TARGET)
+	rm -f *.o *.hex *.elf $(TARGET) lib_SD/*.o
 
 %.o:%.c
 	$(CC) -c $(CPPFLAGS) $(CFLAGS) $< -o $@
