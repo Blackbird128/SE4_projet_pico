@@ -131,6 +131,26 @@ Fichier get_Fichier(char *name){
 }
 
 /*
+ * Cette fonction renvoie l'index de l'emplacement de la struct Fichier passée en parametre
+ */
+int void_get_index_from_TOC(Fichier fichier){
+    int file_index;
+    lecture_block(0);
+    Fichier fichier2;
+    for (int i = 0; i < MAX_FILE; i++) {
+        for (int j = 0; j < sizeof(Fichier); j++) {
+            ((uint8_t*)&fichier2)[j] = buffer[j + i * sizeof(Fichier)];
+        }
+
+        //Si on trouve le fichier avec le nom recherché
+        if (strncmp(fichier.name, fichier2.name, FILE_NAME) == 0) {
+            return file_index;
+        }
+    }
+    return -1; //Probleme
+}
+
+/*
  * Cette fonction formate les blocks utilisés par notre système de fichier
  * Et rend disponible tout les fichiers dans la TOC
  */
@@ -304,6 +324,35 @@ void READ(char *name){
     UART_pputs("\r\n"); //retour chariot et retour à la ligne
 }
 
+void REMOVE(char *name){
+    Fichier fichier;
+    if(fichier_existe(name)){
+        fichier = get_Fichier(name);
+        int file_index = void_get_index_from_TOC(fichier);
+
+        fichier.available = 0x01; // emplacement dispo
+        strncpy(fichier.name, "                ", FILE_NAME); // nom vide
+
+        lecture_block(0);
+        // On replace le fichier vidé dans la TOC
+        for (int i = 0; i < sizeof(Fichier); i++) {
+            buffer[file_index + i] = ((uint8_t*)&fichier)[i];
+        }
+
+        //Ecriture de la TOC
+        ecriture_block(0);
+
+        // Plus qu'a effacer les données dans les blocs
+        clear_buffer();
+        for (int i = fichier.starting_block; i < fichier.starting_block + BLOCK_PAR_FILE; i++) {
+            ecriture_block(i);
+        }
+        UART_pputs("Fichier supprimé\n\r");
+    } else {
+        UART_pputs("Le fichier n'existe pas\n\r");
+    }
+}
+
 int main(void){
 
     UART_init();
@@ -324,18 +373,19 @@ int main(void){
 
     APPEND("louis.test",(uint8_t*)"12345678901234567890louis",25);
 
-    lecture_block(0); //La TOC
-    SD_printBuf(buffer);
+    LS();
 
+    READ("louis.test");
+
+    REMOVE("louis.test");
+    LS();
+
+    UART_pputs("terminé\r\n");
+    lecture_block(0); // Verification de la TOC
+    SD_printBuf(buffer);
     lecture_block(2); //Premier bloc avec des données
     SD_printBuf(buffer);
 
-    LS();
 
-    READ("louis");
-    _delay_ms(1000);
-    READ("louis.test");
-
-    UART_pputs("terminé\r\n");
     while(1){}
 }

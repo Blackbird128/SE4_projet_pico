@@ -23,6 +23,8 @@ void clear_buffer();
 
 Fichier get_Fichier(char *name);
 
+int void_get_index_from_TOC(Fichier fichier);
+
 void FORMAT();
 
 void LS();
@@ -30,3 +32,5 @@ void LS();
 void APPEND(char *name, uint8_t *data, int taille);
 
 void READ(char *name);
+
+void REMOVE(char *name);
