@@ -1,7 +1,8 @@
 #include <avr/io.h>
 #include <util/delay.h>
-#include <avr/pgmspace.h>
+#include <avr/interrupt.h>
 #include <string.h>
+#include <stdio.h>
 #include "lib_SD/uart.h"
 #include "lib_SD/spi.h"
 #include "lib_SD/sdcard.h"
@@ -12,6 +13,7 @@
 //Lets go faire notre propre systeme de fichier ;)
 
 uint8_t buffer[BLOCK_SIZE]; //variable globale d'un buffer de la même taille qu'un bloc de la carte SD
+unsigned char serial_buffer[MAX_BUFFER] = {0}; // Buffer pour stocker la chaîne reçue en UART
 
 /*
  * Fonction de lecture du bloc passé en paramètre
@@ -148,6 +150,27 @@ int void_get_index_from_TOC(Fichier fichier){
 }
 
 /*
+ * Cette fonction permet de lire une ligne par UART et la copie dans serial_buffer
+ */
+void serial_read_line(){
+    unsigned char buffer_index = 0;
+    while(1) {
+        unsigned char received_char = UART_getc();
+        if (received_char == '\n' || received_char == '\r') {
+            serial_buffer[buffer_index] = '\0';  // Ajouter le caractère de fin de chaîne
+            buffer_index = 0;  // Réinitialiser l'indice pour la prochaine lecture
+            break;
+        } else {
+            // Stocker chaque caractère reçu dans le buffer
+            serial_buffer[buffer_index++] = received_char;
+            if (buffer_index >= sizeof(serial_buffer)) {
+                buffer_index = sizeof(serial_buffer) - 1;
+            }
+        }
+    }
+}
+
+/*
  * Cette fonction formate les blocks utilisés par notre système de fichier
  * Et rend disponible tout les fichiers dans la TOC
  */
@@ -155,12 +178,10 @@ void FORMAT(){
     UART_pputs("Formatage...\r\n");
     //On rempli le buffer de 0x00
     clear_buffer();
-
     for(int i = 0; i < FIRST_FILE_BLOCK + (BLOCK_PAR_FILE * MAX_FILE); i++){
         //on remplie tout les blocs de données et la TOC avec les 0x00
         ecriture_block(i);
     }
-
     Fichier fichier; //Création d'une struct Fichier
     fichier.available = 0x01;
     memset(fichier.name, 0x00, FILE_NAME); //nom vide (charactere 00 en hex)
@@ -177,8 +198,7 @@ void FORMAT(){
         }
     }
     ecriture_block(0);
-
-    UART_pputs("Formatage termine\r\n");
+    UART_pputs("Formatage terminé\r\n");
 }
 
 /*
@@ -250,7 +270,6 @@ void APPEND(char *name, uint8_t *data, int taille){
         ecriture_block(0);
 
         clear_buffer(); //Nécessaire car il contient actuellement la TOC
-
         // Ajouter les données dans les blocs du fichier
         int current_block = fichier.starting_block;
         int data_index = 0;
@@ -269,10 +288,8 @@ void APPEND(char *name, uint8_t *data, int taille){
         if (data_index > 0) {
             ecriture_block(current_block);
         }
-
         UART_pputs("Fichier créé.\r\n");
     }
-
 }
 
 /*
@@ -280,20 +297,15 @@ void APPEND(char *name, uint8_t *data, int taille){
  * On envoie directement le contenu du fichier sur la "sortie" série car l'Atmega 328p n'a pas assez de mémoire pour stocker un fichier de taille BLOCK_SIZE * BLOCK_PAR_FILE
  */
 void READ(char *name){
-
     Fichier fichier;
-
     // Si le fichier n'est pas trouvé, on quitte la fonction READ
     if (!fichier_existe(name)) {
         UART_pputs("Fichier non trouvé.\r\n");
         return;
     }
-
     fichier = get_Fichier(name);
-
     // On lit les blocs du fichier
     int current_block = fichier.starting_block;
-
     int run = 1;
     int colonne = 0;
     uint8_t octet;
@@ -377,8 +389,22 @@ void RENAME(char *oldname, char *newname){
     }
 }
 
-int main(void){
+void COPY(char *source_name, char *dest_name){
+    Fichier fichier;
+    if(fichier_existe(source_name)){
+        fichier = get_Fichier(source_name);
+        int file_index = void_get_index_from_TOC(fichier);
 
+        //todo
+
+        UART_pputs("Fichier copié\n\r");
+    } else {
+        UART_pputs("Le fichier n'existe pas\n\r");
+    }
+}
+
+int main(void){
+    sei();
     UART_init();
     SPI_init(SPI_MASTER | SPI_FOSC_128 | SPI_MODE_0);
 
@@ -391,28 +417,63 @@ int main(void){
     }
     UART_pputs("Carte SD connectée\r\n");
 
-    FORMAT();
+    while(1){
+        serial_read_line(); //On lit la ligne envoyée en UART et on choisit la commande à executer
+        //Facile, pas d'arguments pour LS()
+        if(strcmp((char *)serial_buffer, "ls") == 0){
+            LS();
+        }
+        //Idem pas d'arguments pour FORMAT()
+        else if(strcmp((char *)serial_buffer, "format") == 0){
+            FORMAT();
+        }
+        // READ, commande read suivie du nom du fichier
+        else if(strncmp((char *)serial_buffer, "read ", 5) == 0) {
+            char *filename = (char *)serial_buffer + 5;
+            READ(filename);
+        }
+        // Commande REMOVE
+        else if(strncmp((char *)serial_buffer, "remove ", 7) == 0) {
+            char *filename = (char *)serial_buffer + 7; // Extraire le nom du fichier
+            REMOVE(filename); // Supprimer le fichier
+        }
+        // Commande RENAME
+        else if(strncmp((char *)serial_buffer, "rename ", 7) == 0) {
+            char oldname[FILE_NAME], newname[FILE_NAME];
+            if (sscanf((char *)serial_buffer + 7, "%s %s", oldname, newname) == 2) {
+                RENAME(oldname, newname);
+            } else {
+                UART_pputs("Format de commande incorrect.\n");
+            }
+        }
+        // Commande COPY
+        else if(strncmp((char *)serial_buffer, "copy ", 5) == 0) {
+            char source[FILE_NAME], destination[FILE_NAME];
+            if (sscanf((char *)serial_buffer + 5, "%s %s", source, destination) == 2) {
+                COPY(source, destination);
+            } else {
+                UART_pputs("Format de commande incorrect.\n");
+            }
+        }
+        // Pour écrire un fichier on utilise la commande write suivie du nom du fichier à écrire
+        else if(strncmp((char *)serial_buffer, "write ", 6) == 0) {
+            char filename[FILE_NAME];
+            strncpy(filename, (char *)serial_buffer + 6, FILE_NAME);
+            UART_pputs("Entrez les données à écrire dans le fichier :\r\n");
+            memset(serial_buffer, 0x00, MAX_BUFFER);
+            serial_read_line(); // Lire les données à écrire dans le fichier
+            APPEND(filename, serial_buffer, strlen((char *)serial_buffer)); //Ecriture des données
+        }
+        // Commande inconnue
+        else {
+            UART_pputs("Commande inconnue\r\n");
+        }
 
-    LS();
-
-    APPEND("louis.test",(uint8_t*)"12345678901234567890louis",25);
-    APPEND("1111111",(uint8_t*)"12345678901234567890louis",25);
-    APPEND("2222222",(uint8_t*)"12345678901234567890louis",25);
-
-
-    LS();
-    READ("louis.test");
-    RENAME("louis.test", "112233");
-    LS();
-    READ("112233");
-    REMOVE("112233");
-    LS();
-    UART_pputs("terminé\r\n");
+        //Ajouter commande raw qui renvoie le bloc en parametre (pour du debug)
+    }
     //lecture_block(0); // Verification de la TOC
     //SD_printBuf(buffer);
     //lecture_block(2); //Premier bloc avec des données
     //SD_printBuf(buffer);
-
-
-    while(1){}
+    return 0;
 }

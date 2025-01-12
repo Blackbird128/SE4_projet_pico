@@ -4,6 +4,8 @@
 #define MAX_FILE 8
 #define BLOCK_SIZE 512
 
+#define MAX_BUFFER 100 //Longueur max de la commande avec arguments lue en UART
+
 struct Fichier{
     uint8_t available;
     uint8_t starting_block;
@@ -25,6 +27,8 @@ Fichier get_Fichier(char *name);
 
 int void_get_index_from_TOC(Fichier fichier);
 
+void serial_read_line();
+
 void FORMAT();
 
 void LS();
@@ -36,3 +40,5 @@ void READ(char *name);
 void REMOVE(char *name);
 
 void RENAME(char *oldname, char *newname);
+
+void COPY(char *source_name, char *dest_name);
