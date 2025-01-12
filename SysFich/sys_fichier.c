@@ -41,8 +41,6 @@ void ecriture_block(int block){
     uint8_t res, token;
     uint32_t addr = 512 * block; //On utilise une carte SD standard (pas SDHC) il faut multiplier le numero de bloc par 512
 
-    addr = 512 * block;
-
     // Ecriture du buffer sur le secteur de la carte
     res = SD_writeSingleBlock(addr, buffer, &token);
 
@@ -134,17 +132,16 @@ Fichier get_Fichier(char *name){
  * Cette fonction renvoie l'index de l'emplacement de la struct Fichier passée en parametre
  */
 int void_get_index_from_TOC(Fichier fichier){
-    int file_index;
     lecture_block(0);
-    Fichier fichier2;
+    Fichier fichier_temp;
     for (int i = 0; i < MAX_FILE; i++) {
         for (int j = 0; j < sizeof(Fichier); j++) {
-            ((uint8_t*)&fichier2)[j] = buffer[j + i * sizeof(Fichier)];
+            ((uint8_t*)&fichier_temp)[j] = buffer[j + i * sizeof(Fichier)];
         }
 
         //Si on trouve le fichier avec le nom recherché
-        if (strncmp(fichier.name, fichier2.name, FILE_NAME) == 0) {
-            return file_index;
+        if (strncmp(fichier.name, fichier_temp.name, FILE_NAME) == 0) {
+            return i;
         }
     }
     return -1; //Probleme
@@ -166,7 +163,7 @@ void FORMAT(){
 
     Fichier fichier; //Création d'une struct Fichier
     fichier.available = 0x01;
-    strncpy(fichier.name, "                ", FILE_NAME); //nom vide (charactere 20 en hex)
+    memset(fichier.name, 0x00, FILE_NAME); //nom vide (charactere 00 en hex)
 
     //On écrit la TOC dans le buffer (on place des structs Fichier avec available -> 0x01)
     for(int j = 0; j < MAX_FILE; j++) {
@@ -331,7 +328,7 @@ void REMOVE(char *name){
         int file_index = void_get_index_from_TOC(fichier);
 
         fichier.available = 0x01; // emplacement dispo
-        strncpy(fichier.name, "                ", FILE_NAME); // nom vide
+        memset(fichier.name, 0x00, FILE_NAME); //nom vide (charactere 00 en hex)
 
         lecture_block(0);
         // On replace le fichier vidé dans la TOC
@@ -348,6 +345,33 @@ void REMOVE(char *name){
             ecriture_block(i);
         }
         UART_pputs("Fichier supprimé\n\r");
+    } else {
+        UART_pputs("Le fichier n'existe pas\n\r");
+    }
+}
+
+/*
+ * Cette focntion renomme le fichier
+ */
+void RENAME(char *oldname, char *newname){
+    Fichier fichier;
+    if(fichier_existe(oldname)){
+        fichier = get_Fichier(oldname);
+        int file_index = void_get_index_from_TOC(fichier);
+
+        fichier.available = 0x00;
+        strncpy(fichier.name, newname, FILE_NAME); // nouveau nom
+
+        lecture_block(0);
+        // On replace le fichier renommé dans la TOC
+        for (int i = 0; i < sizeof(Fichier); i++) {
+            buffer[file_index + i] = ((uint8_t*)&fichier)[i];
+        }
+
+        //Ecriture de la TOC
+        ecriture_block(0);
+
+        UART_pputs("Fichier renommé\n\r");
     } else {
         UART_pputs("Le fichier n'existe pas\n\r");
     }
@@ -372,19 +396,22 @@ int main(void){
     LS();
 
     APPEND("louis.test",(uint8_t*)"12345678901234567890louis",25);
+    APPEND("1111111",(uint8_t*)"12345678901234567890louis",25);
+    APPEND("2222222",(uint8_t*)"12345678901234567890louis",25);
+
 
     LS();
-
     READ("louis.test");
-
-    REMOVE("louis.test");
+    RENAME("louis.test", "112233");
     LS();
-
+    READ("112233");
+    REMOVE("112233");
+    LS();
     UART_pputs("terminé\r\n");
-    lecture_block(0); // Verification de la TOC
-    SD_printBuf(buffer);
-    lecture_block(2); //Premier bloc avec des données
-    SD_printBuf(buffer);
+    //lecture_block(0); // Verification de la TOC
+    //SD_printBuf(buffer);
+    //lecture_block(2); //Premier bloc avec des données
+    //SD_printBuf(buffer);
 
 
     while(1){}

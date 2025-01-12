@@ -34,3 +34,5 @@ void APPEND(char *name, uint8_t *data, int taille);
 void READ(char *name);
 
 void REMOVE(char *name);
+
+void RENAME(char *oldname, char *newname);
