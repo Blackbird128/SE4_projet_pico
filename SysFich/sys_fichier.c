@@ -19,13 +19,18 @@ unsigned char serial_buffer[MAX_BUFFER] = {0}; // Buffer pour stocker la chaîne
  * Fonction de lecture du bloc passé en paramètre
  * les données lues sont placées dans le buffer
  */
-void lecture_block(int block){
+void lecture_block(uint32_t block){
     uint8_t res, token;
-    uint32_t addr = 512 * block; //On utilise une carte SD standard (pas SDHC) il faut multiplier le numéro de bloc par 512
-
+    /*
+     On utilise une carte SD standard (pas SDHC) il faut multiplier le numéro de bloc par 512 (décalage de 9bits)
+     En effet les cartes SD sont bytes-addressed, le bloc 0 est à l'adresse 0, le bloc 1 à l'adresse 512...
+     Le cartes SDHC et SDXC sont block-addressed, le bloc 0 est à l'adresse 0, le bloc 1 à l'adresse 1...
+     */
+    uint32_t addr = block << 9;
+    
     // Lecture de secteur
     res = SD_readSingleBlock(addr, buffer, &token);
-    (void)res;
+    (void)res; //On utilise pas res (il contient la réponse de la carte SD);
 
     // Impression en cas d'erreur
     if(!(token & 0xF0)){
@@ -36,21 +41,24 @@ void lecture_block(int block){
 
 
 /*
- * Fonction d'écriture du bloc passé en parametre
- * les données à écrire doivent etre placées dans le buffer
+ * Fonction d'écriture du bloc passé en paramètre
+ * les données à écrire doivent être placées dans le buffer
  */
-void ecriture_block(int block){
+void ecriture_block(uint32_t block){
     uint8_t res, token;
-    uint32_t addr = 512 * block; //On utilise une carte SD standard (pas SDHC) il faut multiplier le numero de bloc par 512
+    uint32_t addr = block << 9; // Idem que pour lecture_block
 
     // Ecriture du buffer sur le secteur de la carte
     res = SD_writeSingleBlock(addr, buffer, &token);
 
+    /*
+    // Exemple de réponse de la carte SD en cas de réussite de l'écriture
     // if no errors writing
     if(res == 0x00){
         if(token == SD_DATA_ACCEPTED);
-        //UART_pputs("Write successful\r\n");
+        UART_pputs("Write successful\r\n");
     }
+    */
 }
 
 /*

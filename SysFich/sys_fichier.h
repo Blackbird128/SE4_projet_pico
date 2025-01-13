@@ -1,7 +1,7 @@
 #define FILE_NAME 16
 #define FIRST_FILE_BLOCK 2 // On garde les deux premiers blocs pour la TOC
 #define BLOCK_PAR_FILE 4
-#define MAX_FILE 8
+#define MAX_FILE 16
 #define BLOCK_SIZE 512
 
 #define MAX_BUFFER 100 //Longueur max de la commande avec arguments lue en UART
@@ -13,9 +13,9 @@ struct Fichier{
 }typedef Fichier; //Taille 18 octets
 
 
-void lecture_block(int block);
+void lecture_block(uint32_t block);
 
-void ecriture_block(int block);
+void ecriture_block(uint32_t block);
 
 int fichier_existe(char *name);
 
