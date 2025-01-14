@@ -469,6 +469,7 @@ int main(void){
         return 0;
     }
     UART_pputs("Carte SD connectée\r\n");
+    print_block(0);
     UART_pputs("Prêt à recevoir une commande\n\r");
 
     while(1){
