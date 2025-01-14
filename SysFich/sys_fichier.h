@@ -1,7 +1,7 @@
-#define FILE_NAME 14 //Passage à 14 caracteres pour que la struct fasse 16 octets (32*12=512)
-#define FIRST_FILE_BLOCK 2 // On garde les deux premiers blocs pour la TOC
+#define FILE_NAME 14 //Passage à 14 caracteres pour que la struct Fichier fasse 16 octets (32*12=512)
+#define FIRST_FILE_BLOCK 2 // On garde les deux premiers blocs de la carte SD pour la TOC
 #define BLOCK_PAR_FILE 4
-#define MAX_FILE 32 //La toc est pleine
+#define MAX_FILE 32 //La TOC est pleine
 #define BLOCK_SIZE 512
 
 #define MAX_BUFFER 100 //Longueur max de la commande avec arguments lue en UART

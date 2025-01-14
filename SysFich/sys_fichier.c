@@ -17,7 +17,8 @@ unsigned char serial_buffer[MAX_BUFFER] = {0}; // Buffer pour stocker la chaîne
 
 /*
  * Fonction de lecture du bloc passé en paramètre
- * les données lues sont placées dans le buffer
+ * Les données lues sont placées dans le buffer global
+ * @param block : le numero du secteur à lire
  */
 void lecture_block(uint32_t block){
     uint8_t res, token;
@@ -27,11 +28,9 @@ void lecture_block(uint32_t block){
      Le cartes SDHC et SDXC sont block-addressed, le bloc 0 est à l'adresse 0, le bloc 1 à l'adresse 1...
      */
     uint32_t addr = block << 9;
-    
-    // Lecture de secteur
+    // Lecture du bloc (secteur)
     res = SD_readSingleBlock(addr, buffer, &token);
     (void)res; //On utilise pas res (il contient la réponse de la carte SD);
-
     // Impression en cas d'erreur
     if(!(token & 0xF0)){
         UART_pputs("Erreur :\r\n");
@@ -39,10 +38,10 @@ void lecture_block(uint32_t block){
     }
 }
 
-
 /*
  * Fonction d'écriture du bloc passé en paramètre
- * les données à écrire doivent être placées dans le buffer
+ * Les données à écrire doivent être placées dans le buffer
+ * @param block : le numero du secteur à écrire
  */
 void ecriture_block(uint32_t block){
     uint8_t res, token;
@@ -51,46 +50,36 @@ void ecriture_block(uint32_t block){
     // Ecriture du buffer sur le secteur de la carte
     res = SD_writeSingleBlock(addr, buffer, &token);
     (void)res;
-    /*
-    // Exemple de réponse de la carte SD en cas de réussite de l'écriture
-    // if no errors writing
-    if(res == 0x00){
-        if(token == SD_DATA_ACCEPTED);
-        UART_pputs("Write successful\r\n");
-    }
-    */
 }
 
 /*
- * Cette fonction renvoie 1 si le fichier passé en paramètre existe, 0 si il n'existe pas
+ * Cette fonction vérifie si un fichier est présent dans la TOC
+ * @param name : le nom du fichier fichier
+ * @return : 1 si le fichier existe, 0 sinon
  */
 int fichier_existe(char *name) {
     // lecture de la TOC dans le buffer
     lecture_block(0);
     Fichier fichier;
-
     //parcours de la TOC
     for (int i = 0; i < MAX_FILE; i++) {
         //remplissage de la struct Fichier
         for (int j = 0; j < sizeof(Fichier); j++) {
             ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
         }
-        if (fichier.available == 0x00) {
-            if (strncmp(fichier.name, name, FILE_NAME) == 0) {
-                return 1;
-            }
+        if (fichier.available == 0x00 && strncmp(fichier.name, name, FILE_NAME) == 0) {
+            return 1;
         }
     }
     return 0;
 }
 
 /*
- * Cette fonction renvoie l'index du premier emplacement de fichier dispo dans la TOC
- * renvoie -1 si aucun emplacement n'est disponible
+ * Cette fonction trouve le premier emplacement disponible dans la table of content
+ * @return l'index du premier premier emplacement libre dans notre systeme de fichiers, -1 si aucun disponible
  */
 int first_file_available() {
     lecture_block(0);
-
     // Parcourir la TOC pour trouver un emplacement libre
     for (int i = 0; i < MAX_FILE; i++) {
         Fichier fichier;
@@ -112,13 +101,13 @@ int first_file_available() {
  * Cette fonction clear le buffer (le rempli de 0x00)
  */
 void clear_buffer(){
-    for(uint16_t i = 0; i < 512; i++){
-        buffer[i] = 0x00;
-    }
+    memset(buffer, 0, sizeof(buffer));
 }
 
 /*
  * Cette fonction renvoie la struct Fichier du fichier dont le nom est passé en paramètre
+ * @param name : le nom du fichier à trouver
+ * @return la structure Fichier cherchée (ou un Fichier vide si il n'existe pas)
  */
 Fichier get_Fichier(char *name){
     // lecture de la TOC dans le buffer
@@ -135,12 +124,13 @@ Fichier get_Fichier(char *name){
                 return fichier;
         }
     }
-    return fichier;
+    return fichier; //Fichier vide
 }
 
 /*
  * Cette fonction imprime un bloc complet
  * Permet de debug
+ * @param block : le numéro du bloc à imprimer
  */
 void print_block(int block){
     lecture_block(block);
@@ -148,7 +138,9 @@ void print_block(int block){
 }
 
 /*
- * Cette fonction renvoie l'index de l'emplacement de la struct Fichier passée en parametre
+ * Cette fonction renvoie l'index de l'emplacement de la struct Fichier passée en paramètre
+ * @param fichier : une struct Fichier
+ * @return l'index (dans la TOC) de la struct passée en paramètre
  */
 int void_get_index_from_TOC(Fichier fichier){
     lecture_block(0);
@@ -157,13 +149,12 @@ int void_get_index_from_TOC(Fichier fichier){
         for (int j = 0; j < sizeof(Fichier); j++) {
             ((uint8_t*)&fichier_temp)[j] = buffer[j + i * sizeof(Fichier)];
         }
-
         //Si on trouve le fichier avec le nom recherché
         if (strncmp(fichier.name, fichier_temp.name, FILE_NAME) == 0) {
             return i;
         }
     }
-    return -1; //Probleme
+    return -1; // Problème
 }
 
 /*
@@ -188,7 +179,7 @@ void serial_read_line(){
 }
 
 /*
- * Cette fonction formate les blocks utilisés par notre système de fichier
+ * Cette fonction formate les blocs utilisés par notre système de fichier
  * Et rend disponible tout les fichiers dans la TOC
  */
 void FORMAT(){
@@ -205,11 +196,8 @@ void FORMAT(){
 
     //On écrit la TOC dans le buffer (on place des structs Fichier avec available -> 0x01)
     for(int j = 0; j < MAX_FILE; j++) {
-
         fichier.starting_block = FIRST_FILE_BLOCK + (j * BLOCK_PAR_FILE);
-
         int start_index = j * sizeof(Fichier);
-
         for (int k = 0; k < sizeof(Fichier); k++) {
             buffer[start_index + k] = ((uint8_t*)&fichier)[k];  // copie octet par octet
         }
@@ -289,7 +277,6 @@ void APPEND(char *name, uint8_t *data, int taille){
         fichier.starting_block = FIRST_FILE_BLOCK + (index * BLOCK_PAR_FILE); // Premier bloc du fichier
 
         lecture_block(0);
-
         //Il faut écrire le fichier au bon index du buffer
         int i = 0;
         for (int j = index * sizeof(Fichier); j < index * sizeof(Fichier) + sizeof(Fichier); j++) {
@@ -350,7 +337,6 @@ void READ(char *name){
             } else {
                 UART_puthex8(octet);
                 UART_pputs(" ");
-
                 // Un peu de mise en page sur le retour série
                 colonne ++;
                 if (colonne > 19){
@@ -364,25 +350,25 @@ void READ(char *name){
     UART_pputs("\r\n"); //retour chariot et retour à la ligne
 }
 
+/*
+ * Cette fonction supprime le fichier dont le nom est passé en paramètre
+ * Pour cela on replace sa struct Fichier dans la TOC par une Struct fichier "vierge" puis on remplist les blocs de données correspondant de 00
+ */
 void REMOVE(char *name){
-    Fichier fichier;
     if(fichier_existe(name)){
-        fichier = get_Fichier(name);
+        Fichier fichier = get_Fichier(name);
         int file_index = void_get_index_from_TOC(fichier);
 
         fichier.available = 0x01; // emplacement dispo
         memset(fichier.name, 0x00, FILE_NAME); //nom vide (charactere 00 en hex)
-
         lecture_block(0);
         // On replace le fichier vidé dans la TOC
         for (int i = 0; i < sizeof(Fichier); i++) {
             buffer[file_index + i] = ((uint8_t*)&fichier)[i];
         }
-
         //Ecriture de la TOC
         ecriture_block(0);
-
-        // Plus qu'a effacer les données dans les blocs
+        // Plus qu'à effacer les données dans les blocs
         clear_buffer();
         for (int i = fichier.starting_block; i < fichier.starting_block + BLOCK_PAR_FILE; i++) {
             ecriture_block(i);
@@ -397,9 +383,8 @@ void REMOVE(char *name){
  * Cette fonction renomme le fichier
  */
 void RENAME(char *oldname, char *newname){
-    Fichier fichier;
     if(fichier_existe(oldname)){
-        fichier = get_Fichier(oldname);
+        Fichier fichier = get_Fichier(oldname);
         int file_index = void_get_index_from_TOC(fichier);
 
         fichier.available = 0x00;
@@ -418,6 +403,10 @@ void RENAME(char *oldname, char *newname){
     }
 }
 
+/*
+ * Cette fonction copy un fichier source vers une nouvelle destination
+ * Les blocs de données sont copiés et associés à une entrée dans la TOC
+ */
 void COPY(char *source_name, char *dest_name){
     Fichier fichier_source;
     Fichier fichier_dest;
@@ -469,7 +458,6 @@ int main(void){
         return 0;
     }
     UART_pputs("Carte SD connectée\r\n");
-    print_block(0);
     UART_pputs("Prêt à recevoir une commande\n\r");
 
     while(1){
