@@ -50,7 +50,7 @@ void ecriture_block(uint32_t block){
 
     // Ecriture du buffer sur le secteur de la carte
     res = SD_writeSingleBlock(addr, buffer, &token);
-
+    (void)res;
     /*
     // Exemple de réponse de la carte SD en cas de réussite de l'écriture
     // if no errors writing
@@ -371,7 +371,7 @@ void REMOVE(char *name){
 }
 
 /*
- * Cette focntion renomme le fichier
+ * Cette fonction renomme le fichier
  */
 void RENAME(char *oldname, char *newname){
     Fichier fichier;
@@ -387,10 +387,8 @@ void RENAME(char *oldname, char *newname){
         for (int i = 0; i < sizeof(Fichier); i++) {
             buffer[file_index + i] = ((uint8_t*)&fichier)[i];
         }
-
         //Ecriture de la TOC
         ecriture_block(0);
-
         UART_pputs("Fichier renommé\n\r");
     } else {
         UART_pputs("Le fichier n'existe pas\n\r");
@@ -398,13 +396,37 @@ void RENAME(char *oldname, char *newname){
 }
 
 void COPY(char *source_name, char *dest_name){
-    Fichier fichier;
-    if(fichier_existe(source_name)){
-        fichier = get_Fichier(source_name);
-        int file_index = void_get_index_from_TOC(fichier);
+    Fichier fichier_source;
+    Fichier fichier_dest;
+    if (fichier_existe(source_name)){
+        fichier_source = get_Fichier(source_name);
+        if (fichier_existe(dest_name)) {
+            UART_pputs("Le fichier de destination existe déjà\r\n");
+            return;
+        }
+        // On cherche le premier emplacement libre dans la TOC
+        int index_dest = first_file_available();
+        if (index_dest == -1) {
+            UART_pputs("Pas de place disponible pour copier le fichier\r\n");
+            return;
+        }
+        fichier_dest.available = 0x00;
+        strncpy(fichier_dest.name, dest_name, FILE_NAME);
+        fichier_dest.starting_block = FIRST_FILE_BLOCK + (index_dest * BLOCK_PAR_FILE);
 
-        //todo
-
+        // maj de la TOC
+        lecture_block(0);
+        for (int i = 0; i < sizeof(Fichier); i++) {
+            buffer[index_dest * sizeof(Fichier) + i] = ((uint8_t*)&fichier_dest)[i];
+        }
+        ecriture_block(0);
+        // Copie des données des blocs
+        int first_block_source = fichier_source.starting_block;
+        int first_block_dest = fichier_dest.starting_block;
+        for(int j = 0; j < BLOCK_PAR_FILE; j++){
+            lecture_block(first_block_source + j);
+            ecriture_block(first_block_dest + j);
+        }
         UART_pputs("Fichier copié\n\r");
     } else {
         UART_pputs("Le fichier n'existe pas\n\r");
@@ -424,6 +446,7 @@ int main(void){
         return 0;
     }
     UART_pputs("Carte SD connectée\r\n");
+    UART_pputs("Prêt à recevoir une commande\n\r");
 
     while(1){
         serial_read_line(); //On lit la ligne envoyée en UART et on choisit la commande à executer
@@ -460,7 +483,7 @@ int main(void){
             if (sscanf((char *)serial_buffer + 5, "%s %s", source, destination) == 2) {
                 COPY(source, destination);
             } else {
-                UART_pputs("Format de commande incorrect.\n");
+                UART_pputs("Format de commande incorrect.\r\n");
             }
         }
         // Pour écrire un fichier on utilise la commande write suivie du nom du fichier à écrire
@@ -476,8 +499,6 @@ int main(void){
         else {
             UART_pputs("Commande inconnue\r\n");
         }
-
-        //Ajouter commande raw qui renvoie le bloc en parametre (pour du debug)
     }
     //lecture_block(0); // Verification de la TOC
     //SD_printBuf(buffer);
