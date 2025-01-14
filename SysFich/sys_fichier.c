@@ -251,12 +251,26 @@ void APPEND(char *name, uint8_t *data, int taille){
 
     if (fichier_existe(name)) {
         // Le fichier existe on Append les données
+        Fichier fichier = get_Fichier(name);
 
-        //TODO
+        int current_block = fichier.starting_block;
+        int data_index = 0;
 
+        for (int i = 0; i < BLOCK_PAR_FILE; i++) {
+            lecture_block(current_block);
+            for (int j = 0; j < BLOCK_SIZE; j++) {
+                if (buffer[j] == 0x00 && data_index < taille) {
+                    buffer[j] = data[data_index++];
+                }
+            }
+            ecriture_block(current_block);
+            // les données sont totalement ajoutées
+            if (data_index >= taille) {
+                break;
+            }
+            current_block++;
+        }
         UART_pputs("Données ajoutées au fichier.\r\n");
-
-
     } else {
         //Le fichier n'existe pas on le crée (si possible)
         int index = first_file_available();
