@@ -29,6 +29,8 @@ int void_get_index_from_TOC(Fichier fichier);
 
 void serial_read_line();
 
+void print_block(int block);
+
 void FORMAT();
 
 void LS();

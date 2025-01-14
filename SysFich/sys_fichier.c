@@ -139,6 +139,15 @@ Fichier get_Fichier(char *name){
 }
 
 /*
+ * Cette fonction imprime un bloc complet
+ * Permet de debug
+ */
+void print_block(int block){
+    lecture_block(block);
+    SD_printBuf(buffer);
+}
+
+/*
  * Cette fonction renvoie l'index de l'emplacement de la struct Fichier passée en parametre
  */
 int void_get_index_from_TOC(Fichier fichier){
@@ -500,9 +509,5 @@ int main(void){
             UART_pputs("Commande inconnue\r\n");
         }
     }
-    //lecture_block(0); // Verification de la TOC
-    //SD_printBuf(buffer);
-    //lecture_block(2); //Premier bloc avec des données
-    //SD_printBuf(buffer);
     return 0;
 }
