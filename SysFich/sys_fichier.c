@@ -10,7 +10,7 @@
 
 #include "sys_fichier.h"
 
-//Lets go faire notre propre systeme de fichier ;)
+//Lets go faire notre propre système de fichiers ;)
 
 uint8_t buffer[BLOCK_SIZE]; //variable globale d'un buffer de la même taille qu'un bloc de la carte SD
 unsigned char serial_buffer[MAX_BUFFER] = {0}; // Buffer pour stocker la chaîne reçue en UART
@@ -18,7 +18,7 @@ unsigned char serial_buffer[MAX_BUFFER] = {0}; // Buffer pour stocker la chaîne
 /*
  * Fonction de lecture du bloc passé en paramètre
  * Les données lues sont placées dans le buffer global
- * @param block : le numero du secteur à lire
+ * @param block : le numéro du secteur à lire
  */
 void lecture_block(uint32_t block){
     uint8_t res, token;
@@ -59,7 +59,7 @@ void ecriture_block(uint32_t block){
  */
 int fichier_existe(char *name) {
     Fichier fichier;
-    // Parcourt les deux blocs de la TOC
+    // Parcours des deux blocs de la TOC
     for (int toc = 0; toc < TOC_BLOCKS; toc++) {
         lecture_block(toc);
         // Parcours des fichiers dans la TOC
@@ -76,7 +76,7 @@ int fichier_existe(char *name) {
 
 /*
  * Cette fonction trouve le premier emplacement disponible dans la table of content
- * @return l'index du premier premier emplacement libre dans notre systeme de fichiers, -1 si aucun disponible
+ * @return l'index du premier emplacement libre dans notre système de fichiers, -1 si aucun disponible
  */
 int first_file_available() {
     // Parcourir les deux TOC
@@ -96,7 +96,7 @@ int first_file_available() {
 }
 
 /*
- * Cette fonction clear le buffer (le rempli de 0x00)
+ * Cette fonction clear le buffer (le remplit de 0x00)
  */
 void clear_buffer(){
     memset(buffer, 0, sizeof(buffer));
@@ -193,10 +193,10 @@ int get_toc_from_index(int index) {
  */
 void FORMAT(){
     UART_pputs("Formatage...\r\n");
-    //On rempli le buffer de 0x00
+    //On remplit le buffer de 0x00
     clear_buffer();
     for(int i = 0; i < TOC_BLOCKS + (BLOCK_PAR_FILE * MAX_FILE); i++){
-        //on remplie tout les blocs de données et la TOC avec les 0x00
+        //on remplit tous les blocs de données et la TOC avec les 0x00
         ecriture_block(i);
     }
     Fichier fichier; //Création d'une struct Fichier
@@ -212,7 +212,6 @@ void FORMAT(){
         }
         ecriture_block(toc); // Écriture du buffer
     }
-    ecriture_block(1);
     UART_pputs("Formatage terminé\r\n");
 }
 
@@ -229,7 +228,7 @@ void LS(){
             // Création d'un struct fichier
             Fichier fichier;
 
-            // On rempli Fichier avec les infos du buffer
+            // On remplit Fichier avec les infos du buffer
             memcpy(&fichier, &buffer[i * sizeof(Fichier)], sizeof(Fichier));
 
             // Fichier non dispo donc un fichier est stocké sur la carte
@@ -302,8 +301,7 @@ void APPEND(char *name, uint8_t *data, int taille){
                 // Si le bloc est plein, on écrit ce bloc et on passe au suivant
                 ecriture_block(current_block);
                 current_block++; // Passer au bloc suivant
-                // Réinitialiser le buffer pour le prochain bloc
-                clear_buffer();
+                clear_buffer(); // Réinitialisation du buffer pour le prochain bloc
                 data_index = 0;
             }
         }
@@ -460,7 +458,7 @@ int main(void){
     UART_init();
     SPI_init(SPI_MASTER | SPI_FOSC_128 | SPI_MODE_0);
 
-    _delay_ms(500);
+    _delay_ms(100);
 
     //Initialisation carte SD
     if(SD_init() != SD_SUCCESS){
