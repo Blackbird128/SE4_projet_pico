@@ -32,6 +32,8 @@ void serial_read_line();
 
 void print_block(int block);
 
+int get_toc_from_index(int index);
+
 void FORMAT();
 
 void LS();

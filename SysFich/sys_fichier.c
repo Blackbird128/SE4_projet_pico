@@ -84,10 +84,7 @@ int first_file_available() {
         lecture_block(toc);
         for (int i = 0; i < FILE_PAR_TOC; i++) {
             Fichier fichier;
-
-            for (int j = 0; j < sizeof(Fichier); j++) {
-                ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
-            }
+            memcpy(&fichier, &buffer[i * sizeof(Fichier)], sizeof(Fichier));
             // Si le fichier est disponible (available == 0x01), l'emplacement est libre
             if (fichier.available == 0x01) {
                 return i + (toc * FILE_PAR_TOC); // Retourne l'index du premier emplacement libre
@@ -118,9 +115,7 @@ Fichier get_Fichier(char *name){
         for (int i = 0; i < FILE_PAR_TOC; i++) {
             lecture_block(toc);
             //remplit la struct Fichier
-            for (int j = 0; j < sizeof(Fichier); j++) {
-                ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
-            }
+            memcpy(&fichier, &buffer[i * sizeof(Fichier)], sizeof(Fichier));
             // Comparaison des noms
             if (strncmp(fichier.name, name, FILE_NAME) == 0) {
                     return fichier;
@@ -151,9 +146,7 @@ int get_index_from_TOC(Fichier fichier){
     for (int toc = 0; toc < TOC_BLOCKS; toc++){
         lecture_block(toc);
         for (int i = 0; i < FILE_PAR_TOC; i++) {
-            for (int j = 0; j < sizeof(Fichier); j++) {
-                ((uint8_t*)&fichier_temp)[j] = buffer[j + i * sizeof(Fichier)];
-            }
+            memcpy(&fichier_temp, &buffer[i * sizeof(Fichier)], sizeof(Fichier));
             //Si on trouve le fichier avec le nom recherché
             if (strncmp(fichier.name, fichier_temp.name, FILE_NAME) == 0) {
                 return i + (toc * FILE_PAR_TOC);
@@ -182,6 +175,16 @@ void serial_read_line(){
             }
         }
     }
+}
+
+/*
+ * Si l'index passé en paramètre est inférieur au nombre de fichiers par TOC on est dans la premiere TOC (bloc 0)
+ * Si l'index est supérieur à FILE_PAR_TOC alors il faudra modifier la deuxieme TOC (dans le bloc 1)
+ * @param index : l'index dont il faut déterminer la TOC
+ * @return int le numéro de la TOC ou est l'index
+ */
+int get_toc_from_index(int index) {
+    return (index < FILE_PAR_TOC) ? 0 : 1;
 }
 
 /*
@@ -227,9 +230,7 @@ void LS(){
             Fichier fichier;
 
             // On rempli Fichier avec les infos du buffer
-            for (int j = 0; j < sizeof(Fichier); j++) {
-                ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
-            }
+            memcpy(&fichier, &buffer[i * sizeof(Fichier)], sizeof(Fichier));
 
             // Fichier non dispo donc un fichier est stocké sur la carte
             if (fichier.available == 0x00) {
@@ -284,15 +285,11 @@ void APPEND(char *name, uint8_t *data, int taille){
         strncpy(fichier.name, name, FILE_NAME); // Copier le nom du fichier
         fichier.starting_block = TOC_BLOCKS + (index * BLOCK_PAR_FILE); // Premier bloc du fichier
         
-        int toc = (index < FILE_PAR_TOC) ? 0 :1; // On cherche la TOC 0 ou 1
+        int toc = get_toc_from_index(index); // On cherche la TOC 0 ou 1
         int index_reel = index % FILE_PAR_TOC;
         lecture_block(toc);
         // On copie le fichier dans la bonne TOC
-        int i = 0;
-        for (int j = index_reel * sizeof(Fichier); j < index_reel * sizeof(Fichier) + sizeof(Fichier); j++) {
-            buffer[j] = ((uint8_t*)&fichier)[i];
-            i++;
-        }
+        memcpy(&buffer[index_reel * sizeof(Fichier)], &fichier, sizeof(Fichier));
         ecriture_block(toc);
 
         clear_buffer(); //Nécessaire car il contient actuellement la TOC
@@ -370,15 +367,13 @@ void REMOVE(char *name){
         memset(fichier.name, 0x00, FILE_NAME); //nom vide (charactere 00 en hex)
         
         // On determine quelle TOC lire
-        int toc = (index < FILE_PAR_TOC) ? 0 : 1;
+        int toc = get_toc_from_index(index);
         int index_reel = index % FILE_PAR_TOC;
         lecture_block(toc);
         // On replace le fichier vidé dans la TOC
-        for (int i = 0; i < sizeof(Fichier); i++) {
-            buffer[index_reel + i] = ((uint8_t*)&fichier)[i];
-        }
-        //Ecriture de la TOC
-        ecriture_block(toc);
+        memcpy(&buffer[index_reel * sizeof(Fichier)], &fichier, sizeof(Fichier));
+        ecriture_block(toc); //Ecriture de la TOC correspondante
+        
         // Plus qu'à effacer les données dans les blocs
         clear_buffer();
         for (int i = fichier.starting_block; i < fichier.starting_block + BLOCK_PAR_FILE; i++) {
@@ -402,14 +397,12 @@ void RENAME(char *oldname, char *newname){
         strncpy(fichier.name, newname, FILE_NAME); // nouveau nom
 
         // On determine quelle TOC lire
-        int toc = (index < FILE_PAR_TOC) ? 0 : 1;
+        int toc = get_toc_from_index(index);
         int index_reel = index % FILE_PAR_TOC;
         lecture_block(toc);
         
         // On replace le fichier renommé dans la TOC
-        for (int i = 0; i < sizeof(Fichier); i++) {
-            buffer[index_reel + i] = ((uint8_t*)&fichier)[i];
-        }
+        memcpy(&buffer[index_reel * sizeof(Fichier)], &fichier, sizeof(Fichier));
         //Ecriture de la TOC
         ecriture_block(toc);
         
@@ -443,13 +436,11 @@ void COPY(char *source_name, char *dest_name){
         fichier_dest.starting_block = TOC_BLOCKS + (index_dest * BLOCK_PAR_FILE);
 
         // On determine quelle TOC lire
-        int toc = (index_dest < FILE_PAR_TOC) ? 0 : 1;
+        int toc = get_toc_from_index(index_dest);
         int index_reel = index_dest % FILE_PAR_TOC;
         lecture_block(toc);
         // maj de la TOC
-        for (int i = 0; i < sizeof(Fichier); i++) {
-            buffer[index_reel * sizeof(Fichier) + i] = ((uint8_t*)&fichier_dest)[i];
-        }
+        memcpy(&buffer[index_reel * sizeof(Fichier)], &fichier_dest, sizeof(Fichier));
         ecriture_block(toc);
         
         // Copie des données des blocs
@@ -476,8 +467,6 @@ int main(void){
         UART_pputs("Erreur Initialisation de la carte SD\r\n");
         return 0;
     }
-    print_block(0);
-    print_block(1);
     UART_pputs("Carte SD connectée\r\n");
     UART_pputs("Prêt à recevoir une commande\n\r");
 
