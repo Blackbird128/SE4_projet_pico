@@ -26,7 +26,7 @@ void clear_buffer();
 
 Fichier get_Fichier(char *name);
 
-int void_get_index_from_TOC(Fichier fichier);
+int get_index_from_TOC(Fichier fichier);
 
 void serial_read_line();
 

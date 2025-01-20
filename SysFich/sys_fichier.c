@@ -1,6 +1,5 @@
 #include <avr/io.h>
 #include <util/delay.h>
-#include <avr/interrupt.h>
 #include <string.h>
 #include <stdio.h>
 
@@ -146,10 +145,10 @@ void print_block(int block){
  * @param fichier : une struct Fichier
  * @return l'index (dans la TOC) de la struct passée en paramètre
  */
-int void_get_index_from_TOC(Fichier fichier){
+int get_index_from_TOC(Fichier fichier){
     Fichier fichier_temp;
     
-    for (int toc =0; toc < TOC_BLOCKS; toc++){
+    for (int toc = 0; toc < TOC_BLOCKS; toc++){
         lecture_block(toc);
         for (int i = 0; i < FILE_PAR_TOC; i++) {
             for (int j = 0; j < sizeof(Fichier); j++) {
@@ -245,7 +244,6 @@ void LS(){
  * Cette fonction crée un fichier si il n'existe pas, si il existe les données en paramètres sont ajoutées à la fin du fichier
  */
 void APPEND(char *name, uint8_t *data, int taille){
-
     if (fichier_existe(name)) {
         // Le fichier existe on Append les données
         Fichier fichier = get_Fichier(name);
@@ -285,18 +283,18 @@ void APPEND(char *name, uint8_t *data, int taille){
         fichier.available = 0x00; // L'emplacement est maintenant occupé
         strncpy(fichier.name, name, FILE_NAME); // Copier le nom du fichier
         fichier.starting_block = TOC_BLOCKS + (index * BLOCK_PAR_FILE); // Premier bloc du fichier
-
+        
         int toc = (index < FILE_PAR_TOC) ? 0 :1; // On cherche la TOC 0 ou 1
         int index_reel = index % FILE_PAR_TOC;
         lecture_block(toc);
-        
         // On copie le fichier dans la bonne TOC
         int i = 0;
         for (int j = index_reel * sizeof(Fichier); j < index_reel * sizeof(Fichier) + sizeof(Fichier); j++) {
             buffer[j] = ((uint8_t*)&fichier)[i];
             i++;
         }
-        
+        ecriture_block(toc);
+
         clear_buffer(); //Nécessaire car il contient actuellement la TOC
         // Ajouter les données dans les blocs du fichier
         int current_block = fichier.starting_block;
@@ -325,13 +323,12 @@ void APPEND(char *name, uint8_t *data, int taille){
  * On envoie directement le contenu du fichier sur la "sortie" série car l'Atmega 328p n'a pas assez de mémoire pour stocker un fichier de taille BLOCK_SIZE * BLOCK_PAR_FILE
  */
 void READ(char *name){
-    Fichier fichier;
     // Si le fichier n'est pas trouvé, on quitte la fonction READ
     if (!fichier_existe(name)) {
         UART_pputs("Fichier non trouvé.\r\n");
         return;
     }
-    fichier = get_Fichier(name);
+    Fichier fichier = get_Fichier(name);
     // On lit les blocs du fichier
     int current_block = fichier.starting_block;
     int run = 1;
@@ -362,22 +359,26 @@ void READ(char *name){
 
 /*
  * Cette fonction supprime le fichier dont le nom est passé en paramètre
- * Pour cela on replace sa struct Fichier dans la TOC par une Struct fichier "vierge" puis on remplist les blocs de données correspondant de 00
+ * Pour cela on replace sa struct Fichier dans la TOC par une Struct fichier "vierge" puis on remplit les blocs de données correspondant de 0x00
  */
 void REMOVE(char *name){
     if(fichier_existe(name)){
         Fichier fichier = get_Fichier(name);
-        int file_index = void_get_index_from_TOC(fichier);
+        int index = get_index_from_TOC(fichier);
 
         fichier.available = 0x01; // emplacement dispo
         memset(fichier.name, 0x00, FILE_NAME); //nom vide (charactere 00 en hex)
-        lecture_block(0);
+        
+        // On determine quelle TOC lire
+        int toc = (index < FILE_PAR_TOC) ? 0 : 1;
+        int index_reel = index % FILE_PAR_TOC;
+        lecture_block(toc);
         // On replace le fichier vidé dans la TOC
         for (int i = 0; i < sizeof(Fichier); i++) {
-            buffer[file_index + i] = ((uint8_t*)&fichier)[i];
+            buffer[index_reel + i] = ((uint8_t*)&fichier)[i];
         }
         //Ecriture de la TOC
-        ecriture_block(0);
+        ecriture_block(toc);
         // Plus qu'à effacer les données dans les blocs
         clear_buffer();
         for (int i = fichier.starting_block; i < fichier.starting_block + BLOCK_PAR_FILE; i++) {
@@ -395,18 +396,23 @@ void REMOVE(char *name){
 void RENAME(char *oldname, char *newname){
     if(fichier_existe(oldname)){
         Fichier fichier = get_Fichier(oldname);
-        int file_index = void_get_index_from_TOC(fichier);
+        int index = get_index_from_TOC(fichier);
 
         fichier.available = 0x00;
         strncpy(fichier.name, newname, FILE_NAME); // nouveau nom
 
-        lecture_block(0);
+        // On determine quelle TOC lire
+        int toc = (index < FILE_PAR_TOC) ? 0 : 1;
+        int index_reel = index % FILE_PAR_TOC;
+        lecture_block(toc);
+        
         // On replace le fichier renommé dans la TOC
         for (int i = 0; i < sizeof(Fichier); i++) {
-            buffer[file_index + i] = ((uint8_t*)&fichier)[i];
+            buffer[index_reel + i] = ((uint8_t*)&fichier)[i];
         }
         //Ecriture de la TOC
-        ecriture_block(0);
+        ecriture_block(toc);
+        
         UART_pputs("Fichier renommé\n\r");
     } else {
         UART_pputs("Le fichier n'existe pas\n\r");
@@ -436,12 +442,16 @@ void COPY(char *source_name, char *dest_name){
         strncpy(fichier_dest.name, dest_name, FILE_NAME);
         fichier_dest.starting_block = TOC_BLOCKS + (index_dest * BLOCK_PAR_FILE);
 
+        // On determine quelle TOC lire
+        int toc = (index_dest < FILE_PAR_TOC) ? 0 : 1;
+        int index_reel = index_dest % FILE_PAR_TOC;
+        lecture_block(toc);
         // maj de la TOC
-        lecture_block(0);
         for (int i = 0; i < sizeof(Fichier); i++) {
-            buffer[index_dest * sizeof(Fichier) + i] = ((uint8_t*)&fichier_dest)[i];
+            buffer[index_reel * sizeof(Fichier) + i] = ((uint8_t*)&fichier_dest)[i];
         }
-        ecriture_block(0);
+        ecriture_block(toc);
+        
         // Copie des données des blocs
         int first_block_source = fichier_source.starting_block;
         int first_block_dest = fichier_dest.starting_block;
@@ -456,7 +466,6 @@ void COPY(char *source_name, char *dest_name){
 }
 
 int main(void){
-    sei();
     UART_init();
     SPI_init(SPI_MASTER | SPI_FOSC_128 | SPI_MODE_0);
 
@@ -467,6 +476,8 @@ int main(void){
         UART_pputs("Erreur Initialisation de la carte SD\r\n");
         return 0;
     }
+    print_block(0);
+    print_block(1);
     UART_pputs("Carte SD connectée\r\n");
     UART_pputs("Prêt à recevoir une commande\n\r");
 
