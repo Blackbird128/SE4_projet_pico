@@ -3,6 +3,7 @@
 #include <avr/interrupt.h>
 #include <string.h>
 #include <stdio.h>
+
 #include "lib_SD/uart.h"
 #include "lib_SD/spi.h"
 #include "lib_SD/sdcard.h"
@@ -58,20 +59,20 @@ void ecriture_block(uint32_t block){
  * @return : 1 si le fichier existe, 0 sinon
  */
 int fichier_existe(char *name) {
-    // lecture de la TOC dans le buffer
-    lecture_block(0);
     Fichier fichier;
-    //parcours de la TOC
-    for (int i = 0; i < MAX_FILE; i++) {
-        //remplissage de la struct Fichier
-        for (int j = 0; j < sizeof(Fichier); j++) {
-            ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
-        }
-        if (fichier.available == 0x00 && strncmp(fichier.name, name, FILE_NAME) == 0) {
-            return 1;
+    // Parcourt les deux blocs de la TOC
+    for (int toc = 0; toc < TOC_BLOCKS; toc++) {
+        lecture_block(toc);
+        // Parcours des fichiers dans la TOC
+        for (int i = 0; i < FILE_PAR_TOC; i++) {
+            // Remplissage de la structure Fichier à partir du buffer
+            memcpy(&fichier, &buffer[i * sizeof(Fichier)], sizeof(Fichier));
+            if (fichier.available == 0x00 && strncmp(fichier.name, name, FILE_NAME) == 0) {
+                return 1; // Fichier trouvé
+            }
         }
     }
-    return 0;
+    return 0; // Fichier non trouvé
 }
 
 /*
@@ -79,18 +80,19 @@ int fichier_existe(char *name) {
  * @return l'index du premier premier emplacement libre dans notre systeme de fichiers, -1 si aucun disponible
  */
 int first_file_available() {
-    lecture_block(0);
-    // Parcourir la TOC pour trouver un emplacement libre
-    for (int i = 0; i < MAX_FILE; i++) {
-        Fichier fichier;
+    // Parcourir les deux TOC
+    for (int toc = 0; toc < TOC_BLOCKS; toc++){
+        lecture_block(toc);
+        for (int i = 0; i < FILE_PAR_TOC; i++) {
+            Fichier fichier;
 
-        for (int j = 0; j < sizeof(Fichier); j++) {
-            ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
-        }
-
-        // Si le fichier est disponible (available == 0x01), l'emplacement est libre
-        if (fichier.available == 0x01) {
-            return i; // Retourne l'index du premier emplacement libre
+            for (int j = 0; j < sizeof(Fichier); j++) {
+                ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
+            }
+            // Si le fichier est disponible (available == 0x01), l'emplacement est libre
+            if (fichier.available == 0x01) {
+                return i + (toc * FILE_PAR_TOC); // Retourne l'index du premier emplacement libre
+            }
         }
     }
     //Aucun emplacement libre (nombre max de fichiers atteint)
@@ -111,17 +113,19 @@ void clear_buffer(){
  */
 Fichier get_Fichier(char *name){
     // lecture de la TOC dans le buffer
-    lecture_block(0);
     Fichier fichier;
-
-    //parcours de la toc
-    for (int i = 0; i < MAX_FILE; i++) {
-        //remplit la struct Fichier
-        for (int j = 0; j < sizeof(Fichier); j++) {
-            ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
-        }
-        if (strncmp(fichier.name, name, FILE_NAME) == 0) {
-                return fichier;
+    for (int toc = 0; toc < TOC_BLOCKS; toc ++){
+        //parcours des TOC
+        for (int i = 0; i < FILE_PAR_TOC; i++) {
+            lecture_block(toc);
+            //remplit la struct Fichier
+            for (int j = 0; j < sizeof(Fichier); j++) {
+                ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
+            }
+            // Comparaison des noms
+            if (strncmp(fichier.name, name, FILE_NAME) == 0) {
+                    return fichier;
+            }
         }
     }
     return fichier; //Fichier vide
@@ -143,15 +147,18 @@ void print_block(int block){
  * @return l'index (dans la TOC) de la struct passée en paramètre
  */
 int void_get_index_from_TOC(Fichier fichier){
-    lecture_block(0);
     Fichier fichier_temp;
-    for (int i = 0; i < MAX_FILE; i++) {
-        for (int j = 0; j < sizeof(Fichier); j++) {
-            ((uint8_t*)&fichier_temp)[j] = buffer[j + i * sizeof(Fichier)];
-        }
-        //Si on trouve le fichier avec le nom recherché
-        if (strncmp(fichier.name, fichier_temp.name, FILE_NAME) == 0) {
-            return i;
+    
+    for (int toc =0; toc < TOC_BLOCKS; toc++){
+        lecture_block(toc);
+        for (int i = 0; i < FILE_PAR_TOC; i++) {
+            for (int j = 0; j < sizeof(Fichier); j++) {
+                ((uint8_t*)&fichier_temp)[j] = buffer[j + i * sizeof(Fichier)];
+            }
+            //Si on trouve le fichier avec le nom recherché
+            if (strncmp(fichier.name, fichier_temp.name, FILE_NAME) == 0) {
+                return i + (toc * FILE_PAR_TOC);
+            }
         }
     }
     return -1; // Problème
@@ -186,7 +193,7 @@ void FORMAT(){
     UART_pputs("Formatage...\r\n");
     //On rempli le buffer de 0x00
     clear_buffer();
-    for(int i = 0; i < FIRST_FILE_BLOCK + (BLOCK_PAR_FILE * MAX_FILE); i++){
+    for(int i = 0; i < TOC_BLOCKS + (BLOCK_PAR_FILE * MAX_FILE); i++){
         //on remplie tout les blocs de données et la TOC avec les 0x00
         ecriture_block(i);
     }
@@ -195,14 +202,15 @@ void FORMAT(){
     memset(fichier.name, 0x00, FILE_NAME); //nom vide (charactere 00 en hex)
 
     //On écrit la TOC dans le buffer (on place des structs Fichier avec available -> 0x01)
-    for(int j = 0; j < MAX_FILE; j++) {
-        fichier.starting_block = FIRST_FILE_BLOCK + (j * BLOCK_PAR_FILE);
-        int start_index = j * sizeof(Fichier);
-        for (int k = 0; k < sizeof(Fichier); k++) {
-            buffer[start_index + k] = ((uint8_t*)&fichier)[k];  // copie octet par octet
+    for (int toc = 0; toc < TOC_BLOCKS; toc++) {
+        for (int j = 0; j < MAX_FILE; j++) {
+            fichier.starting_block = TOC_BLOCKS + (j * BLOCK_PAR_FILE) + (toc * FILE_PAR_TOC);
+            int start_index = j * sizeof(Fichier);
+            memcpy(&buffer[start_index], &fichier, sizeof(Fichier)); // Copie de la structure
         }
+        ecriture_block(toc); // Écriture du buffer
     }
-    ecriture_block(0);
+    ecriture_block(1);
     UART_pputs("Formatage terminé\r\n");
 }
 
@@ -212,22 +220,23 @@ void FORMAT(){
  */
 void LS(){
     UART_pputs("Fichier(s) sur la carte SD :\r\n");
-    //On rempli le buffer avec la TOC (block 0 de la carte SD)
-    lecture_block(0);
+    // On boucle sur les differents blocs de TOC
+    for (int toc = 0; toc < TOC_BLOCKS; toc++){
+        lecture_block(toc);
+        for (int i = 0; i < FILE_PAR_TOC; i++){
+            // Création d'un struct fichier
+            Fichier fichier;
 
-    for (int i = 0; i < MAX_FILE; i++){
-        // Création d'un struct fichier
-        Fichier fichier;
+            // On rempli Fichier avec les infos du buffer
+            for (int j = 0; j < sizeof(Fichier); j++) {
+                ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
+            }
 
-        // On rempli Fichier avec les infos du buffer
-        for (int j = 0; j < sizeof(Fichier); j++) {
-            ((uint8_t*)&fichier)[j] = buffer[j + i * sizeof(Fichier)];
-        }
-
-        // Fichier non dispo donc un fichier est stocké sur la carte
-        if (fichier.available == 0x00) {
-            UART_puts(fichier.name); //Affichage du nom du fichier trouvé
-            UART_pputs("\r\n");
+            // Fichier non dispo donc un fichier est stocké sur la carte
+            if (fichier.available == 0x00) {
+                UART_puts(fichier.name); //Affichage du nom du fichier trouvé
+                UART_pputs("\r\n");
+            }
         }
     }
 }
@@ -269,24 +278,25 @@ void APPEND(char *name, uint8_t *data, int taille){
         //Le fichier à écrire dépasse la taille max
         if (taille > BLOCK_PAR_FILE * BLOCK_SIZE){
             UART_pputs("Fichier trop gros pour notre systeme de fichiers");
+            return;
         }
 
         Fichier fichier;
         fichier.available = 0x00; // L'emplacement est maintenant occupé
         strncpy(fichier.name, name, FILE_NAME); // Copier le nom du fichier
-        fichier.starting_block = FIRST_FILE_BLOCK + (index * BLOCK_PAR_FILE); // Premier bloc du fichier
+        fichier.starting_block = TOC_BLOCKS + (index * BLOCK_PAR_FILE); // Premier bloc du fichier
 
-        lecture_block(0);
-        //Il faut écrire le fichier au bon index du buffer
+        int toc = (index < FILE_PAR_TOC) ? 0 :1; // On cherche la TOC 0 ou 1
+        int index_reel = index % FILE_PAR_TOC;
+        lecture_block(toc);
+        
+        // On copie le fichier dans la bonne TOC
         int i = 0;
-        for (int j = index * sizeof(Fichier); j < index * sizeof(Fichier) + sizeof(Fichier); j++) {
+        for (int j = index_reel * sizeof(Fichier); j < index_reel * sizeof(Fichier) + sizeof(Fichier); j++) {
             buffer[j] = ((uint8_t*)&fichier)[i];
             i++;
         }
-
-        // mise à jour de la TOC
-        ecriture_block(0);
-
+        
         clear_buffer(); //Nécessaire car il contient actuellement la TOC
         // Ajouter les données dans les blocs du fichier
         int current_block = fichier.starting_block;
@@ -424,7 +434,7 @@ void COPY(char *source_name, char *dest_name){
         }
         fichier_dest.available = 0x00;
         strncpy(fichier_dest.name, dest_name, FILE_NAME);
-        fichier_dest.starting_block = FIRST_FILE_BLOCK + (index_dest * BLOCK_PAR_FILE);
+        fichier_dest.starting_block = TOC_BLOCKS + (index_dest * BLOCK_PAR_FILE);
 
         // maj de la TOC
         lecture_block(0);
