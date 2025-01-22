@@ -83,10 +83,8 @@ int first_file_available() {
     for (int toc = 0; toc < TOC_BLOCKS; toc++){
         lecture_block(toc);
         for (int i = 0; i < FILE_PAR_TOC; i++) {
-            Fichier fichier;
-            memcpy(&fichier, &buffer[i * sizeof(Fichier)], sizeof(Fichier));
-            // Si le fichier est disponible (available == 0x01), l'emplacement est libre
-            if (fichier.available == 0x01) {
+            // On regarde directement les emplacements des champs "available" dans la TOC (economise l'extraction des données dans une struct Fichier utilisée dans la version precedente)
+            if (buffer[i * sizeof(Fichier)] == 0x01) {
                 return i + (toc * FILE_PAR_TOC); // Retourne l'index du premier emplacement libre
             }
         }
