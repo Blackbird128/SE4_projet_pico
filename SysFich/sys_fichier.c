@@ -452,6 +452,27 @@ void COPY(char *source_name, char *dest_name){
     }
 }
 
+/*
+ * Cette fonction renvoie le nombre d'emplacement de fichiers disponibles
+ */
+void QUOTADISK(){
+    int quota = 0;
+    char str[10];
+    for (int toc = 0; toc < TOC_BLOCKS; toc++){
+        lecture_block(toc);
+        for (int i = 0; i < FILE_PAR_TOC; i++) {
+            if (buffer[i * sizeof(Fichier)] == 0x01) {
+                quota++;
+            }
+        }
+    }
+    sprintf(str, "%d", quota);
+    UART_puts(str);
+    UART_pputs(" emplacements disponibles sur ");
+    sprintf(str, "%d\n\r", MAX_FILE);
+    UART_puts(str);
+}
+
 int main(void){
     UART_init();
     SPI_init(SPI_MASTER | SPI_FOSC_128 | SPI_MODE_0);
@@ -475,6 +496,10 @@ int main(void){
         //Idem pas d'arguments pour FORMAT()
         else if(strcmp((char *)serial_buffer, "format") == 0){
             FORMAT();
+        }
+        // Quotadisk
+        else if(strcmp((char *)serial_buffer, "quotadisk") == 0){
+            QUOTADISK();
         }
         // READ, commande read suivie du nom du fichier
         else if(strncmp((char *)serial_buffer, "read ", 5) == 0) {
