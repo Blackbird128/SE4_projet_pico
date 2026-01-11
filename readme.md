@@ -1,4 +1,4 @@
-# Projet Pico ordinateur Louis Bonningre & Antoine Lecomte
+# Projet Pico ordinateur 
 
 Lors de ce projet nous avons réalisé une carte mère qui interface avec plusieurs cartes filles développées par d'autres binômes
 
